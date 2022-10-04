@@ -1,0 +1,238 @@
+%Standard imports für Artikel
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{cite}
+
+%Bilder importieren
+\usepackage{graphicx}
+\graphicspath{ {./img/} }
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\setlength{\parskip}{1em}
+
+\title{Human Centered Design - Software zur Terminvereinbarung}
+\author{Johannes Schnirring}
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    {\scshape\LARGE Human Centered Design - Software zur Terminvereinbarung \par}
+    \vspace{1cm}
+
+    {\scshape\Large Bachelorarbeit\par}
+    \vspace{1.5cm}
+
+    \begin{tabular}{r l}
+        {\Large Studierender:} & {\Large Johannes Schnirring}             \\ \\
+        {\Large Betreuung:}    & {\Large Prof. Dr. Claude Draude        } \\ \\
+        {\Large Semester:}     & {\Large Wintersemester 2022}             \\ \\
+        {\Large Datum:}        & {\Large \today}                          \\ \\
+    \end{tabular}
+    \vfill
+    {\large Universität Kassel}
+
+    % Bottom of the page
+
+\end{titlepage}
+
+%\maketitle
+\tableofcontents
+\newpage
+
+\section{Einleitung}
+
+\subsection{Motivation}
+
+% Hier wird die Problemstellung im Kontext
+% einer Anwendung dargestellt und der Inhalt der Arbeit kurz vorweggenommen. Welches Problem wurde
+% gelöst, warum ist das relevant? Wie ist die Vorgehensweise? Was wurde thematisch eingegrenzt, was
+% wurde ausgegrenzt? Wichtig ist es, den eigenen Beitrag in wenigen prägnanten Sätzen herauszuarbeiten. (Das Fazit soll sich zum Schluss auf diese Beiträge beziehen, um der Arbeit eine erzählerische
+% Klammer zu geben.) Die Einleitung endet mit einem Überblick über die Arbeit – hierbei werden die
+% Inhalte der einzelnen Kapitel knapp umschrieben
+
+Der Ansatz des Human Centered Design bietet einen nutzungsfokussierten
+Blickwinkel auf den Entwurf und den Designprozess von Software. In dieser
+Ausarbeitung werden die grundlegenden Methoden des Human Centered Design
+vorgestellt, praktisch angewendet und abschließend reflektiert.
+
+Die allgemeine Studienberatung und Information Studium der Universität Kassel
+nutzt zur Erleichterung und Dokumentation der täglich anfallenden Aufgaben eine
+speziell für diesen Bereich entwickelte, webbasierte Software. Diese Software
+setzt sich aus verschiedenen Modulen zusammen, die dazu beitragen Ordnung und
+Kommunikation im Team zu erleichtern. Um allen Mitarbeitenden einen Überblick
+zu geben, welche Kolleg:innen aufgrund von Urlaub, Krankheit oder Dienstreisen
+am aktuellen Tag abwesend sind, gibt es in dieser Software ein Modul um
+Abwesenheiten einzupflegen und somit alle Teammitglieder auf dem neuesten Stand
+zu halten.\\ Um die Nutzung des Abwesenheitsmoduls für alle Mitarbeitenden der
+Abteilung intuitiver und einfacher zu gestalten soll eine Überarbeitung des
+Moduls mit Methoden des Human Centered Design durchgeführt werden. Ziel ist die
+Implementierung eines übersichtlichen und intuitiven Managements von
+Abwesenheiten des Teams in der bestehenden Callcenter Software.
+
+Das Ziel dieser Seminararbeit ist es den Designprozess strukturiert zu
+begleiten und zu dokumentieren. Am Beispiel des Abwesenheitsmoduls sollen
+Verfahren zur Entwicklung und Einführung intuitiv zu bedienender Software in
+enger Zusammenarbeit mit den Anwender:innen diskutiert und praktisch erprobt
+werden. Hierfür wird zunächst der Begriff des Human Centered Design näher
+erläutert. Mit dem \textit{Interview im Kontext} wird eine grundlegende Methode
+dieses Designansatzes vorgestellt. Der Ablauf des Interviews in der Praxis wird
+im Hauptteil beschrieben. Die darauf aufbauenden Prozesse der Erarbeitung von
+Optimierungen der Software werden weitergehend dokumentiert. Schließlich werden
+die ersten Entwürfe der neu umgesetzten Veränderungen präsentiert und kritisch
+reflektiert. Abschließend wird der Erfolg der verwendeten Methoden beurteilt
+und ein Ausblick auf die weiteren Schritte der Implementierung gegeben.
+
+\section{Methoden}
+
+\subsection{Human Centered Design}
+Human-Centered Design ist eine Methode zur Entwicklung interaktiver Systeme,
+wie beispielsweise Software. Der wichtigste Aspekt der Methode ist es, diese
+Systeme benutzerfreundlich und möglichst nützlich zu gestalten. Wie Alan Dix
+klarstellt hat sich die Interaktion zwischen Menschen und Computern in den
+letzten Jahrzehnten stark verändert. Während Computer anfangs die meiste Zeit
+einfach vor sich hin gerechnet haben, sind Softwaresysteme heutzutage höchst
+interaktiv uns sollen ohne Hürden von allen Teilen der Gesellschaft genutzt
+werden können. \cite{hci}[S. 234] Beim Human Centered Design werden die
+Nutzenden der Systeme in den Mittelpunkt gestellt. Martin Ludwig Hofmann
+betont: \glqq [Es geht nicht darum] vom Gerät her zu denken, sondern vom
+Menschen und der Art und Weise, wie er die Welt wahrnimmt\grqq{}. \cite{hcd}[S.
+    134] Die Bedürfnisse, Prozessabläufe und Erwartungen der Nutzenden sind beim
+Human Centered Design der wichtigste Aspekt beim Entwurf von Schnittstellen
+zwischen Systemen und den Menschen, die sie benutzen.
+
+Die Nutzenden sollen während der gesamten Design- und Entwicklungsphase
+kontinuierlich in den Prozess der Produktentwicklung eingebunden werden. Statt
+sie eine fertige Idee oder einen fertig entwickelten Prototypen bewerten zu
+lassen, sollen ihre Bedürfnisse erforscht und direkt in die Ausgestaltung des
+Produkts integriert werden. In \textit{Human-Computer Interaction} wird betont
+wie wichtig es ist den Fokus im gesamten Prozess auf die Nutzenden zu legen.
+Bei allen Aspekten des Softwaredesigns ist es wichtig, das direkte Feedback der
+Nutzenden einzuholen und in den kompletten Entwicklungs- und Lebenszyklus einer
+Software einfließen zu lassen \cite{hci}[S. 226]
+
+Der Designprozess beinhaltet den intensiven Austausch mit den Nutzenden. In
+\textit{The human-computer interaction handbook} weisen die Autoren auf die
+Relevanz von Beobachtung und aufmerksamer Wahrnehmung hin. Wenn man Nutzende
+fragt, wie sie eine Software benutzen, werden sie viele Dinge nicht erwähnen,
+weil sie vergessen werden, nicht relevant erscheinen oder die Nutzenden nicht
+genau wissen, wie sie darüber sprechen können. \cite{hciHandbook}[S. 970]
+Resultierend ist es also wichtig die Bedürfnisse, Fähigkeiten und Strategien
+der Nutzenden direkt im Nutzungsalltag zu beobachten und zu analysieren.
+Entwickler und Designer sollen aber auch das Umfeld, die Arbeitsabläufe und den
+Kontext des zu entwerfenden Systems genau verstehen. So soll ein System
+entwickelt werden, dass den Nutzenden in ihrer Situation genau den Mehrwert
+bieten kann, der für sie wichtig ist. Das System soll sich an die Abläufe und
+Prozesse der Nutzenden anpassen und nicht umgekehrt.
+
+\begin{figure}[h]
+    \caption{Iteratives Vorgehen im Human Centered Design nach ISO 9241 \cite{iso9241}}
+    \centering
+    \includegraphics[width=10cm]{HCD.png}
+\end{figure}
+
+Alan Dix stellt des weiteren ganz klar heraus, dass dieser Prozess in mehreren
+Iterationen ablaufen muss. Nach dem ausgiebigen Beobachten und Diskutieren der
+Anforderungen gemeinsam mit den Nutzenden, können erste Prototypen und
+Beta-Versionen entwickelt werden. Diese müssen nun unbedingt erneut mit den
+Nutzenden ausprobiert und diskutiert werden. Dieser Prozess des Ausprobierens,
+Beobachtens, Analysierens und Entwickelns neuer Lösungsansätze sowie deren
+praktische Umsetzung muss oftmals in vielen Iterationen wiederholt und mit
+jedem Mal weiter optimiert werden.\cite{hci}[S. 234-237]
+
+\subsection{Interview im Kontext}
+Eines der wichtigsten Kernkonzepte im Human Centered Design ist das Verstehen
+der Nutzenden und ihrer Umfelder. Hierfür gibt es verschiedene Methoden, die
+Entwicklern und Designern diesen Prozess erleichtern. An dieser Stelle wird die
+Methode des\textbf{ Interviews im Kontext} gewählt und kurz vorgestellt.
+
+Ziel des \textit{Interviews im Kontext} ist es, die Anforderungen und
+Bedürfnisse der Nutzenden im realen Nutzungskontext zu erleben und zu
+dokumentieren. Wie in \textit{Contextual Design} klargestellt wird, machen
+klassische Techniken der Marktforschung für eine nutzerfokussierte
+Softwareentwicklung oftmals keinen Sinn. Wichtig ist es die Nutzenden im
+tatsächlichen Arbeitsumfeld zu beobachten und somit den Kontext der Interaktion
+mit der Software als essentiellen Teil in die Beobachtungen einfließen zu
+lassen.\cite{contextualDesign}[S. 36ff] Hierbei werden die Nutzenden direkt an
+Ihrem Arbeitsplatz, während ihrer Arbeit beobachtet und begleitet. Der
+Interviewende begibt sich hauptsächlich in eine zurückhaltende Rolle eines
+Beobachters. Wie in \textit{The human-computer interaction handbook}
+vorgeschlagen, wird der Rahmen des Interviews möglichst locker gehalten. Die
+Nutzenden des Systems sollen möglichst natürlich und frei zeigen, wie sie das
+System benutzen.\cite{hciHandbook}[S. 972] Wichtig ist den Nutzenden
+Möglichkeiten zum Erzählen zu bieten. Auch Dinge die im ersten Moment trivial
+oder nicht relevant erscheinen, sollen Nutzende in Ruhe ausführen und dem
+Interviewer somit die Möglichkeit geben, einen umfassenden Einblick in die
+Interaktionen mit dem System zu gewähren. Der Interviewende verbringt also die
+meiste Zeit damit zuzuhören und Impulsen des Interviewten zu folgen. Zusätzlich
+stellt er Nachfragen zum besseren Verständnis der beobachteten Situationen,
+Arbeitsabläufe und Handlungen. Der Interviewende hält das Feedback der
+Nutzenden zusammen mit seinen eigenen Beobachtungen meist schriftlich fest.
+Ziel dieser Methode ist es kontextabhängige Nutzungsszenarien der Systeme
+mitzuerleben, zu dokumentieren und daraus Ideen für die Entwicklung bzw.
+Verbesserung der Systeme zu gewinnen.
+
+\subsection{Weitere Methode (vllt Prototypentwicklung/Feedbackmethode)}
+
+
+\section{Durchführung}
+
+Struktur abarbeiten und verschiedene inhaltliche Aspekte immer wieder aufgreifen. Oder inhaltliche Aspekte abarbeiten und Struktur aufgreifen...?
+
+\subsection{Softwarebedarf in der Abteilung}
+\subsection{Aktuelle Softwarelösung}
+\subsection{Grund für Veränderung}
+
+\subsection{Erste Planungen - Interview im Kontext}
+\subsubsection{Kontext des Interviews}
+\subsubsection{Spannende Erkentnisse}
+
+\begin{itemize}
+    \item Datum / Uhrzeit mit Maus statt Tastatur
+    \item Suche nach Teilnehmer
+    \item Kompakte Ansicht Kalender (mit Farben)
+    \item Telefonnummeranzeige ("Silbentrennung")
+    \item Format / Beispielwerte bei Variablen in Templates
+    \item Modal reset oder nicht?
+\end{itemize}
+
+\subsubsection{Erarbeitung von Verbesserungsvorschlägen}
+
+\subsection{Prototyping}
+\subsubsection{Methode ???}
+\subsubsection{Erste Prototypen}
+\subsubsection{Feedback zu Prototypen}
+
+\subsection{Implementierung}
+\subsubsection{Methode ???}
+\subsubsection{Beschreibung des Prozess}
+\subsubsection{Technische Umsetzung}
+\subsubsection{Präsentation erster Ergebnisse}
+
+\subsection{Testen / User-feedback}
+\subsubsection{Methode ???}
+\subsubsection{Feedback der Nutzenden}
+\subsubsection{Ausblick auf weitere Iterationen}
+
+\section{Reflektion und Fazit}
+\subsection{Beschreibung des Ergebnis}
+\subsection{Beurteilung der Umsetzungsphase}
+\subsection{Beurteilung der eingesetzten Methoden}
+\subsection{Ausblick}
+
+\newpage
+
+\bibliographystyle{plain}
+\bibliography{refs}
+
+\end{document}
