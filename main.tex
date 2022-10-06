@@ -187,112 +187,122 @@ Verbesserung der Systeme zu gewinnen.
 
 \section{Durchführung}
 
-\todo{Struktur abarbeiten und verschiedene inhaltliche Aspekte immer wieder
-aufgreifen. Oder inhaltliche Aspekte abarbeiten und Struktur aufgreifen...?}
+Struktur abarbeiten und verschiedene inhaltliche Aspekte immer wieder
+aufgreifen. Oder inhaltliche Aspekte abarbeiten und Struktur
+aufgreifen...?\todo{Struktur?}
 
 \subsection{Situation in der Abteilung}
 
 \paragraph{Überleitung Situation Abteilung}
 Um den Bedarf und Entstehungsprozess der Software besser einordnen zu können,
-werden nun die Workflows und Prozessabläufe im Büroteam kurz skizziert. Diese
+werden nun die Workflows und Prozessabläufe im Büroteam kurz skizziert. Die
 Beschreibung der Situation im Team hilft zu erkennen, wie sich die aktuelle
-Softwarelösung in den Arbeitsalltag eingliedert,
+Softwarelösung in den Arbeitsalltag eingliedert, welche Prozessabläufe bereits
+gut durch Software begleitet werden, und an welchen Stellen noch
+Optimierungsbedarf besteht.
 
 \paragraph{Grundlegende Beschreibung der Abteilung}
-Im Rahmen dieser Bachelorarbeit wird immer wieder auf den tatsächlichen Bedarf
-einer Software im Alltag einer Abteilung der Hochschulverwaltung der Universität
-Kassel beschrieben. Es handelt sich um die Abteilung 2 (Studium und Lehre) zu
-deren alltäglichen Aufgaben es gehört, alle erdenklichen Organisationen zu
-übernehmen, die Studierenden und Lehrenden ein erfolgreiches Zusammenarbeiten
-an der Universität ermöglichen. Hierzu gehören beispielsweise das Einschreiben,
-und Exmatrikulieren von Studierenden, die Durchführung des Bewerbungsverfahrens, die information Studium
-und die Studienberatung. In dieser Arbeit wird die Studienberatung ein wichtige
-Rolle spielen.
+Als Nutzergruppe aller Studien dieser Bachelorarbeit werden die Mitarbeitenden
+einer Abteilung der Hochschulverwaltung an der Universität Kassel dienen. Es
+handelt sich um die Abteilung "Studium und Lehre", zu deren alltäglichen
+Aufgaben es gehört, alle erdenklichen Organisationen zu übernehmen, die
+Studierenden und Lehrenden ein erfolgreiches Zusammenarbeiten an der
+Universität ermöglichen. Hierzu gehören beispielsweise das Einschreiben, und
+Exmatrikulieren von Studierenden, die Durchführung des Bewerbungsverfahrens,
+das Betrieben der Information Studium und die allgemeine Studienberatung. In
+dieser Arbeit wird der Fokus auf die Mitarbeitenden der Studienberatung in der
+Abteilung Studium und Lehre gesetzt.
 
 \paragraph{Studienberatung}
-Die allgemeine Studienberatung der Universität Kassel berät Studierende zu allen Fragen rund um
-das Studium. Insbesondere bei persönlichen Problemen mit der Fertigstellung
-des eigenen Studiums hilft die Studienberatung mit einem persönlichen
-Lösungsgespräch und kann an weitere fachspezifische Beratungsstellen weiter
-vermitteln.\cite{studBeratungKsWeb}
+Die allgemeine Studienberatung der Universität Kassel berät Studierende zu
+allen Fragen rund um das Studium. Insbesondere bei persönlichen Problemen mit
+der Fertigstellung des eigenen Studiums hilft die Studienberatung mit einem
+persönlichen Lösungsgespräch und kann an weitere fachspezifische
+Beratungsstellen weiter vermitteln. Des Weiteren bietet die allgemeine
+Studienberatung verschiedene Workshops und Seminare an. Hierbei können sich
+Studierende in Gruppen mit Fokus auf bestimmten Fragestellungen austauschen und
+Qualifikationen im Umgang mit herausfordernden Studiensituationen erlangen.
+Auch "Schnupperkurse" für Studieninteressierte und Schüler werden von der
+allgemeinen Studienberatung angeboten um jungen Menschen mit Interesse an einem
+Studium einen möglichst unmittelbaren Einblick in den Studienalltag zu
+gewähren.\cite{studBeratungKsWeb}
 
 \paragraph{Terminvereinbarung in der ZSB}
-Eines der zentralen Dinge im Alltag der Studienberatung ist der Beratungstermin.
-Studienberatende müssen Termine mit den Ratsuchenden vereinbaren und abstimmen.
-Beratungstermine können über verschiedene Kontaktkanäle stattfinden. Es ist eine
-telefonische Beratung oder auch eine Beratung über eine Videokonferenz möglich.
-Selbstverständlich ist auch ein persönlicher Beratung Kontakt vor Ort zu
-vereinbaren. Über Alle diese Termine muss jeder Studienberatung den Überblick
-behalten und gleichzeitig neue Termin-Anfragen schnell beantworten können. Um
-diesen Prozess zu erleichtern und mögliche Fehler wie beispielsweise
-Terminüberschneidungen zu minimieren wird hierfür die Software Stubegru
-eingesetzt.
+Eines der zentralen Themen im Alltag der Studienberatung sind Beratungstermine.
+\todo{gendern?} Studienberatende müssen Termine mit den Ratsuchenden
+vereinbaren und abstimmen. Beratungstermine können über verschiedene
+Kontaktkanäle stattfinden: Es ist eine telefonische Beratung oder auch eine
+Beratung über eine Videokonferenz möglich. Selbstverständlich ist auch möglich
+einen persönlichen Beratungskontakt vor Ort zu vereinbaren. Über all diese
+Termine muss jeder Studienberatende den Überblick behalten und gleichzeitig
+neue Terminanfragen schnell beantworten können. Um diesen Prozess zu
+erleichtern und mögliche Fehler, wie beispielsweise Terminüberschneidungen, zu
+minimieren, wird hierfür die \textbf{Software "Stubegru"} eingesetzt.
 
 \subsection{Aktuelle Softwarelösung}
 \paragraph{Stubegru}
-Stubegru ist ein Softwarepaket für akademische Beratungsstellen. Die
-webbasierte Groupware begleitet viele Arbeitsabläufe im Alltag einer
-Beratungsstelle an einer Hochschule. In einem System vereint Stube Gru eine
-Wissensdatenbank in Form eines Wikis, sowie ein Dashboard mit vielen Modulen
-für spezifische Workflows. So können über Stubegru an der Universität Kassel
-beispielsweise Abwesenheiten der Abteilung, Telefonnotizen und tagesaktuelle
-Infos gemanagt werden. Jeder Mitarbeitende der Abteilung hat über einen
-eigenen Account Zugriff auf die Software, die er im Browser aufrufen kann. Die
-Software hilft dabei tagesaktuelle Informationen schnell und übersichtlich
-allen Mitarbeitenden zur Verfügung zu stellen und bei Bedarf langfristige und
-ausführliche Informationen zur Verfügung zu stellen.\cite{stubegruWebsite}
+Stubegru ist ein umfangreiches Softwarepaket für akademische Beratungsstellen.
+Die webbasierte Groupware begleitet viele Arbeitsabläufe im Alltag einer
+Beratungsstelle an einer Hochschule. In einem Softwaresystem vereint Stubegru
+eine Wissensdatenbank in Form eines Wikis, sowie ein Dashboard mit vielen
+Modulen für spezifische Workflows. So können über Stubegru an der Universität
+Kassel beispielsweise Abwesenheiten der Abteilung, Telefonnotizen und
+Beratungskontakte verwaltet werden. Jeder Mitarbeitende der Abteilung hat über
+einen eigenen Account Zugriff auf die Software, die er im Browser aufrufen
+kann. Die Software hilft dabei tagesaktuelle Informationen schnell und
+übersichtlich allen Mitarbeitenden zur Verfügung zu stellen und bei Bedarf
+langfristige und ausführliche Informationen mit wenigen Klicks zur Verfügung zu
+stellen.\cite{stubegruWebsite}
 
 \paragraph{Terminvereinbarung in Stubegru}
-Das wichtigste MOdule der eingesetzten Software für die Studienberatungen in der
-Abteilung ist der Kalender zur Terminvereinbarung von Beratungsterminen. Über
-diese Modul könnte in einem zweistufigen Prozess Termine für Ratsuchende
-Freigegeben und an die ne sprechenden Studierenden und Studieninteressierten
-vermittelt werden.
+Das wichtigste Modul der eingesetzten Software für die Studienberatung ist der
+Kalender zur Terminvereinbarung von Beratungsterminen. Über diese Modul können
+in einem zweistufigen Prozess Termine für Ratsuchende freigegeben und an die
+entsprechenden Studierenden und Studieninteressierten vermittelt werden.
 
 \paragraph{Zeitslots erstellen}
-Im ersten Schritt können die Studienberatungen freie Zeitslots für ihre
-Beratungstermine anlegen. Diese Zeitlos zeigen an, dass der entsprechende
-Beratende in der eingestellten Zeitspanne potenziell ZEit für einen
+Im ersten Schritt können die Studienberatenden freie Zeitslots für ihre
+Beratungstermine anlegen. Diese Zeitslots zeigen an, dass der entsprechende
+Beratende in der eingestellten Zeitspanne potenziell Zeit für ein
 Beratungsgespräch hat. Bei der Erstellung der Zeitslot können weitere Attribute
-wi der Beratungskanal (Online Meeting, Telefongespräch oder Präsenztermin)
+wie der Beratungskanal (Online Meeting, Telefongespräch oder Präsenztermin)
 konfiguriert werden. Außerdem können Mail Templates verknüpft werden, die im
-Falle einer Terminvergabe den Ratsuchenden über alle wichtigen Informationen zum Termin als Mail
-informieren.
+Falle einer Terminvergabe den Ratsuchenden per Email über alle wichtigen
+Informationen zum Termin informieren.
 
 \paragraph{Terminvergabe durch Erstinformation}
-Im zweiten Schritt werden die eingestellten Beratungszeit Slots durch
-Hilfskräfte der Erstinformation an Ratsuchende vergeben. Die erstinformation
-berät über Telefon. E Mail und eine Servicetheke Studierende un
-Studieninteressierte zu allen Fragen rund ums Studium und verweis bei
-tiefgehenden Fragen und anliegen an dies entsprechenden Sachbearbeitenden
-oder Beratungsstellen. Die erstinformation ist auch für das vereinbaren von
-Beratungsterminen mit der zentralen Studienberatung verantwortlich. Sind sie
-in Kontakt mit einem Kunde, der einen Termin in Anspruch nehmen ,möchte, können
-sie in der Software alle freien Zeitslots der Studien Beratenden einsehen und
-einen passenden Termin mit den Kunden vereinbaren. Wenn ein freier Zeitslot
-vergeben wird und fest mit einem Ratsuchenden verknüpft ist,. wird sowohl eine
-Email an den Studienberatenden versendet, der über alle Details wie Adresse,
-Kontoinformationen und Anliegen der Ratsuchenden informiert. Des Weiteren wird
-eine Mail an die ratsuchende Person versendet, die auf dem zuvor verknüpften
-Mailtemplate aufbaut und dynamisch terminrelevante Informationen einsetzt, wie
-beispielsweise datum und Zeit des Termins, oder eine Wegbeschreibung zum
+Im zweiten Schritt werden die eingestellten Zeitslots durch Hilfskräfte der
+Erstinformation an Ratsuchende vergeben. Die Erstinformation der Universität
+Kassel berät Studierende und Studieninteressierte zu allen Fragen rund ums
+Studium übers Telefon, Email und eine Servicetheke vor Ort. Bei tiefgehenden
+Fragen und spezifischen Anliegen verweisen die Mitarbeitenden an die
+entsprechenden Sachbearbeitenden oder Beratungsstellen. Die Erstinformation ist
+auch für das vereinbaren von Beratungsterminen mit der allgemeinen
+Studienberatung verantwortlich. Sind die Mitarbeitenden der Erstinformation in
+Kontakt mit einem Kunden, der einen Termin in Anspruch nehmen möchte, können
+sie in der Software alle freien Zeitslots der Beratenden einsehen und einen
+passenden Termin mit den Kunden vereinbaren. Wenn ein freier Zeitslot vergeben
+wird und fest mit einem Ratsuchenden verknüpft ist, wird eine Email an den
+Beratenden versendet, der über alle Details wie Adresse, Kontaktinformationen
+und Anliegen der Ratsuchenden informiert wird. Des Weiteren wird eine Mail an
+die Ratsuchende Person versendet, die auf dem zuvor verknüpften Mailtemplate
+aufbaut und dynamisch terminrelevante Informationen einsetzt, wie
+beispielsweise Datum und Zeit des Termins, oder eine Wegbeschreibung zum
 Beratungsraum.
 
 \paragraph{Auskunft bei Terminabsage}
-Eine weitere Verwendung des Kalendermodels kommt vor wenn Kunden der
+Eine weitere Verwendung des Kalendermoduls tritt ein, wenn Kunden der
 Erstinformationen Fragen zu einem bereits vereinbarten Termin haben oder diesen
-Absagen möchten, In diesem Fall können die Hilfskräfte der erstinformation über
+Absagen möchten. In diesem Fall können die Hilfskräfte der Erstinformation über
 eine Suchfunktion gezielt nach den vereinbarten Terminen des Kunden suchen und
-weiter Auskünfte geben.
+weitere Auskünfte geben.
 
 \paragraph{Datenschutz}
-Da Datenschutz gerade in Beratung Szenarien eine wichtige Rolle einnimmt, kann
-lediglich der verantwortliche Studienberatungen das Anliegen der Ratsuchenden
-Person einsehen. Zu Auskunftszwecken können aber alle Mitarbeitenden der
-Abteilung sehen, wann ein Beratungstermin mit welchem Studienberatungen
-vereinbart wurde.
-
-
+Da Datenschutz in Beratungsszenarien eine wichtige Rolle einnimmt, kann
+lediglich der verantwortliche Beratende das Anliegen der ratsuchenden Person
+einsehen. Zu Auskunftszwecken können aber alle Mitarbeitenden der Abteilung
+sehen, wann ein Beratungstermin mit welchem Beratenden vereinbart wurde.
+Datensätze zu vergangenen Beratungstermin werden täglich gelöscht, sodass möglichst wenig personenbezogenen Daten in der Datenbank gespeichert werden müssen. Über ein differenziertes Berechtigungssystem der eingesetzten Software Stubegru, kann genau gesteuert werden, welche Nutzergruppen Beratungstermine anlegen und vergeben dürfen.
 
 \subsection{Grund für Veränderung}
 
