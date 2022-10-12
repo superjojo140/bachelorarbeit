@@ -447,14 +447,14 @@ verfügbar sind.
 
 Durch ein Mouseover über den entsprechenden Tag in der Monatsübersicht kann man
 die genauen Termine mit Informationen über die Uhrzeit, den zuständigen
-Beratenden und die Anzahl der freien Plätze sehen.
-Oliver Claves erklärt mir, dass die kompakte Monatsansicht mit den farblich
-hervorgehobenen Terminslots bereits eine sehr gute Lösung ist, damit die
-Hilfskräfte auf einen Blick erfassen können, an welche Tagen sie den Kunden
-noch Beratungsgespräche anbieten können. Sobald alle Plätze der
-Beratungstermine an einem Tag vergeben sind, wird dieser im Kalender rot
-markiert. "So sehen Hilfskräfte sofort, dass sie hier keinen Termin mehr
-vergeben werden können", erklärt Herr Claves \todo{direkte Zitate?}.
+Beratenden und die Anzahl der freien Plätze sehen. Oliver Claves erklärt mir,
+dass die kompakte Monatsansicht mit den farblich hervorgehobenen Terminslots
+bereits eine sehr gute Lösung ist, damit die Hilfskräfte auf einen Blick
+erfassen können, an welche Tagen sie den Kunden noch Beratungsgespräche
+anbieten können. Sobald alle Plätze der Beratungstermine an einem Tag vergeben
+sind, wird dieser im Kalender rot markiert. "So sehen Hilfskräfte sofort, dass
+sie hier keinen Termin mehr vergeben werden können", erklärt Herr Claves
+\todo{direkte Zitate?}.
 
 \begin{figure}[h]
     \caption{Bewegt man den Mauszeiger über einen Tag, erscheinen weiteren Informationen zu den Zeitslots an diesem Tag}
@@ -470,7 +470,7 @@ ist. Oliver Claves zeigt mir, wie die Mitarbeitenden der Erstinformation in
 diesem Detail-View die freien Zeitslots an die ratsuchenden Personen vergeben
 können. In einer Liste werden, nach Uhrzeit sortiert, alle Termine
 untereinander angezeigt. Neben jedem freien Termin steht ein Button zum Vergabe
-dieses Zeitslots zur Verfügung. 
+dieses Zeitslots zur Verfügung.
 
 \begin{figure}[h]
     \caption{Der Detail-View: Eine Liste mit drei freien Zeitslots am entsprechenden Datum}
@@ -478,10 +478,10 @@ dieses Zeitslots zur Verfügung.
     \includegraphics[width=0.9\textwidth]{screen_old_daylist.png}
 \end{figure}
 
-Herr Claves zeigt mir wie
-eine Hilfskraft der Erstinformation nun einen solchen Zeitslot vergeben könnte.
-Nach KLick auf den Vergabe Button klappt ein Formular auf, indem Name,
-Kontaktdaten und Anliegen der Ratsuchenden erfasst werden können.
+Herr Claves zeigt mir wie eine Hilfskraft der Erstinformation nun einen solchen
+Zeitslot vergeben könnte. Nach Klick auf den "Vergabe-Button" klappt ein
+Formular auf, indem Name, Kontaktdaten und Anliegen der Ratsuchenden erfasst
+werden können.
 
 \begin{figure}[h]
     \caption{Formular zum vergeben eines Zeitslots an eine ratsuchende Person}
@@ -489,18 +489,55 @@ Kontaktdaten und Anliegen der Ratsuchenden erfasst werden können.
     \includegraphics[width=0.9\textwidth]{screen_old_clientdata.png}
 \end{figure}
 
-
+Nachdem alle personenbezogenen Daten korrekt erfasst wurden kann der Termin nun
+endgültig gebucht werden. Hierzu klicken die Hilfskräfte auf den Button
+"Bestätigen". Oliver Claves erklärt mir, dass dies ein sehr wichtiger Schritt
+ist: Solange eine Mitarbeitender der Erstinformation das Formular zum Erfassen
+der persönlichen Daten des Ratsuchenden geöffnet hat, wird dieser Zeitslot mit
+einer Sperre versehen. So wird verhindert, dass dieser Zeitslot von einem
+Kollegen vergeben werden kann, während man selbst gerade mit dem Ratsuchenden
+beispielsweise am Telefon die persönlichen Daten und das Anliegen bespricht.
+Sollte nach dem Aufklappen des Formulars der entsprechende Zeitslot doch nicht
+vergeben werden, ist es deshalb notwendig, dass die terminvergebende Person auf
+"Abbrechen" klickt, um die Sperre dieses Zeitslots aufzuheben und ihn somit für
+die Kollegen wieder freizugeben. Oliver Claves betont, dass dieser Schritt
+manchmal nicht ganz intuitiv ist, und für die Hilfskräfte daher in
+Einführungsschulungen immer besonders hervorgehoben wird. Es wäre allerdings
+deutlich schlimmer einen Termin doppelt zu vergeben und somit mindestens einer
+ratsuchenden Person wieder absagen zu müssen, als einen Zeitslot versehentlich
+zu sperren.
 
 \begin{figure}[h]
-    \caption{Detail-View: Ein Zeitslot wurde nun vergeben und ist für den entpsrechenden Kunden reserviert}
+    \caption{Detail-View: Ein Zeitslot wurde nun vergeben und ist für den entsprechenden Kunden reserviert. Hilfskräfte können nur den Namen des Ratsuchenden einsehen}
+    \centering
+    \includegraphics[width=0.9\textwidth]{screen_old_assigned_hiwi.png}
+\end{figure}
+
+Ist der Termin nun erfolgreich vergeben, können alle Nutzenden der Software
+einsehen an welche Person dieser Termin vergeben wurde. Meldet sich ein
+Ratsuchender beispielsweise einige Tage später noch einmal bei der
+Erstinformation und möchte wissen, wann sein Beratungstermin stattfindet,
+können die Mitarbeitenden der Erstinformation diese Auskunft aus der Software
+ablesen. Aus Datenschutzgründen können allerdings keine weiteren
+personenbezogenen Daten des Beratungstermins ausgelesen werden. Lediglich der
+Studienberatende, bei dem der Termin stattfindet, bekommt beim Aufruf des
+Detail-Views weitere Details wie Kontaktdaten und Anliegen der ratsuchenden
+Person angezeigt.
+
+\begin{figure}[h]
+    \caption{Detail-View: Der verantwortliche Beratende kann weitere personenbezogene Details einsehen}
     \centering
     \includegraphics[width=0.9\textwidth]{screen_old_assigned.png}
 \end{figure}
 
-
-
+Herr Claves hat nun den zweistufigen Workflow zur Terminvergabe einmal komplett
+durchgespielt und mich auf viele Details hingewiesen. Während Herr Claves mir
+gezeigt und erzählt hat, wie die Terminvergabe in der aktuellen Softwareversion
+abläuft, habe ich in Stichworten mitgeschrieben, welche Bemerkungen und
+Auffälligkeiten er besonders betont hat.
 
 \subsubsection{Spannende Erkentnisse}
+Während bisher der detaillierte Ablauf des Interviews im Kontext geschildert wurde, sollen im Folgenden die wesentlichen Auffälligkeiten nochmals zusammengefasst werden, die während des Interviews notiert wurden. Das Augenmerk liegt hierbei auf Beobachtungen, die Konsequenzen für den Designprozess des überarbeiteten Kalendermoduls zur Terminvergabe hervorbringen.
 
 \begin{itemize}
     \item Datum / Uhrzeit mit Maus statt Tastatur
