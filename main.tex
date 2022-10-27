@@ -455,8 +455,9 @@ die kompakte Monatsansicht mit den farblich hervorgehobenen Terminslots bereits
 eine sehr gute Lösung ist, damit die Hilfskräfte auf einen Blick erfassen
 können, an welche Tagen sie den Kunden noch Beratungsgespräche anbieten können.
 Sobald alle Plätze der Beratungstermine an einem Tag vergeben sind, wird dieser
-im Kalender rot markiert. \glqq So sehen Hilfskräfte mit einem Blick sofort, dass sie hier keinen
-Termin mehr vergeben werden können\grqq, erklärt \ipName \cite{claves}.
+im Kalender rot markiert. \glqq So sehen Hilfskräfte mit einem Blick sofort,
+dass sie hier keinen Termin mehr vergeben werden können\grqq, erklärt \ipName
+\cite{claves}.
 
 \begin{figure}[h]
     \caption{Bewegt man den Mauszeiger über einen Tag, erscheinen weiteren Informationen zu den Zeitslots an diesem Tag}
@@ -537,9 +538,9 @@ gezeigt und erzählt hat, wie die Terminvergabe in der aktuellen Softwareversion
 abläuft, habe ich in Stichworten mitgeschrieben, welche Bemerkungen und
 Auffälligkeiten er besonders betont hat.
 
-\subsubsection{Auswertung des Interviews}
+\subsubsection{}
 
-\subsubsection{Spannende Erkentnisse}
+\paragraph{Einleitung Auswertung}
 Während bisher der detaillierte Ablauf des Interviews im Kontext geschildert
 wurde, sollen im Folgenden die wesentlichen Auffälligkeiten nochmals
 zusammengefasst werden, die während des Interviews notiert wurden. Das
@@ -547,19 +548,32 @@ Augenmerk liegt hierbei auf Beobachtungen, die Konsequenzen für den
 Designprozess des überarbeiteten Kalendermoduls zur Terminvergabe
 hervorbringen.
 
-\begin{itemize}
-    \item Datum / Uhrzeit mit Maus statt Tastatur
-    \item Suche nach Teilnehmer
-    \item Kompakte Ansicht Kalender (mit Farben)
-    \item Telefonnummeranzeige ("Silbentrennung")
-    \item Format / Beispielwerte bei Variablen in Templates
-    \item Modal reset oder nicht?
-\end{itemize}
+\paragraph{Methode der Auswertung}
+Während de sINterview habe ich mir alle relevant erschienenden Aussagen von \ipName auf einem iPda notiert. Wurden im weiteren Gesprächverlaufe noche rgänzenden infomrationen zu den einzelenen Punkten deutlich habe ich diese in den notizen stichpunkartig an die entsrepchnden themen angefügt. Im nachgang des INTerviews mussten diese nOtizen nun siorgfältig analysiert und ausgewertetet ewrden,. Hierzu bin ich die einzelneen, notireten Themn durchgegangen und habe mir die entsprechenden views und KLicpfade in der SOftware nochmals nachgespielt. In ienem neuen Dkument auf dem ipad habe ich nun die problematischen stellen zusammengefasst und versucht die dahintersteckenden zusammenhänge klrzustellen und zu spezifizieren-. Dies entspricht dem zweiten Schirtt des iterativen Designzykles des human centered desgin nach ISO 9241 \cite{iso9241}
 
-\subsubsection{Erarbeitung von Verbesserungsvorschlägen}
+\paragraph{Spannende Erkenntnisse}
+Im folgenden werden nun drei Punkte eemplarisch vorgestellt, di während des INterviews aufgefallen sind. Anahnd ideser drei verschiedenen bestehenden Probleme wor der Designprozerss des hUman cetnered design beispielhaft beschrieben. Im ersten schritt geht es um das Erkennen der Optimierungswürdigen Punkte.
+
+\paragraph{Kompakte Ansicht Kalender (mit Farben)}
+In der alten Softwareversion die an der UNikasssel bisher zum einsatz  werden alle freien und vergeben zeitslots der Beatungstermine in einer tabellarischen MIOnatsansicht dargestellt. \todo{screenshot} Durch die Frablichen markierungen der eintzelnen tage können nUTzenden auf einen BLick erfassen, ob a dniesem tag Beratungsslots eingetragen wurden und ob unter den eingeteagenen Zeitslots noch freie Temrine vorhanden sind. Ein grün markierter Tag bedeutet, dass an diesem Tag noch mindestens ein freier Beratungsslot vrohanden ist. IEin rot markierter Tag bedeutet ,d ass es an diesem Tag Beratungstermine stattfinden, diese allerdings beretis alle an Ratsuchende Personen vergeben sind.
+IN der überarbetitenden Version der Stubegru Software, die in zusammenarbeit mit der HOchcshule bRemen entstanden sit, wurde diese kompakte tabellarische übersicht durhc einen größeren umfangereichen Ansicht  asugetauascht, die durch dii Javascript libaryy fullcalendar gerendert wird. Dises neue absicht ermöglicht auf den ersten BLick zu sehen zu welcher Uhrzeit die Termine stattfinden und einzelne termine aus der montasübersicht direkt anzuklicken. Allerings beitet diese ANsicht keine Möglicchkeit Tage nje nach freiern Plötzen rot oder grün darzustellen. Da dies ein wichtiges Featuere ffür die zweistufige Terminvbergaeb an der zebntralen Studienberatung der Universität Kassel ist jier eine Idde nötig um den Huilfskärften der Erstrinformation auf den resten bLBick anzuzeigen bo siean diesem Tag noch greir Terminslots vbbergeben können.
+
+\paragraph{Suche nach Teilnehmer}
+Manchmal kommt es vor, dasss Ratsuchende, die bereits ienen Ebratungstermin vereinbart haben , nochmals in Kontakt mit der Erstinformation tereten um weiter Fragen zum Termin stellen. Auch okmmt es vor, dasss das genau Datum oder die Uhrzeit vergessen wurden. IN diesem Fall sollen die HIlfskärfte der Erstinformation möglhicst schnell Audkunft über die angefragten details geben können. Hierfür immer alle vergeben n Beratungstermine manuell durchzusehen sti zeitlch ein groér Aufwand. ES braucht also ein faeature, sodass dei Mitarbeitenden der erstinformationen direkt nach Temrinen und weitern organisatorischen Daten dieser Termine suchen können. Wenn ratsuchende beieilweise am teleofn ihren Namen nennen werden sie macnhmal nicht einwaqndfrei verstanden. Ein suche nach Teilnehmernamen der Terine sollte also acuh funktioneren wenn der Name nicht exakt in der bgleichen Schriebweise eingenegen wird, wie er im Datensatz des BEratungstermins in der Datenbnak hinterlegt ist. \todo{paper zu autosuggestions...?}
+
+\paragraph{Telefonnummeranzeige ("Silbentrennung")}
+In der regel wird bei einer Terminvergabe die Telefonnummer der Artsuchendden Person mit erfasst. Der zusötnändige Studeinberatende kann den Termindatensatz bei Bedarf aufrufen und diese Telefnnummer einsehen. Die passiert in der regel wenn der BEratnden vor einem BEratungstermin ochmals telfonscih Details mit der ratsucehdnen Preson ablklren mlchte,. Der Beratenden wöhlt also die angeizeigt telefnonnummer in seinem Teelefon. Währedn des INterviews im Okntext zeigt sich, dass die Eingabe längerer Telefonnummern machmal fehler mit sich bringt, da ZIfern vertausch oder vergessen werden. Wenn hier eine darstellung langer teflonnumern mglich waäre, die ein dkretes und intuitives eintippen ind die telfontatstur erleichtern, wäre den Beratenden NUtzenden eine wertvolle Huilfe an die Hand gegeben. \todo{paper Telefonnummern}
+
+\subsubsection{Erarbeitung von Featurelisten}
+
+\paragraph{Einleitung Featurelisten}
+\paragraph{Methode der Erarbeitung}
+\paragraph{Suche nach Teilnehmer}
+\paragraph{Kompakte Ansicht Kalender (mit Farben)}
+\paragraph{Telefonnummeranzeige ("Silbentrennung")}
+\todo{Skizzen vom iPad einarbeiten}
 
 \subsection{Implementierung}
-\subsubsection{Methode ???}
 \subsubsection{Beschreibung des Prozess}
 \subsubsection{Technische Umsetzung}
 \subsubsection{Präsentation erster Ergebnisse}

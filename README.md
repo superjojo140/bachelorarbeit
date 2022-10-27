@@ -1,6 +1,10 @@
 # Fragen an Claude
 - Methodenteil *Interview im Kontext* und *Human Centered Design* übernehmen aus Seminararbeit...?
 - Anonymisierung kennzeichnen?
+- alte Kasseler Version, Bremer Version, neue Kasseler Version... Wie erklärt man das am besten
+
+# inhaltliche Todos
+- Literatur zu Telefonnummernanzeige finden
 
 # Organisatorische Todos
 - Zweitprüfer organisieren (Claude fragt Albert Zündorf)
