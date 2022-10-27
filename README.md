@@ -1,3 +1,7 @@
+# Fragen an Claude
+- Methodenteil *Interview im Kontext* und *Human Centered Design* übernehmen aus Seminararbeit...?
+- Anonymisierung kennzeichnen?
+
 # Organisatorische Todos
 - Zweitprüfer organisieren (Claude fragt Albert Zündorf)
 - Arbeit anmelden beim Studienservice
