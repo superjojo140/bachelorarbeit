@@ -3,6 +3,7 @@
 - Anonymisierung kennzeichnen?
 - alte Kasseler Version, Bremer Version, neue Kasseler Version... Wie erklärt man das am besten
 - Ansicht, View... wie nennt man das?
+- Anmeldung der Arbeit: Titel festlegen, Zweitprüfer
 
 # inhaltliche Todos
 - Literatur zu Telefonnummernanzeige finden
