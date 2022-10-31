@@ -619,7 +619,7 @@ beispielsweise am Telefon ihren Namen nennen, werden sie manchmal nicht
 einwandfrei verstanden. Ein Suche nach Teilnehmernamen der Termine sollte also
 auch funktionieren, wenn der Name nicht exakt in der gleichen Schreibweise
 eingegeben wird, wie er im Datensatz des Beratungstermins in der Datenbank
-hinterlegt ist. \todo{paper zu autosuggestions...?}
+hinterlegt ist.
 
 \paragraph{Telefonnummer Anzeige ("Silbentrennung")}
 In der Regel wird bei einer Terminvergabe die Telefonnummer der ratsuchenden
@@ -637,10 +637,30 @@ Telefontastatur erleichtern. \todo{paper Telefonnummern}
 \subsubsection{Gestaltungslösungen entwickeln}
 
 \paragraph{Einleitung Gestaltungslösungen}
-Nachdem nun die Problematiken und Herausforderungen des neuen Softwaremoduls verdeutlicht wurden, sollen im nächsten Schritt konkrete Ideen entwickelt werden, wie die erkannten Problematiken und Anforderungen in der Praxis umgesetzt werden können. Alan Dix betitelt diese Phase in "Human Computer Interaction" als "Requirements specification" und betont, dass der Fokus in diesem Schritt darauf liegt, die notwendigen Funktionalitäten und Features der Software grob zu beschreiben. Von besonderer Bedeutung in diesem Schritt des Designzyklus sind Zusammenhänge und Abhängigkeiten zwischen einzelnen Komponenten. Exakte Implementierungsdetails hingegen sind in dieser Phase noch nicht von großer Bedeutung und sollten erst im nächste Schritt genauer betrachtet werden.
+Nachdem nun die Problematiken und Herausforderungen des neuen Softwaremoduls
+verdeutlicht wurden, sollen im nächsten Schritt konkrete Ideen entwickelt
+werden, wie die erkannten Problematiken und Anforderungen in der Praxis
+umgesetzt werden können. Alan Dix betitelt diese Phase in "Human Computer
+Interaction" als "Requirements specification" und betont, dass der Fokus in
+diesem Schritt darauf liegt, die notwendigen Funktionalitäten und Features der
+Software grob zu beschreiben. Von besonderer Bedeutung in diesem Schritt des
+Designzyklus sind Zusammenhänge und Abhängigkeiten zwischen einzelnen
+Komponenten. Exakte Implementierungsdetails hingegen sind in dieser Phase noch
+nicht von großer Bedeutung und sollten erst im nächste Schritt genauer
+betrachtet werden.
 
 \paragraph{Methode der Erarbeitung}
-Das Ergebnis der Auswertung des Interviews im Kontext waren Nutzungsanforderungen an das neue Modul zur Terminvereinbarung. Um diese lose formulierten Nutzungsanforderungen später implementieren zu können, werden sie in diesem Schritt weiter konkretisiert. Es sollen erste Ideen entstehen, wie die Bedürfnisse der Nutzenden durch einzelne Komponenten der Software umgesetzt werden können. In diesem Fall wird mit Skizzen der einzelnen Views und Formulare gearbeitet. Für jedes Szenario, dass Nutzende beim späteren Verwenden der Software durchlaufen, wird eine digital gezeichnete Skizze erstellt. Hierbei werden bereits wichtige Elemente wie Buttons, Formularfelder und Hinweisboxen skizziert. Durch Markierungen und Notizen an der Skizze werden die Funktionen dieser Elemente definiert.
+Das Ergebnis der Auswertung des Interviews im Kontext waren
+Nutzungsanforderungen an das neue Modul zur Terminvereinbarung. Um diese lose
+formulierten Nutzungsanforderungen später implementieren zu können, werden sie
+in diesem Schritt weiter konkretisiert. Es sollen erste Ideen entstehen, wie
+die Bedürfnisse der Nutzenden durch einzelne Komponenten der Software umgesetzt
+werden können. In diesem Fall wird mit Skizzen der einzelnen Views und
+Formulare gearbeitet. Für jedes Szenario, dass Nutzende beim späteren Verwenden
+der Software durchlaufen, wird eine digital gezeichnete Skizze erstellt.
+Hierbei werden bereits wichtige Elemente wie Buttons, Formularfelder und
+Hinweisboxen skizziert. Durch Markierungen und Notizen an der Skizze werden die
+Funktionen dieser Elemente definiert.
 
 \paragraph{Kompakte Ansicht Kalender (mit Farben)}
 
@@ -658,6 +678,8 @@ Das Ergebnis der Auswertung des Interviews im Kontext waren Nutzungsanforderunge
     \includegraphics[width=0.9\textwidth]{doodle_search_view.jpeg}
 \end{figure}
 
+\cite{autoCompletion}
+
 \paragraph{Telefonnummeranzeige ("Silbentrennung")}
 
 \begin{figure}[h]
@@ -666,10 +688,13 @@ Das Ergebnis der Auswertung des Interviews im Kontext waren Nutzungsanforderunge
     \includegraphics[width=0.9\textwidth]{doodle_client_details.jpeg}
 \end{figure}
 
+\cite{humCompPhoneNumbers}
 
 \subsection{Implementierung}
 \subsubsection{Beschreibung des Prozess}
-Dieser Prozess entspricht dem dritten Schritt "Gestaltungslösungen entwickeln, die die Nutzungsanforderungen erfüllen" des Designzyklus im Human Centered Design nach iso9241 \cite{iso9241}.
+Dieser Prozess entspricht dem dritten Schritt "Gestaltungslösungen entwickeln,
+die die Nutzungsanforderungen erfüllen" des Designzyklus im Human Centered
+Design nach iso9241 \cite{iso9241}.
 
 \subsubsection{Technische Umsetzung}
 \subsubsection{Präsentation erster Ergebnisse}
