@@ -542,7 +542,7 @@ Auffälligkeiten er besonders betont hat.
 
 \paragraph{Einleitung Auswertung}
 Während bisher der detaillierte Ablauf des Interviews im Kontext geschildert
-wurde, sollen im Folgenden die wesentlichen Auffälligkeiten nochmals
+wurde, sollen im Folgenden die wesentlichen Kernaspekte nochmals
 zusammengefasst werden, die während des Interviews notiert wurden. Das
 Augenmerk liegt hierbei auf Beobachtungen, die Konsequenzen für den
 Designprozess des überarbeiteten Kalendermoduls zur Terminvergabe
@@ -553,7 +553,7 @@ Während dem Interview habe ich mir alle relevant erscheinenden Aussagen von
 \ipName auf einem iPad notiert. Wurden im weiteren Gesprächsverlauf noch
 ergänzenden Informationen zu den einzelnen Punkten deutlich, habe ich diese in
 den Notizen stichpunktartig an die entsprechenden Themen angefügt. Im Nachgang
-des InTerviews mussten diese Notizen nun sorgfältig analysiert und ausgewertet
+des Interviews mussten diese Notizen nun sorgfältig analysiert und ausgewertet
 werden. Hierzu bin ich die einzelnen Themen durchgegangen und habe die
 entsprechenden Ansichten und Klickpfade in der Software nochmals nachgespielt.
 In einem neuen Dokument habe ich nun die herausgearbeiteten Problematiken
@@ -634,17 +634,43 @@ wertvolle Hilfe an die Hand gegeben, wenn eine Darstellung langer
 Telefonnummern möglich wäre, die ein direktes und intuitives eintippen in die
 Telefontastatur erleichtern. \todo{paper Telefonnummern}
 
-\subsubsection{Erarbeitung von Featurelisten}
+\subsubsection{Gestaltungslösungen entwickeln}
 
-\paragraph{Einleitung Featurelisten}
+\paragraph{Einleitung Gestaltungslösungen}
+Nachdem nun die Problematiken und Herausforderungen des neuen Softwaremoduls verdeutlicht wurden, sollen im nächsten Schritt konkrete Ideen entwickelt werden, wie die erkannten Problematiken und Anforderungen in der Praxis umgesetzt werden können. Alan Dix betitelt diese Phase in "Human Computer Interaction" als "Requirements specification" und betont, dass der Fokus in diesem Schritt darauf liegt, die notwendigen Funktionalitäten und Features der Software grob zu beschreiben. Von besonderer Bedeutung in diesem Schritt des Designzyklus sind Zusammenhänge und Abhängigkeiten zwischen einzelnen Komponenten. Exakte Implementierungsdetails hingegen sind in dieser Phase noch nicht von großer Bedeutung und sollten erst im nächste Schritt genauer betrachtet werden.
+
 \paragraph{Methode der Erarbeitung}
-\paragraph{Suche nach Teilnehmer}
+Das Ergebnis der Auswertung des Interviews im Kontext waren Nutzungsanforderungen an das neue Modul zur Terminvereinbarung. Um diese lose formulierten Nutzungsanforderungen später implementieren zu können, werden sie in diesem Schritt weiter konkretisiert. Es sollen erste Ideen entstehen, wie die Bedürfnisse der Nutzenden durch einzelne Komponenten der Software umgesetzt werden können. In diesem Fall wird mit Skizzen der einzelnen Views und Formulare gearbeitet. Für jedes Szenario, dass Nutzende beim späteren Verwenden der Software durchlaufen, wird eine digital gezeichnete Skizze erstellt. Hierbei werden bereits wichtige Elemente wie Buttons, Formularfelder und Hinweisboxen skizziert. Durch Markierungen und Notizen an der Skizze werden die Funktionen dieser Elemente definiert.
+
 \paragraph{Kompakte Ansicht Kalender (mit Farben)}
+
+\begin{figure}[h]
+    \caption{Monatsübersicht der Beratungstermine mit farblichen Markierungen}
+    \centering
+    \includegraphics[width=0.9\textwidth]{doodle_month_view.jpeg}
+\end{figure}
+
+\paragraph{Suche nach Teilnehmern}
+
+\begin{figure}[h]
+    \caption{Suche nach Terminen eines Ratsuchenden mit Ergebnisliste}
+    \centering
+    \includegraphics[width=0.9\textwidth]{doodle_search_view.jpeg}
+\end{figure}
+
 \paragraph{Telefonnummeranzeige ("Silbentrennung")}
-\todo{Skizzen vom iPad einarbeiten}
+
+\begin{figure}[h]
+    \caption{Detailansicht eines Termins, der bereits an eine ratsuchende Person vergeben wurde}
+    \centering
+    \includegraphics[width=0.9\textwidth]{doodle_client_details.jpeg}
+\end{figure}
+
 
 \subsection{Implementierung}
 \subsubsection{Beschreibung des Prozess}
+Dieser Prozess entspricht dem dritten Schritt "Gestaltungslösungen entwickeln, die die Nutzungsanforderungen erfüllen" des Designzyklus im Human Centered Design nach iso9241 \cite{iso9241}.
+
 \subsubsection{Technische Umsetzung}
 \subsubsection{Präsentation erster Ergebnisse}
 

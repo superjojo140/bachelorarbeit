@@ -2,6 +2,7 @@
 - Methodenteil *Interview im Kontext* und *Human Centered Design* übernehmen aus Seminararbeit...?
 - Anonymisierung kennzeichnen?
 - alte Kasseler Version, Bremer Version, neue Kasseler Version... Wie erklärt man das am besten
+- Ansicht, View... wie nennt man das?
 
 # inhaltliche Todos
 - Literatur zu Telefonnummernanzeige finden
