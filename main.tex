@@ -650,11 +650,11 @@ nicht von großer Bedeutung und sollten erst im nächste Schritt genauer
 betrachtet werden.
 
 \paragraph{Methode der Erarbeitung}
-Das Ergebnis der Auswertung des Interviews im Kontext waren
-Nutzungsanforderungen an das neue Modul zur Terminvereinbarung. Um diese lose
-formulierten Nutzungsanforderungen später implementieren zu können, werden sie
-in diesem Schritt weiter konkretisiert. Es sollen erste Ideen entstehen, wie
-die Bedürfnisse der Nutzenden durch einzelne Komponenten der Software umgesetzt
+Durch die Auswertung des Interviews im Kontext sind Nutzungsanforderungen an
+das neue Modul zur Terminvereinbarung entstanden. Um diese lose formulierten
+Nutzungsanforderungen später implementieren zu können, werden sie in diesem
+Schritt weiter konkretisiert. Es sollen erste Ideen entstehen, wie die
+Bedürfnisse der Nutzenden durch einzelne Komponenten der Software umgesetzt
 werden können. In diesem Fall wird mit Skizzen der einzelnen Views und
 Formulare gearbeitet. Für jedes Szenario, dass Nutzende beim späteren Verwenden
 der Software durchlaufen, wird eine digital gezeichnete Skizze erstellt.
@@ -664,13 +664,59 @@ Funktionen dieser Elemente definiert.
 
 \paragraph{Kompakte Ansicht Kalender (mit Farben)}
 
+Die Übersicht aller Termine eines Monats ist die Ansicht, die Nutzende beim
+Aufruf der Software als erstes sehen. Den größten Raum nimmt die tabellarische
+Ansicht der einzelnen Tage des Monats ein. In den einzelnen Feldern werden
+Terminslots, nach Uhrzeit sortiert, aufgelistet. Neben der Uhrzeit des Termins
+wird der Titel eines jeden Termins angezeigt. Die einzelnen Termine werden
+farblich entweder grün oder rot eingefärbt, um auf den ersten Blick zu
+kennzeichnen, ob es sich um einen freien Terminslot (grün) oder um einen
+bereits vergebene Termin (rot) handelt. Wenn an einem Tag viele Zeitslots
+angelegt werden, wird das Feld für diesen Tag automatisch größer, sodass alle
+Termine Platz finden. Sollten an jedem Tag sehr viel Termine angelegt werden,
+könnte die tabellarische Monatsansicht so lang werden, dass sie unter Umständen
+nicht mehr vollständig auf den Bildschirm passt. Dies wäre unpraktisch, da dann
+nicht mehr alle Termine eines Monats auf einen Blick erfasst werden könnten. In
+der Phase der Evaluation sollte Diese Problematik berücksichtigt werden und
+eine Abschätzung getroffen werden, wie viele Termine im praktische Einsatz
+tatsächlich pro Tag angelegt werden.
+
 \begin{figure}[h]
     \caption{Monatsübersicht der Beratungstermine mit farblichen Markierungen}
     \centering
     \includegraphics[width=0.9\textwidth]{doodle_month_view.jpeg}
 \end{figure}
 
+Über der tabellarischen Ansicht der Tage befindet sich eine horizontale Leiste, die den aktuell angezeigten Monat betitelt und Kontrollelemente beinhaltet um in den vorherigen bzw nächsten Monat zu wechseln. Ein Button, um nach einigem hin- und herblättern wieder den aktuelle Monat anzuzeigen, könnte in einigen Anwendungsszenarien viele Klicks ersparen. Über der Leiste mit dem Monat befindet sich eine weitere Kontrollleiste. Diese enthält einen Button um einen neuen Zeitslot anzulegen. Dieser Button sollte nur für Nutzeraccounts von Beratenden sichtbar sein. Hilfskräfte der Erstinformation sollen Zeitslots nur vergeben, aber nicht selbst anlegen können. Daneben befindet sich eine Suchleiste um schnell nach Namen von ratsuchenden Personen suchen zu können. Ganz rechts gibt es schließlich noch einen Button um weitere Einstellungen vorzunehmen. Durch einen Klick auf diesen Button mit einem Zahnrad Symbol soll ein Dropdown-Menü aufklappen, in dem Filter für die Ansicht der Termine gesetzt werden können.
+
+\begin{figure}[h]
+    \caption{Filtereinstellungen der Kalenderansicht. Das Dropdown Menü öffnet sich durch Klick auf den Zahnrad Button}
+    \centering
+    \includegraphics[width=0.9\textwidth]{example-image-a}
+\end{figure}
+
+In diesem Menü kann über Toggles eingestellt werden, ob nur eigene Termine oder
+auch fremde Termine in der Monatsansicht dargestellt werden sollen. Mit
+\textit{eigenen Terminen} sind Termine gemeint, die den eigenen Benutzeraccount
+als zuständigen Beratenden hinterlegt haben. Außerdem kann ein Filter gesetzt
+werden um ausschließlich freie Termine anzuzeigen. Dies kann besonders für
+Hilfskräfte bei der Vergabe freier Termine relevant sein, da bereits vergeben
+Zeitslots in diesem Fall irrelevante Informationen sind, die von freien
+Zeitslots ablenken.
+
 \paragraph{Suche nach Teilnehmern}
+
+Die Suchfunktion ist ein weiterer Aspekt, dem in dieser Ausarbeitung besonderer
+Aufmerksamkeit gewidmet ist. Über das Freitextfeld in der oberen Kontrollleiste
+können Nutzende nach Namen von Ratsuchenden suchen, an die bereits Termine
+vergeben wurden. Tippt man einige Buchstaben in das Suchfeld ein, klappt eine
+Box mit Ergebnisvorschlägen unter der Suchleiste auf und schiebt den restlichen
+Inhalt (die tabellarische Monatsansicht) nach unten. In diese Box werden zur
+Suchanfrage passenden Termine dargestellt. Für jeden Termin wird in einer Zeile
+der Titel, der Name des Ratsuchenden, der Name des Beratenden sowie Datum und
+Uhrzeit aufgelistet. Neben jedem Datensatz erscheint ein Button mit einem
+Augensymbol. Durch einen Klick darauf wird der entsprechende Termin in der
+Detailansicht geöffnet.
 
 \begin{figure}[h]
     \caption{Suche nach Terminen eines Ratsuchenden mit Ergebnisliste}
@@ -678,9 +724,30 @@ Funktionen dieser Elemente definiert.
     \includegraphics[width=0.9\textwidth]{doodle_search_view.jpeg}
 \end{figure}
 
-\cite{autoCompletion}
+Wichtig für die Suchfunktion ist, dass passende Ergebnisse auch angezeigt
+werden, wenn die Eingabe in der Suchleiste eventuell Fehler enthält oder noch
+nicht vollständig ist. Durch solche automatischen Ergebnisvorschläge wird das
+Suchen für die Nutzenden erleichtert und Fehlerquellen minimiert. Dadurch, dass
+Nutzenden schon während dem Tippen der ersten Buchstaben ein aktives und
+konstruktives Feedback erhalten, fühlt sich die Nutzung der Software
+dynamischer und flüssiger an. \cite{autoCompletion} Wenn Mitarbeitende der
+Erstinformation ihre Kunden am Telefon beispielsweise nicht ganz genau
+verstehen, können sie mit diesen automatischen Ergebnisvorschlägen trotzdem den
+passenden Termin finden. Allerdings muss bei solchen automatisiertenVorschlägen
+darauf geachtet werden, dass nicht zu viele unnötige oder unpassende Vorschläge
+angezeigt werden. Diese würden Nutzende von den eigentlich gesuchten
+Ergebnissen ablenken und sich somit nachteilig auf die User-Experience
+auswirken. \cite{autosuggModeration}
 
 \paragraph{Telefonnummeranzeige ("Silbentrennung")}
+
+Durch einen Klick auf den Termin in der Monatsübersicht öffnet sich die
+Detailansicht des zugehörigen Termins und weitere Eigenschaften des Datensatzes
+werden angezeigt. Alternativ kann ein Termin auch über die Suchfunktion
+gefunden und dann über den Button mit dem Augensymbol in der Detailansicht
+aufgerufen werden. In dieser Ansicht können Nutzeraccounts mit der
+entsprechenden Berechtigung nochmals Details des Termins bearbeiten oder den
+Termin löschen.
 
 \begin{figure}[h]
     \caption{Detailansicht eines Termins, der bereits an eine ratsuchende Person vergeben wurde}
@@ -688,7 +755,36 @@ Funktionen dieser Elemente definiert.
     \includegraphics[width=0.9\textwidth]{doodle_client_details.jpeg}
 \end{figure}
 
-\cite{humCompPhoneNumbers}
+Wenn Beratende nach der Vereinbarung eines Termins nochmals auf telefonischem
+Weg Absprachen oder Vorgespräche mit den Ratsuchenden erledigen möchten, können
+sie die Telefonnummer der entsprechenden Person in der Detailansicht eines
+Beratungstermins einsehen. Die Beobachtung des Nutzungsverhaltens während des
+Interviews im Kontext hat gezeigt, dass es umständlich ist, lange
+Telefonnummern zu erkennen und korrekt in die Tastatur des Telefons einzugeben.
+Im Gespräch mit \ipName kam der Wunsch auf, Telefonnummern an dieser Stelle so
+zu formatieren, dass sie intuitiver erfasst und abgetippt werden können. Der
+Standard für das Formatieren von Telefonnummern in Deutschland wird durch DIN
+5008 geregelt. Diese Norm beschäftigt sich mit Formatierungsstandards für
+Briefe und Anschreiben. Hier wird das Trennen der Vorwahl vom Rest der Nummer
+durch ein Leerzeichen vorgeschrieben. Weitere Formatierung, wie beispielsweise
+das aufteilen der Ziffern in kleinere Blöcke wird hier nicht thematisiert.
+\cite{din5008}
+
+\begin{figure}[h]
+    caption{So werden nationale Festnetz- und Mobilfunknummern nach DIN 5008 richtig geschrieben. Quelle: \cite{phoneFormatBlog}}
+    \centering
+    \includegraphics[width=0.9\textwidth]{grafik-telefonnummer-national.png}
+\end{figure}
+
+Wissenschaftliche Untersuchungen zeigen, dass das Eingeben und Ablesen von
+Telefonnummern in Interaktion mit den entsprechenden Maschinen ein relevantes
+Details ist. Dieser Prozess sollte durch die technischen Systeme möglichst
+intuitiv und nutzerfreundlich gestaltet werden. \cite{humCompPhoneNumbers}.
+Eine Unterteilung der Ziffern in kleinere Blöcke, von beispielsweise vier
+Ziffern pro Block, erhört die Lesbarkeit deutlich und ermöglicht es dem
+menschlichen Gehirn einen Ziffernblock in einem Blick direkt zu erfassen und
+auf die Telefontastatur zu übertragen. \cite{phoneFormatBlog}
+\cite{numberRecognition} \cite{numberRepres}
 
 \subsection{Implementierung}
 \subsubsection{Beschreibung des Prozess}
