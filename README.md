@@ -1,9 +1,18 @@
 # Fragen an Claude
 - Methodenteil *Interview im Kontext* und *Human Centered Design* übernehmen aus Seminararbeit...?
+    - Nicht einfach übernehmen, andere Quellen (paper statt große bücher). wissenschaftlich unterfüttern. Seminararbeit nicht unbedingt angeben als Quelle
 - Anonymisierung kennzeichnen?
 - alte Kasseler Version, Bremer Version, neue Kasseler Version... Wie erklärt man das am besten
-- Ansicht, View... wie nennt man das?
+ - Abschnitt Historie der Sfotware ist gut.
+- Ansicht, View... wie nennt man das? (Benutzeransicht, View) kann definiert werden in Arbeit
+    Glossar im Anhang oder direkt da wo das Wot zum ersten mal benutzt wird.
 - Anmeldung der Arbeit: Titel festlegen, Zweitprüfer
+- Userflow-skizzen interessant für Arbeit?
+Ja interessant, **Sequenzmodell** von IIK
+
+18.11. 11Uhr (iteg, pfannkuch straße, Hautengant lniks treppe hoch, ende vom Gang)
+
+- Anmeldung fertig machen und in Claudes Fach im Postraum werfen.
 
 # inhaltliche Todos
 - Literatur zu Telefonnummernanzeige finden
