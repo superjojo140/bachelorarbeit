@@ -14,6 +14,10 @@ Ja interessant, **Sequenzmodell** von IIK
 
 - Anmeldung fertig machen und in Claudes Fach im Postraum werfen.
 
+
+## neue Fragen
+Schaubild Interview im Kontext cool?
+
 # inhaltliche Todos
 - Literatur zu Telefonnummernanzeige finden
 
