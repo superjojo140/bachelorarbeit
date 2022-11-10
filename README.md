@@ -18,6 +18,9 @@ Ja interessant, **Sequenzmodell** von IIK
 ## neue Fragen
 Schaubild Interview im Kontext cool?
 Offizielle Erklärungen am Anfang der Arbeit...?
+Was muss aufs Deckblatt?
+Zusammenfassung vor TOC oder als Teil der Einleitung?
+Fettschreiben von Schlüsselwörtern (z.B. HCD, IIK)
 
 # inhaltliche Todos
 - Literatur zu Telefonnummernanzeige finden
