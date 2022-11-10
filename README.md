@@ -17,6 +17,7 @@ Ja interessant, **Sequenzmodell** von IIK
 
 ## neue Fragen
 Schaubild Interview im Kontext cool?
+Offizielle Erklärungen am Anfang der Arbeit...?
 
 # inhaltliche Todos
 - Literatur zu Telefonnummernanzeige finden
