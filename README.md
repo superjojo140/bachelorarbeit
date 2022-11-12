@@ -1,34 +1,26 @@
 # Fragen an Claude
-- Methodenteil *Interview im Kontext* und *Human Centered Design* übernehmen aus Seminararbeit...?
-    - Nicht einfach übernehmen, andere Quellen (paper statt große bücher). wissenschaftlich unterfüttern. Seminararbeit nicht unbedingt angeben als Quelle
 - Anonymisierung kennzeichnen?
 - alte Kasseler Version, Bremer Version, neue Kasseler Version... Wie erklärt man das am besten
- - Abschnitt Historie der Sfotware ist gut.
-- Ansicht, View... wie nennt man das? (Benutzeransicht, View) kann definiert werden in Arbeit
-    Glossar im Anhang oder direkt da wo das Wot zum ersten mal benutzt wird.
-- Anmeldung der Arbeit: Titel festlegen, Zweitprüfer
-- Userflow-skizzen interessant für Arbeit?
-Ja interessant, **Sequenzmodell** von IIK
+ -> Abschnitt Historie der Sfotware ist gut.
+- Ansicht, View... wie nennt man das?
+    -> (Benutzeransicht, View) kann definiert werden in Arbeit
+    -> Glossar im Anhang oder direkt da wo das Wot zum ersten mal benutzt wird.
+- Anmeldung der Arbeit (angekommen, alles korrekt?)
+-> Methode zur Auswertung des IIK: **Sequenzmodell**
 
-18.11. 11Uhr (iteg, pfannkuch straße, Hautengant lniks treppe hoch, ende vom Gang)
+- Schaubild Interview im Kontext cool?
+- Offizielle Erklärungen am Anfang der Arbeit...?
+- Was muss aufs Deckblatt?
+- Zusammenfassung vor TOC oder als Teil der Einleitung?
+- Fettschreiben von Schlüsselwörtern (z.B. HCD, IIK)
+    - Zitate, Namen von Büchern Namen von Autoren
+- Erste screenshots eher in Teil *Ergebnisse der Implementierung* oder in Teil *Testen und Userfeedback*?
+- Wie werden verwendete Technologien (jquery, fullcalendar, PHP, JS) referenziert und hervorgehoben (Fett?)
+- Interviewter und Interviewender (gibt's da schönere Begriffe?)
+- Doppelung Motivation / HCD Einführung
 
-- Anmeldung fertig machen und in Claudes Fach im Postraum werfen.
-
-
-## neue Fragen
-Schaubild Interview im Kontext cool?
-Offizielle Erklärungen am Anfang der Arbeit...?
-Was muss aufs Deckblatt?
-Zusammenfassung vor TOC oder als Teil der Einleitung?
-Fettschreiben von Schlüsselwörtern (z.B. HCD, IIK)
-
-# inhaltliche Todos
-- Literatur zu Telefonnummernanzeige finden
-
-# Organisatorische Todos
-- Zweitprüfer organisieren (Claude fragt Albert Zündorf)
-- Arbeit anmelden beim Studienservice
-- nach Abgabe der Arbeit -> Kolloqium (Arbeit vorstellen, Live Demo, Code zeigen)
+## Kolloquium
+(Arbeit vorstellen, Live Demo, Code zeigen)
 
 
 ## Inhaltliche Tipps

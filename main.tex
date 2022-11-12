@@ -125,9 +125,8 @@ Terminvergabe-Software anzuwenden. Die bestehenden wissenschaftlichen
 Erkenntnisse im Bereich der menschzentrierten Gestaltung sollen somit
 erarbeitet, vertieft und auf Praxistauglichkeit geprüft werden. Ein weiterer
 wichtiger Bestandteil ist schließlich die theoretischen und methodischen
-Grundlagen im Hinblick auf die gewonnenen praktischen Erfahrungen zu hinterfragen und
-deren Praxistauglichkeit zu diskutieren.
-
+Grundlagen im Hinblick auf die gewonnenen praktischen Erfahrungen zu
+hinterfragen und deren Praxistauglichkeit zu diskutieren.
 
 \subsection{Aufbau}
 
@@ -148,20 +147,19 @@ Studienberatung durchgeführt, dokumentiert und ausgewertet. Die aus den
 Wünschen und Bedürfnissen der Nutzenden entstehenden Anforderungen sollen
 ebenfalls zusammengefasst und dargestellt werden. Als nächster Schritt soll die
 praktische Umsetzung der technischen Anforderungen an die Software skizziert
-werden. Implementierungsdetails, Screenshots und Codeschnipsel
-sollen in diesem Teil die Dokumentation der Umsetzung veranschaulichen. Als
-letzter Aspekt dieses Kapitels soll das Feedback der Nutzenden bei
-Vorstellungen von Prototypen und ersten Ergebnissen festgehalten und
-aufbereitet werden. Im letzten Kapitel wird schließlich das Ergebnis des
-durchgeführten Entwicklungsprozesses dargestellt. Die eingesetzten Methoden
-werden nochmals aufgegriffen und kritisch hinterfragt: An welchen Stellen
-können die theoretischen Grundlagen des Human Centered Design den
-Entwicklungsprozess in der Praxis tatsächlich sinnvoll unterstützen? Gab es
-eventuell auch Methoden, die in der praktischen Umsetzung problematisch waren
-oder noch optimiert werden könnten. Der letzte Teil dieser Arbeit gewährt
-schlussendlich einen Ausblick auf weitere Einsatzmöglichkeiten des Human
-Centered Design und die weitere Entwicklung der Software in der Studienberatung
-der Universität Kassel.
+werden. Implementierungsdetails, Screenshots und Codeschnipsel sollen in diesem
+Teil die Dokumentation der Umsetzung veranschaulichen. Als letzter Aspekt
+dieses Kapitels soll das Feedback der Nutzenden bei Vorstellungen von
+Prototypen und ersten Ergebnissen festgehalten und aufbereitet werden. Im
+letzten Kapitel wird schließlich das Ergebnis des durchgeführten
+Entwicklungsprozesses dargestellt. Die eingesetzten Methoden werden nochmals
+aufgegriffen und kritisch hinterfragt: An welchen Stellen können die
+theoretischen Grundlagen des Human Centered Design den Entwicklungsprozess in
+der Praxis tatsächlich sinnvoll unterstützen? Gab es eventuell auch Methoden,
+die in der praktischen Umsetzung problematisch waren oder noch optimiert werden
+könnten. Der letzte Teil dieser Arbeit gewährt schlussendlich einen Ausblick
+auf weitere Einsatzmöglichkeiten des Human Centered Design und die weitere
+Entwicklung der Software in der Studienberatung der Universität Kassel.
 
 % Hier wird die Problemstellung im Kontext
 % einer Anwendung dargestellt und der Inhalt der Arbeit kurz vorweggenommen. Welches Problem wurde
@@ -173,10 +171,10 @@ der Universität Kassel.
 \section{Methoden}
 
 \subsection{Human Centered Design}
-Human-Centered Design ist eine Methode die den Entwicklungsprozess von
-interaktiven Systemen und Software beschrieben. Die Kernthese der Methode ist,
-dass die Nutzenden der Systeme im Mittelpunkt aller Entwicklungs- und
-Designprozesse stehen.
+Human Centered Design ist eine Methode die den Entwicklungsprozess von
+interaktiven Systemen und Software beschreibt. Die Kernthese des Human Centered
+Design ist, dass die Nutzenden der Systeme im Mittelpunkt aller Entwicklungs-
+und Designprozesse stehen.
 
 Die Entwicklung von Software war in den Anfängen geprägt von den technisch sehr
 eingeschränkte Möglichkeiten des Computers. Software wurde also größtenteils so
@@ -184,122 +182,124 @@ entwickelt, dass sie möglichst problemlos und effizient auf dem entsprechenden
 Computer ausgeführt werden kann. Alle Entwicklungsprozesse wurden also aus
 Perspektive der ausführenden Maschine gedacht.
 
-DEr Ansatz des HUman Centered Design setzt dieser maschinen zentrierten
+Der Ansatz des Human Centered Design setzt dieser maschinenzentrierten
 Vorgehensweise eine klare Alternative entgegen. Martin Ludwig Hofmann
-beschreibt den Grundgedanken in \glqq Human Centered Design\grqq so: \glqq [Es
-    geht] nicht darum, mit Geräten zu denken, sondern mit Menschen und ihren
-Weltanschauungen\grqq{}. \cite{hcd}
+beschreibt den Grundgedanken in \glqq{} Human Centered Design\grqq{} so:
+\glqq{} [Es geht] nicht darum, mit Geräten zu denken, sondern mit Menschen und
+ihren Weltanschauungen\grqq{}. \cite{hcd}
 
-Dieser Ansatz gewinnt in der heutigen Zeit immer größere Bedeutung. Wie Alan
-Dix in \glqq Human Computer Interaction\grqq erklärt, hat sich die Art und
-Weise, wie Menschen und Computer interagieren, in den letzten Jahrzehnten stark
-verändert. Während Computer früher meist nur mathematische Berechnungen
-durchführen, sind Softwaresysteme heute hochgradig interaktiv und sollen von
-allen Teilen der Gesellschaft ungehindert genutzt werden können. \cite{hci}
+Wie im Kapitel Motivation ausführlich erläutert gewinnt dieser Ansatz in der
+heutigen Zeit immer größere Bedeutung. Wie Alan Dix in \glqq{} Human Computer
+Interaction\grqq{} erklärt, hat sich die Art und Weise, wie Menschen und
+Computer interagieren, in den letzten Jahrzehnten stark verändert. Während
+Computer früher meist nur mathematische Berechnungen durchführten, sind
+Softwaresysteme heute hochgradig interaktiv und sollen von allen Teilen der
+Gesellschaft ungehindert genutzt werden können. \cite{hci}
 
-Um die Methodik des Human CEntered design weiter zu spezifizieren ist Zunächst
+Um die Methodik des Human Centered Design weiter zu spezifizieren ist zunächst
 festzuhalten, dass der Designprozess von Software als solches eine wichtige
-Stellung einnehmen. Es reicht nicht aus, dass eine Software korrekt
-funktioniert, also alle Berechnungen und Prozesse fehlerfrei ausführen. Im
-Human Centered Design liegt der Fokus auf der INteraktion zwischen dem
-Nutzenden und der Maschine. Man betrachtet, wie die Nutzenden mit dem Computer
-interagieren. Wie stoßen sie Prozesse an? Die Nutzenden sollen mit den Systeme
-möglichst intuitiv interagieren können. Die Benutzeroberfläche der Software,
-soll selbsterklärend sein, welche Funktionen auf welchem Weg erreicht werden
-können
+Stellung einnimmt. Es reicht nicht aus, dass eine Software korrekt
+funktioniert, sich also alle Berechnungen und Prozesse fehlerfrei ausführen
+lassen. Im Human Centered Design liegt der Fokus auf der Interaktion zwischen
+dem Nutzenden und der Maschine. Man betrachtet, wie die Nutzenden mit dem
+Computer interagieren. Wie stoßen sie Prozesse an? Welche Reaktionen erwarten
+sie von dem System? Die Nutzenden sollen mit den Systemen möglichst intuitiv
+interagieren können. Die Benutzeroberfläche der Software soll selbst erklären,
+welche Funktionen auf welchem Weg erreicht werden können.
 
-Ein essentieller Bestandteil und die INteraktion zwischen den NUtzenden und der
+Ein essentieller Bestandteil um die Interaktion zwischen den Nutzenden und der
 Systeme optimieren zu können, ist zu verstehen, wie die Systeme genutzt werden.
-Relevante Fragestellung sind hier: IN welchem KOntext werden die Systeme
-eingesetzt. Welche Menschen arbeiten mit den Systemen? Welche INformationen
-müssen die NUtzenden schnell erfassen können? Um diese Fragen sinnvoll
-beantworten zu können müssen die NUtzenden während der Design- und
-Entwicklungsphase des Prozesses kontinuierlich einbezogen werden. Ihre gesamte
-Situation, sowie ihre Bedürfnisse muss im Designprozess untersucht und direkt
-in das Produktdesign integriert werden.\cite{hci} Während des gesamten
+Relevante Fragestellung sind hier: In welchem Kontext werden die Systeme
+eingesetzt? Welche Menschen arbeiten mit den Systemen? Welche Informationen
+müssen die Nutzenden schnell erfassen können? Um diese Fragen sinnvoll
+beantworten zu können müssen die Nutzenden während der Designphase
+kontinuierlich in den Entwicklungsprozess einbezogen werden. Ihre gesamte
+Situation, sowie ihre Bedürfnisse müssen im Designprozess untersucht und direkt
+in das Produktdesign integriert werden.\cite{hci}
 
-Wie M. Kurosu erwähnt ist ein weitere wichtiger Aspekt des HUman Centered
-Design das Durchlaufen mehrere Iterationen.\cite{kurosuHCI} Ein Produkt ist
-nach einem ersten Entwicklungszyklus selten schon perfekt. Oftmals ist es
-wichtig den Nutzernden erste ergebnisse zu oräsentiwere oder ihnen pRototypen
-zu zeigen. Das Feedback das nutzenden hierbei geben muss dokumentiert und für
-weitere Entwicklung iterationen aufgearbeitet werden. Iwe Kurosu weiter erwähnt
-seht diese r zyklische Ablauf deM Human Centered Design auch in der
-entsprechende ISO Norm im Fokus. \cite{kurosuHCI}
+Wie M. Kurosu erwähnt, ist ein weitere wichtiger Aspekt des Human Centered
+Design das Durchlaufen mehrere Iterationen. Ein Produkt ist nach einem ersten
+Entwicklungszyklus selten schon perfekt. Oftmals ist es wichtig den Nutzenden
+erste Ergebnisse zu präsentieren oder ihnen Prototypen zu zeigen. Das Feedback
+das Nutzende hierbei geben muss dokumentiert und für weitere Iterationen der
+Entwicklung aufgearbeitet werden. Wie Kurosu weiter erwähnt, steht der
+zyklische Ablauf des Human Centered Design auch in der entsprechende ISO Norm
+im Fokus.\cite{kurosuHCI}
+
 \begin{figure}[h]
     \caption{Iteratives Vorgehen im Human Centered Design nach ISO 9241 \cite{iso9241}}
     \centering
     \includegraphics[width=10cm]{HCD.png}
 \end{figure}
 
-Das Schaubild der Iso Norm verdeutlicht den ABlauf eines Designprozesses in
-mehrere Phasen. Nachdem geplant ist, was für ein Projekt umgesetzt werden soll
-beginnt der zyklische Kreislauf des Entwicklungsprozesses. Im ersten schritt
-liegt der fokus auf dem ANalysieren der situation in dem das zu entwickelnde
-System später eingesetzt werden soll. NUr wer den Kontext eines interaktiven
-Systems kennt kann die schnittstelle zwischen Maschine und Mensch adäquat
-gestalten. Im zweiten Schritt geht ses darm aus den geplanten Erwartungen an
-das ystem und der Abalyse des Nutzungskontexte konkrete ANforderungen zu
-spezifizieren. HIerbei geht es nocht nicht darum, wie diese aroferungen
-technisch umgesetzt werden könnten sonder, darum, welche Anforderungen einf
-fertiges System überhaupt erfüllen soll. IM dritten Schritt geht es nun darum
-diese Anforderunge tatsächlich umzusetzen und technische LÖsungen zu
+Das Schaubild der Iso Norm verdeutlicht den Ablauf eines Designprozesses in
+mehreren Phasen. Nachdem geplant ist, was für ein Projekt umgesetzt werden soll
+beginnt der zyklische Kreislauf des Entwicklungsprozesses. Im ersten Schritt
+liegt der Fokus auf dem Analysieren der Situation, in der das zu entwickelnde
+System später eingesetzt werden soll. Nur wer den Kontext eines interaktiven
+Systems kennt, kann die Schnittstelle zwischen Maschine und Mensch adäquat
+gestalten. Im zweiten Schritt geht es darum aus den geplanten Erwartungen an
+das System und der Analyse des Nutzungskontextes konkrete Anforderungen zu
+formulieren. Hierbei geht es noch nicht nicht darum, wie diese Anforderungen
+technisch umgesetzt werden könnten, sondern darum, welche Anforderungen das
+fertige System überhaupt erfüllen soll. Im dritten Schritt geht es nun darum
+diese Anforderungen tatsächlich umzusetzen und technische Lösungen zu
 implementieren. Gibt es erste Ergebnisse wird der vierte Schritt relevant: Die
 Umgesetzte Lösungen müssen im tatsächlichen Nutzungskontext evaluiert werden.
-Das setzt weder eine intensivem Austausch mit den Nutzenden des Systems voraus.
-MIt dem so gewonnen Feedback kann der Prozess wieder von vorne begonnen.
-Fehlende Features können auch gearbeitete werden, MIssverständliche
-Schnittstellen klarer gestaltet werden und Probleme im praktischen Einsatz
-minimiert werden. \cite{iso9241}
+Das setzt wieder eine intensiven Austausch mit den Nutzenden des Systems
+voraus. Mit dem so gewonnen Feedback kann der Prozess wieder von vorne
+beginnen. Fehlende Features können nachgebessert, missverständliche
+Schnittstellen klarer gestaltet und Probleme im praktischen Einsatz minimiert
+werden.\cite{iso9241}
 
-G.A. Boy unterricht in \glqq{} The Handbook of Human-Machine Interaction\grqq{}
-wie wichtig es ist dem späteren Nutzenden der System eerste Prototypen und
+G.A. Boy berichtet in \glqq{}The Handbook of Human-Machine Interaction\grqq{}
+wie wichtig es ist, dem späteren Nutzenden der System erste Prototypen und
 Ideen zu präsentieren. Oftmals wissen die Nutzenden gar nicht welche
 technischen Möglichkeiten es gibt oder welche alternativen Bedienkonzepte in
 ihrem Kontext besonders gut funktionieren könnten. Neben dem Zuhören und
-eingehen auf die NUtzenden und IHren KOntext ist also auch das einbringen und
-ur diskussion stellen neuer, für die nUtzenden unbekannter, Lösungsansätze von
+Eingehen auf die Nutzenden und ihr Umfeld ist also auch das Einbringen und zur
+Diskussion stellen neuer, für die Nutzenden unbekannter Lösungsansätze von
 hoher Bedeutung.\cite{HMI-HCD}
 
 \subsection{Interview im Kontext}
 
-Ein wesentlicher Bestandteil im Entwicklungsprozess nach den Methoden den Human
-centered design ist der intensive Austausch mit den Nutzenden der Systeme. Hier
-für ist es wichtig, dass Softwareentwickler und Designer von
+Ein wesentlicher Bestandteil im Entwicklungsprozess nach den Methoden des Human
+Centered Design ist der intensive Austausch mit den Nutzenden der Systeme.
+Hierfür ist es wichtig, dass Softwareentwickler und Designer von
 Benutzerschnittstellen in den direkten Austausch mit den Nutzenden der Systeme
-gehen. Um diesen Prozess strukturiert und zielführend zu durchlaufen kann
-hierfür die Methode des Text Interviews im Kontext benutzt werden.
+gehen. Um diesen Prozess strukturiert und zielführend zu durchlaufen, kann
+hierfür die Methode des \textbf{Interviews im Kontext} benutzt werden.
 
-Beim Interview im kontext geht es darum die Nutzenden der Systeem in genau dem
+Beim Interview im Kontext geht es darum, die Nutzenden der Systeme in dem
 Umfeld zu beobachten, in dem die Software tatsächlich auch im praktischen
-Alltag eingesetzt wird. Der Fokus liegt also auf dem Kontext der Interaktion
-mit technischen Systemen. In herkömmliche INterviews begegnen sich INterviewer
-und Interviewter oftmals in einer neutralen Umgebung, wie beispielsweise einem
-Konferenz raum und sprechen über die Prozesse für die sich der INterviewende
-interessiert. Beim Interview im Kontext geht es nicht darum über einen Prozess
-zu sprechen, sondern den Prozess als INterviewender direkt
-mitzuerleben.\cite{contextualDesign} In \textit{Manual on Human-Computer
+Alltag eingesetzt wird. Der Fokus liegt also auf dem Umfeld der Interaktion mit
+technischen Systemen. In herkömmliche Interviews begegnen sich Interviewer und
+Interviewter oftmals in einer neutralen Umgebung, wie beispielsweise einem
+Konferenzraum und sprechen über die Prozesse für die sich der Interviewende
+interessiert. Beim Interview im Kontext geht es nicht darum \textbf{über} einen
+Prozess zu sprechen, sondern den Prozess als Interviewender \textbf{direkt
+    mitzuerleben}.\cite{contextualDesign} In \textit{Manual on Human-Computer
     Interaction} legen die Autoren den Fokus auf die genaue Beobachtung der
-NUTzenden in der Interaktion mit den Systemen. MIt dieser MEthode könne man
-noch viel mehr praxisnahe details erfassen als wenn man mit den Nutzenden nur
-über das System spricht. Spricht man mit Nutzenden darüber wie sie eine
-software bedienen, gibt es möglicherweise viele Dinge, die sie nicht
-erwähnen,weil sie vergessen wurden, nicht relevant erscheinen oder Nutzende
-nicht wissen, wie sie genau darüber sprechen sollen. \cite{hciHandbook}
+NuTzenden in der Interaktion mit den Systemen. Mit dieser Methode könne man
+noch viel mehr praxisnahe Details erfassen, als wenn man mit den Nutzenden nur
+über das System spricht. Spricht man mit Nutzenden beispielsweise darüber wie
+sie eine Software bedienen, gibt es möglicherweise viele Dinge, die sie nicht
+erwähnen, weil sie vergessen wurden, nicht relevant erscheinen oder Nutzende
+nicht wissen, wie sie genau darüber sprechen sollen.\cite{hciHandbook}
 
-Dies kann in der PRaxis bedeuten, dass man sich mit den NUtzenden der Systeme
+Dies kann in der Praxis bedeuten, dass man sich mit den Nutzenden der Systeme
 in ihren Büroräumen trifft und für mehrere Stunden mit dabei ist, wenn sie
-ihrer Arbeit nachgehen und mit den Systemen interagieren. Die Rolle des
-Interviewenden ist dabei aus einer beobachtenden Perspektive zu verstehen. Der
-Interviewte sollen die Richtung bestimmen, in die sich das Interview
+ihrer Arbeit nachgehen und mit den technischen Systemen interagieren. Die Rolle
+des Interviewenden ist dabei aus einer beobachtenden Perspektive zu verstehen.
+Der Interviewte soll die Richtung bestimmen, in die sich das Interview
 entwickelt. Der Interviewende hört hauptsächlich zu und beobachtet wie die
 Personen in ihrer Umgebung, ihrem Kontext agieren.\cite{hciHandbook} Dazu kann
-der INterviewende Notizen machen um eine spätere Auswertung des INterviews zu
-erleichtern. An passenden stellen kann der INTerviewende gezielte Nachfragen
+der Interviewende Notizen machen um eine spätere Auswertung des Interviews zu
+erleichtern. An passenden Stellen kann der Interviewende gezielte Nachfragen
 stellen um beispielsweise Hürden bei der Interaktion mit den Systemen zu
-provozieren . EIn INtention für Nachfragen kann aber auch sein, die Gedanken
-und Emotionen des Nutzenden zu erfragen, die er während der INteraktion mit dem
-System empfindet.
+provozieren. Eine weitere Intention für Nachfragen kann aber auch sein, die
+Gedanken und Emotionen des Nutzenden zu erfragen, welche er beim Benutzen des
+Systems empfindet.
 
 \begin{figure}[h]
     \caption{Während eines Interviews im Kontext können viele Aspekte beobachtet werden, die über das benutzte System selbst hinausgehen}
@@ -307,20 +307,16 @@ System empfindet.
     \includegraphics[width=10cm]{Interview im Kontext Schaubild.png}
 \end{figure}
 
-Das ergebnis eines INTerviews im KOntext ist also eine ausführliche BEobachtung
-der INTeraktion von Nutzenden mit den ensptefhcenden Systemen im alltäglichen
+Das Ergebnis eines Interviews im Kontext ist also eine ausführliche Beobachtung
+der Interaktion von Nutzenden mit den entsprechenden Systemen im alltäglichen
 Kontext. Diese Beobachtungen können schriftlich festgehalten werden oder auch
 durch Video- und Tonaufzeichnungen ergänzt werden. Im Nachgang des Interviews
-müssen die Beobachtungen ausgewertet und analysiert werden, Ziel Ist es dabei
-aus den Beobachtungen des INterviews konkrete NUtzungsanforderung an das zu
-entwickelnde System zu formulieren.
-
+müssen die Beobachtungen ausgewertet und analysiert werden. Ziel ist es dabei
+aus den Beobachtungen des Interviews konkrete Nutzungsanforderung an das zu
+entwickelnde System zu formulieren. Hier können beispielsweise Featurelisten,
+Diagramme oder User-Scenarios zum Einsatz kommen.\cite{HMI-HCD}
 
 \section{Durchführung}
-
-Struktur abarbeiten und verschiedene inhaltliche Aspekte immer wieder
-aufgreifen. Oder inhaltliche Aspekte abarbeiten und Struktur
-aufgreifen...?\todo{Struktur?}
 
 \subsection{Situation in der Abteilung}
 
@@ -490,7 +486,7 @@ Diese Bachelorarbeit soll insbesondere den Designprozess strukturiert begleiten
 und wissenschaftliche Methoden aufzeigen, um Softwareentwicklern und Nutzenden
 eine möglichst gute Zusammenarbeit zu ermöglichen.
 
-\subsection{Erste Planungen - Interview im Kontext}
+\subsection{Nutzungskontext verstehen - Interview im Kontext}
 
 \paragraph{Warum Interview im Kontext?}
 Das Modul zur Terminvereinbarung der Software Stubegru soll auf den
@@ -760,7 +756,7 @@ dass die Eingabe längerer Telefonnummern manchmal Fehler mit sich bringt, da
 Ziffern vertauscht oder vergessen werden. Den Beratenden wäre hier eine
 wertvolle Hilfe an die Hand gegeben, wenn eine Darstellung langer
 Telefonnummern möglich wäre, die ein direktes und intuitives eintippen in die
-Telefontastatur erleichtern. \todo{paper Telefonnummern}
+Telefontastatur erleichtern.
 
 \subsubsection{Gestaltungslösungen entwickeln}
 
@@ -915,23 +911,106 @@ auf die Telefontastatur zu übertragen. \cite{phoneFormatBlog}
 \cite{numberRecognition} \cite{numberRepres}
 
 \subsection{Implementierung}
-\subsubsection{Beschreibung des Prozess}
-Dieser Prozess entspricht dem dritten Schritt "Gestaltungslösungen entwickeln,
-die die Nutzungsanforderungen erfüllen" des Designzyklus im Human Centered
-Design nach iso9241 \cite{iso9241}.
+\subsubsection{Beschreibung des Prozesses}
+
+\paragraph{Überleitung}
+Im vorherigen Schritt wurden konkrete Nutzungsanforderungen herausgearbeitet
+und Ideen für passende Gestaltungslösungen formuliert. Nun soll das folgende
+Unterkapitel sich mit der praktischen Umsetzung der Anforderungen beschäftigen.
+Dieser Prozess entspricht dem dritten Schritt \glqq{}Gestaltungslösungen
+entwickeln, die die Nutzungsanforderungen erfüllen\grqq{} des Designzyklus im
+Human Centered Design nach ISO 9241\cite{iso9241}.
+
+\paragraph{Kundenwünsche und Technische Machbarkeit}
+Auch wenn im Human Centered Design immer die Nutzenden und nicht das technische
+System im Fokus stehen sollte,kommt man nicht drumherum die technischen Details
+genauer zu betrachten. Dadurch ist es ganz besonders wichtig in dieser Phase
+die Bedürfnisse und Erwartungen der Nutzenden nicht aus den Augen zu verlieren.
+Eine klare und intuitive Schnittstelle für die Nutzenden sollte in diesem
+Prozess eine höhere Priorität einnehmen als eine Lösung, die technisch am
+einfachsten umzusetzen ist. K. Holtzblatt verwendet hier den Begriff
+\textbf{Kohärenz} und meint damit, das sich ein System für den Nutzer so
+zusammenhängend und natürlich wie möglich anfühlen soll: \glqq{}The challenge
+is to keep the system work model coherent, so that it supports the users and
+fits with their expectations while extending and transforming their work
+practice as prescribed by the vision.\grqq{}\cite{contextualDesign}.
+Gleichzeitig müssen alle Lösungsansätze natürlich auch tatsächlich programmiert
+werden können. Hierbei kann nicht ignoriert werden, dass viele externe Faktoren
+die Machbarkeit bestimmter Lösungskonzepte in der Praxis einschränken. G.A. Boy
+erwähnt in \textit{The Handbook of Human-Machine Interaction} einige dieser
+Faktoren: \glqq{}Design work is often constrained by various external factors
+in the development organization and the marketplace (policies, standards,
+competitive products, past and planned products, schedules, resource
+budgets).\grqq\cite{HMI-HCD} So ermöglichen verwendete Programmiersprachen,
+eingesetzte Frameworks und bereits existierende Softwareteile es, bestimmte
+Konzepte sehr elegant umzusetzen. Andere Gestaltungsideen sind, beschränkt
+durch äußere Faktoren, unter Umständen gar nicht realisierbar.\cite{HMI-HCD}
+
+\paragraph{Überleitung konkreter Anwendungsfall Stubegru}
+In dem konkreten Fall des erarbeiteten Moduls zur Terminvergabe für die
+Studienberatung ist hier ein wichtiger Gesichtspunkt, dass es sich um ein Modul
+innerhalb eines bereits bestehenden Softwarepakets handelt. Tech-Stack,
+Programmiersprache und Schnittstellen zu anderen Modulen sind hier bereits
+vorgeben und können nicht allein durch die Wünsche der Nutzenden geformt
+werden.
+
+\paragraph{Techstack Stubegru}
+Im Folgenden sollen nun die technischen Gegebenheiten und Grundlagen der
+Software \textbf{Stubegru} vorgestellt werden. Das neue System zur
+Terminvereinbarung muss sich als Modul in das Softwarepaket Stubegru einbinden
+lassen und somit einige Standards und Schnittstellen der Software zur Verfügung
+implementieren.
+
+Die Software Stubegru ist webbasiert und wird über einen Browser aufgerufen.
+Dementsprechend sind die verwendeten Technologien im Frontend Html, Css und
+Javascript. Die Kommunikation mit dem Backend wird durch asynchrone
+Http-Requests umgesetzt, die durch Javascript Methoden initiiert werden. Das
+Backend besteht aus vielen einzelnen Php Dateien, welche die per Http
+übermittelten Daten auslesen und aufarbeiten. Als Datenbank kommt eine
+relationale mySQL Datenbank zum Einsatz, die von den Php Skripten über
+Php-Database-Objects (PDO) angesprochen wird. Die abgerufenen Daten der Php
+Skripte werden, als JSON codiert zurück an das Frontend geschickt und dort von
+Javascript Methoden weiterverarbeitet. Mithilfe der Javascript Library jQuery
+werden die entsprechende Element im Document Object Model (DOM) angepasst und
+somit für den Nutzenden grafisch dargestellt. Das Softwarepaket Stubegru ist
+grundlegend modular aufgebaut, sodass für jede Funktionalität oder jeden
+Prozess ein eigenes Modul programmiert wird, das genau diese Aufgabe übernimmt.
+Jedes Modul besteht aus den entsprechenden Anzeigeelementen, die in einer
+Html Datei formuliert werden. Des weiteren grafische Designregeln, die als CSS
+Datei angelegt werden und der eigentlichen Logik, die in Javascript
+implementiert werden muss. Im Modul zur Terminvereinbarung kommt zusätzlich die
+Javascript Library \textbf{fullcalendar} zum Einsatz. Diese bietet eine
+einfache Schnittstelle um Termindaten in einer monatlichen Übersicht
+darzustellen und bietet dem Nutzenden standardisierte Kontrollelemente zum
+Interagieren mit der Kalenderansicht. Funktionalitäten wie das Rendern einer
+Monatsübersicht, oder das Wechseln zwischen den einzelnen Monaten sind über diese
+Bibliothek bereits abgedeckt und müssen nicht eigenständig implementiert
+werden. Gleichzeitig schränkt die Verwendung dieser Bibliothek die
+Möglichkeiten in der Darstellung der Termine auch ein, sodass lediglich die
+angebotenen Ansichten (Monatsansicht, Wochenansicht, Tagesansicht, Terminliste)
+eingesetzt werden können.
+
+\subsubsection{Views und User-Flow}
 
 \subsubsection{Technische Umsetzung}
-\subsubsection{Präsentation erster Ergebnisse}
+%erst schreiben wenn (einigermaßen) fertig implementiert
+Klassendiagramm verschiedene Klassen, static Controller Codeschnipsel (Meeting
+Objekte für fullcalendar bauen, fetch await server, DOM manipulation / reading)
 
 \subsection{Testen / User-feedback}
 \subsubsection{Methode ???}
+\subsubsection{Präsentation erster Ergebnisse}
 \subsubsection{Feedback der Nutzenden}
 \subsubsection{Ausblick auf weitere Iterationen}
 
 \section{Reflektion und Fazit}
 \subsection{Beschreibung des Ergebnis}
 \subsection{Beurteilung der Umsetzungsphase}
+Problem: Designpattern bei fertigem Softwareökosystem sehr eingeschränkt
+Fullcalendar Lib: Weniger Arbeit (billiger, robuster) dafür weniger Flexibilität
+
 \subsection{Beurteilung der eingesetzten Methoden}
+
 \subsection{Ausblick}
 
 \newpage
