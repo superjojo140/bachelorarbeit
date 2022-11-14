@@ -992,6 +992,53 @@ eingesetzt werden können.
 
 \subsubsection{Views und User-Flow}
 
+\paragraph{Einführung Workflow Diagramme}
+Um die erarbeiteten Nutzungsanforderungen in praktische Programmierung umzusetzen wurden zunächst Workflow Diagramme erstellt. Diese Diagramme werden jeweils für einen zusammenhängenden Workflow gezeichnet und skizzieren auf informelle Art und Weise alle kleinere Teilschritte, die in diesem Workflow abgearbeitet werden sollen. Über inegehende und ausgehende Pfeile kann abgelesen werden durch welche Aktionen der jeweilige Workflow angestoßen wird, bezeihungsweise welche anderen Workflows druch Nutzerinteraktionen angestoßen werden können Desweiteren können Teile einzelner Elemnte der grafischen Oberfläche zkizzenhaft in desen Diagrammen dargestellt werrden um einen intuitiven Eindrück festzuhalten, wie die Nutzenden druch diesen Workflow navigieren und welche Steuerelemente sie auf dem BIldschirm verwenden können. Durch weitere frabige Anmerkungen an einzelenen Elementen oder Arbeitsschritten wird auf bestimmte DEtails hingewiesen, die bei der IMpemnentierung zu beachten sind. So kann beispielsweise angemerkt werden dass nach einem Klick auf einen BUtton, ein Popoup mit einer Bestätigungsaufforderung angezeigt werden soll. Diese Diagramme sind bewusst sehr formlos gehalten und nur unoprdentlich skizziert. Dies spiegelt die schnelle und unkomplizierte Erstellung diesesr Diagramme wieder. Es geht noch nicht darum den Prozess in einer sehr strukturierten Darstellungsform aufzuzeicvhnen, die man direkt in Code übersetzen könnte. Vielmehr soll intuitiv und spontan festgehlaten werden, welceh Schsrritte ein Nutzendenr durchlaufen könnte zudn welöhce Kontrollemelmetne er angezeigt bekommt, wenn er jenen Workflow anstößt.
+
+\paragraph{Beispiel Workflow Diagramm [Vergebenen Termin aufrufen]}
+Beispielhaft für den Entstehungsprozess dieser Workflow Diagramme wir dim Folgenden ein DIagramm gezeigt und näher erläutert. Dieses Diagramm beschreibt den Workflow wenn ein Nutzender die Detailansicht eines bereits vergebenen Termins aufruft.
+
+\begin{figure}[h]
+    \caption{Workflow Diagramm, Laden der Detailansicht für einen vergebenen Termin}
+    \centering
+    \includegraphics[width=0.9\textwidth]{flow_termin_aufrufen_unvergeben.jpeg}
+\end{figure}
+
+Die grünen Pfeile links oben beschreiben, auf welchem Weg Nutzenden diesen Workflow anstoßen können. Die Detailansicht eines vergebenen Termins kann in disem Falle auf zwei verschienden wegen geöffnet werden. Entweder klickt ein Nutzender auf einen Termin in der monatsüersicht oder er klickt auf ein Suchergebnis in der Ergebnisliste der Suche nach Teilnehmenden. Im rechten poberen Teil des Diagramms wird stischpunkartg festgehlaten, welhce Teilschritte notwendig sind um die Termindetails sinnvoll darstellen zu können: Zunächst muss das Modal\todo{Modal in Glossar} über dem bestehehden Bildschirminhalt eiongeblöendet werden. Im nächsten Schritt muss der Titel des MOdals angepasst werden. Der Standartitel \textit{Termin erstellen} macht in diesem Kontext keinen Sinnn, da der termin bereits existiert. Daher wird der Titel des MOdals in diesem Fall auf \textit{Termindetails} geändert. Im weiteren Verlauf müssen die Daten des Termins (Datum, Uhrzeit, Titel) in die enstperhcenden Inputfelder geladen werden. Diese Inputfelder sollen als \textit{disabled} dargestellt werden. Das bedeutet, dass man den eingetrangene Inhalt lesen kann, ihn jedoch nicht bearbeiten kann. EIn bereits an einen Kunden vergebener Termin kann nicht bearbeitet werden, solange der Datensatz des Kunden nicht entfernt wurde. So soll vermieden werden, dass beispielsweise das Datum des Beratungstermins nachträglich geändert wird, ohne das der Kunde darüber informiert wrid. Hier wird den Nutzenden also bewusst die Funkionalität des eidtierens verboten, um keine Missverständnisse mit der Kundschaft aufkmmen zu lassen. Sollte tatsächlich einmal as Datum eines Beratungstermins verändert werden, muss der Kundendfatensatz zunäcvhst enfertn und dann, nach dem Anpassen des Datums neu hinzugefügt werden, Dies hat den Vorteil, dass die entsprechednen Informationsmails (Terminabsage, Neue Terminbestätigung) korrekt an den Kunden und den Beratenden gesendet werden und somit für beide Parteien nachvollziebar ist, an welchem Datum der Termin nun tatsähclich stattfinden soll.
+
+
+\begin{figure}[h]
+    \caption{Verschiedene Bereiche des Modals mit Kontrollelementen}
+    \centering
+    \includegraphics[width=0.9\textwidth]{doodle_modal_overview.jpeg}
+\end{figure}
+
+
+Im unteren Teil des Diagramms wird durch kleine Skizzen festgehlaten, welche KOntrollelemnte den Nutzenden in idsesm Workflow zur Verfügung stehen. Die \textit{Vergabeleiste} bezeichnet den Bereich, indem Buttons zum interagieren mit den kundensdaten dargestellt werden. In diesem Fall ist lediglich der BUtton \textit{Kundendaten löschen} sichtbar. Ein nachträgliches Bearbeiten der Kunden daten soll nciht mglöcih sein, da auch hier inkonsietene Status beim Versand der Mails an den Kunden enstehen könnten. Wir dbeispiels weise die Emailadresse des Kunden geändert, nachdem er für den Versand eines Feedbackfragebogens eingetragen wurde, kann der Link für den Fragebogen nicht mehr an die korrekte ADresse verschickt werden. Diese Prblematik wird im Diagramm grafisch durch die orangene infobox am rechten Rand verdeutlicht. schlussendlich wird im Idagramm dargestellt welche Buttons in der Fußleiste des mODals angezeigt werden sollen. Hier soll lediglich der BUtton \textit{Abbrechen} akitv sein. Über diesen Button wird das MOdal phne Übernahme von Änderungen geschlossen und ien anderer termin kann aufegerufen werden. Die Buttons zum sepicern und läöschen des Termins sollen angeklickt werden können. Wie bereits erwähnt soll ein Ändern oder löschen der Termindaten nur mgöch sein, wennzuvbopr die verknüpften Kundendaten etnfernt wurden. Die BUttons sollen jedoch nicht vollkommen unsichtbar sein, sondern ledglich ausgegraut argestellt werden. Die blaue Box im Diagramm ergänzt, das bei einem Mouse-Hover über diese ausgegrauten Buttons ein Hinweis angezeigt werden soll. Daruch das die BUttons nicht vollsätndig ausgelbendet werden sondern stattdessen deaktiviert mit einem Hinweis dargestellt werden, soll dazu fürhen ,kdass Nutzende ein enihetliche Benutzeroberflöche vorfinden und ebi dem Versuch mit den deaktivierten buttons zu interagieren,  automatischdarauf hinwwiesen werden, welche Schriteet notwdnig sind um die gewnüshte Fnktion nutzen zu können. Dieser Ansatz soll im Sinne des Human Centered Design sazu beitragen, dass auch unerfahrene Nutzende, scnhnell und intuitiv vestehen, wie iene INteraktion mit dem System gedacht ist.
+
+Im anahng \todo{Referenz einfügen} finden sich weitere drei Workflow DIagramme die folgende Prozesse beschrieben: \textit{Unvergebenen Termin aufrufen}, \textit{Neuen Termin erstellen} und \textit{Termin an Kunden vergeben}.
+
+\paragraph{Einführung Workflow Tabellen}
+
+Nach dem Erstellen der Workflow Diagramme wurden alle Diagramme nochmals genauer betrachtet und analysiert. In diesem Schritt wrude vescuht geminsamkeiten im Ablauf der einzelnen Workflows zu finden, die immer wieder auftreten und vereinheitlicht werden könnten. So wurden einige Kriterein gefunden, die eingeltich in jedem Workflow Diagramm vorkommen. Diese Kriterien wurden im folegnedne Schritt in einer Workflow Tabelle in strukturierterer Form nochmals festgehlaten. Zeil der Workflow tabelle ist es aus den informellen Workflow Diagrammen einen struktureirten ABlauf eines Workflows abzuleiten, der dann anschlie0end relativ direkt in Funkctionsaufrufe im Code übertragen werden wkann. Für alle Zeilen in der Workflow tabelle wird im spüaöteren Vwerlauf eine Methode impemetneiret, die entsürechdne der angekreuzen paramter die ensterpchednen Funkltionen aufruft.
+
+
+\begin{figure}[h]
+    \caption{Workflow Tabelle, Laden der Detailansicht für einen vergebenen Termin}
+    \centering
+    \includegraphics[width=0.9\textwidth]{chart_termin_aufrufen_vergeben.jpeg}
+\end{figure}
+
+Erklärung der Tabelle....
+Im anhang weiter Tabellen...
+
+
+
+
+\paragraph{Kompakte Ansicht Kalender (mit Farben)}
+\paragraph{Suche nach Teilnehmern}
+\paragraph{Telefonnummeranzeige ("Silbentrennung")}
+
 \subsubsection{Technische Umsetzung}
 %erst schreiben wenn (einigermaßen) fertig implementiert
 Klassendiagramm verschiedene Klassen, static Controller Codeschnipsel (Meeting
