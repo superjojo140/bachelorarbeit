@@ -1,13 +1,16 @@
 # Fragen an Claude
-- Anonymisierung kennzeichnen?
+
+## Beantwortet
 - alte Kasseler Version, Bremer Version, neue Kasseler Version... Wie erklärt man das am besten
  -> Abschnitt Historie der Sfotware ist gut.
 - Ansicht, View... wie nennt man das?
     -> (Benutzeransicht, View) kann definiert werden in Arbeit
     -> Glossar im Anhang oder direkt da wo das Wot zum ersten mal benutzt wird.
-- Anmeldung der Arbeit (angekommen, alles korrekt?)
 -> Methode zur Auswertung des IIK: **Sequenzmodell**
 
+## Unbeantwortet
+- Anmeldung der Arbeit (angekommen, alles korrekt?)
+- Anonymisierung kennzeichnen?
 - Schaubild Interview im Kontext cool?
 - Offizielle Erklärungen am Anfang der Arbeit...?
 - Was muss aufs Deckblatt?
