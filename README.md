@@ -9,22 +9,32 @@
 -> Methode zur Auswertung des IIK: **Sequenzmodell**
 
 ## Unbeantwortet
-- Anmeldung der Arbeit (angekommen, alles korrekt?)
 - Anonymisierung kennzeichnen?
-- Schaubild Interview im Kontext cool?
 - Offizielle Erklärungen am Anfang der Arbeit...?
 - Was muss aufs Deckblatt?
-- Zusammenfassung vor TOC oder als Teil der Einleitung?
 - Fettschreiben von Schlüsselwörtern (z.B. HCD, IIK)
     - Zitate, Namen von Büchern Namen von Autoren
-- Erste screenshots  eher in Teil *Ergebnisse der Implementierung* oder in Teil *Testen und Userfeedback*?
-- Feedback der Nutzenden eher in Teil 3 (Umsetzung) oder Teil 4 (Fazit)?
-- Wie werden verwendete Technologien (jquery, fullcalendar, PHP, JS) referenziert und hervorgehoben (Fett?)
 - Interviewter und Interviewender (gibt's da schönere Begriffe?)
-- Doppelung Motivation / HCD Einführung
+
+- Feedback Einleitung
+    - Zusammenfassung vor TOC oder als Teil der Einleitung?
+    - Schaubild Interview im Kontext cool?
+    - Doppelung Motivation / HCD Einführung
+
+- Anmeldung der Arbeit (angekommen, alles korrekt?)
+- Wie werden verwendete Technologien (jquery, fullcalendar, PHP, JS) referenziert und hervorgehoben (Fett?)
+
 - Workflow Diagramme / Tabellen... 
     - Kann ich die einfach erfinden, gibt es ähnliche Theorien...?
     - Eines vorstellen und die anderen in den Anhang?
+
+- Kapitel User-Feedback:
+    - Weiter Wissenschaftl. Methode aufarbeiten...? Wichtig für Theorieanteil oder zu mächtig für Gesamtvolumen der Arbeit?
+- Erste screenshots  eher in Teil *Ergebnisse der Implementierung* oder in Teil *Testen und Userfeedback*?
+- Feedback der Nutzenden eher in Teil 3 (Umsetzung) oder Teil 4 (Fazit)?
+
+
+
 
 ## Kolloquium
 (Arbeit vorstellen, Live Demo, Code zeigen)
