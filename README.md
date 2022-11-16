@@ -13,10 +13,21 @@
 - Offizielle Erklärungen am Anfang der Arbeit...?
 - Was muss aufs Deckblatt?
 - Fettschreiben von Schlüsselwörtern (z.B. HCD, IIK)
+-> Nein aber kursiv
     - Zitate, Namen von Büchern Namen von Autoren
 - Interviewter und Interviewender (gibt's da schönere Begriffe?)
 
+-> HCD: Warum HCD statt UCD (nicht nur Nutzer sondern alle betroffen)
+-> Was mache ich, was gibt es noch, warum mache ich das was ich mache...?
+-> Themenfeld Mensch.Computer Interaktion
+-> Softwareentwicklung ist auch teil der Arbeit!
+-> Albert mag Evaluation
+
+-> In Einleitung konkrete Referenzen auf Kapitel
+-> IN Fazit Antwort auf Kernfragen der Einleitung geben
+
 - Feedback Einleitung
+-> Wenn der Begriff HCD fällt, direkt Quelle dahinter
     - Zusammenfassung vor TOC oder als Teil der Einleitung?
     - Schaubild Interview im Kontext cool?
     - Doppelung Motivation / HCD Einführung
@@ -30,8 +41,9 @@
 
 - Kapitel User-Feedback:
     - Weiter Wissenschaftl. Methode aufarbeiten...? Wichtig für Theorieanteil oder zu mächtig für Gesamtvolumen der Arbeit?
+    -> Wissenschaftliche Methode ist wichtig, vllt. kann Sequenzmodell herangezogen werden...
 - Erste screenshots  eher in Teil *Ergebnisse der Implementierung* oder in Teil *Testen und Userfeedback*?
-- Feedback der Nutzenden eher in Teil 3 (Umsetzung) oder Teil 4 (Fazit)?
+- Feedback der Nutzenden eher **in Teil 3 (Umsetzung)** ~oder Teil 4 (Fazit)~ ?
 
 
 
