@@ -975,37 +975,98 @@ werden die entsprechende Element im Document Object Model (DOM) angepasst und
 somit für den Nutzenden grafisch dargestellt. Das Softwarepaket Stubegru ist
 grundlegend modular aufgebaut, sodass für jede Funktionalität oder jeden
 Prozess ein eigenes Modul programmiert wird, das genau diese Aufgabe übernimmt.
-Jedes Modul besteht aus den entsprechenden Anzeigeelementen, die in einer
-Html Datei formuliert werden. Des weiteren grafische Designregeln, die als CSS
-Datei angelegt werden und der eigentlichen Logik, die in Javascript
-implementiert werden muss. Im Modul zur Terminvereinbarung kommt zusätzlich die
-Javascript Library \textbf{fullcalendar} zum Einsatz. Diese bietet eine
-einfache Schnittstelle um Termindaten in einer monatlichen Übersicht
-darzustellen und bietet dem Nutzenden standardisierte Kontrollelemente zum
-Interagieren mit der Kalenderansicht. Funktionalitäten wie das Rendern einer
-Monatsübersicht, oder das Wechseln zwischen den einzelnen Monaten sind über diese
-Bibliothek bereits abgedeckt und müssen nicht eigenständig implementiert
-werden. Gleichzeitig schränkt die Verwendung dieser Bibliothek die
-Möglichkeiten in der Darstellung der Termine auch ein, sodass lediglich die
-angebotenen Ansichten (Monatsansicht, Wochenansicht, Tagesansicht, Terminliste)
-eingesetzt werden können.
+Jedes Modul besteht aus den entsprechenden Anzeigeelementen, die in einer Html
+Datei formuliert werden. Des weiteren grafische Designregeln, die als CSS Datei
+angelegt werden und der eigentlichen Logik, die in Javascript implementiert
+werden muss. Im Modul zur Terminvereinbarung kommt zusätzlich die Javascript
+Library \textbf{fullcalendar} zum Einsatz. Diese bietet eine einfache
+Schnittstelle um Termindaten in einer monatlichen Übersicht darzustellen und
+bietet dem Nutzenden standardisierte Kontrollelemente zum Interagieren mit der
+Kalenderansicht. Funktionalitäten wie das Rendern einer Monatsübersicht, oder
+das Wechseln zwischen den einzelnen Monaten sind über diese Bibliothek bereits
+abgedeckt und müssen nicht eigenständig implementiert werden. Gleichzeitig
+schränkt die Verwendung dieser Bibliothek die Möglichkeiten in der Darstellung
+der Termine auch ein, sodass lediglich die angebotenen Ansichten
+(Monatsansicht, Wochenansicht, Tagesansicht, Terminliste) eingesetzt werden
+können.
 
-\subsubsection{Views und User-Flow}
+\subsubsection{User Scenarios}
 
-\paragraph{Einführung Workflow Diagramme}
-Um die erarbeiteten Nutzungsanforderungen in praktische Programmierung umzusetzen wurden zunächst Workflow Diagramme erstellt. Diese Diagramme werden jeweils für einen zusammenhängenden Workflow gezeichnet und skizzieren auf informelle Art und Weise alle kleinere Teilschritte, die in diesem Workflow abgearbeitet werden sollen. Über inegehende und ausgehende Pfeile kann abgelesen werden durch welche Aktionen der jeweilige Workflow angestoßen wird, bezeihungsweise welche anderen Workflows druch Nutzerinteraktionen angestoßen werden können Desweiteren können Teile einzelner Elemnte der grafischen Oberfläche zkizzenhaft in desen Diagrammen dargestellt werrden um einen intuitiven Eindrück festzuhalten, wie die Nutzenden druch diesen Workflow navigieren und welche Steuerelemente sie auf dem BIldschirm verwenden können. Durch weitere frabige Anmerkungen an einzelenen Elementen oder Arbeitsschritten wird auf bestimmte DEtails hingewiesen, die bei der IMpemnentierung zu beachten sind. So kann beispielsweise angemerkt werden dass nach einem Klick auf einen BUtton, ein Popoup mit einer Bestätigungsaufforderung angezeigt werden soll. Diese Diagramme sind bewusst sehr formlos gehalten und nur unoprdentlich skizziert. Dies spiegelt die schnelle und unkomplizierte Erstellung diesesr Diagramme wieder. Es geht noch nicht darum den Prozess in einer sehr strukturierten Darstellungsform aufzuzeicvhnen, die man direkt in Code übersetzen könnte. Vielmehr soll intuitiv und spontan festgehlaten werden, welceh Schsrritte ein Nutzendenr durchlaufen könnte zudn welöhce Kontrollemelmetne er angezeigt bekommt, wenn er jenen Workflow anstößt.
+\paragraph{Einführung Sequenzdiagramme}
+Um die erarbeiteten Nutzungsanforderungen in praktische Programmierung
+umzusetzen wurden zunächst Sequenzdiagramme erstellt. Diese Diagramme werden
+jeweils für einen zusammenhängenden Workflow gezeichnet und skizzieren auf
+informelle Art und Weise alle kleinere Teilschritte, die in diesem Workflow
+nacheinander abgearbeitet werden sollen. Ziel eines Sequenzdiagramms ist es,
+die einzelnen Aktivitäten, die ein Nutzender beim Verwenden der Software
+durchläuft, darzustellen. An solchen Diagrammen können auch die Zusammenhänge
+dieser Aktivitäten untereinander abgelesen werden. Karen L. McGraw verweist in
+\textit{User-centered Requirements} darauf, dass diese Art von Diagrammen sehr
+hilfreich sein können, um primäre Workflows und zusammenhängende Prozesse zu
+identifizieren\cite{sequenceDiagrams}. Ian Alexander führt in
+\textit{Scenarios, Stories, Use Cases} ganz ähnliche Diagramm ein, die er
+Scenario Process Models nennt. Auch hier geht es darum ein Abbild der
+Teilprozesse zu schaffen, die ein Nutzender beim Verwenden eine Software
+durchläuft. I. Alexander nennt als weiteren Vorteil dieser Diagramme, das noch
+unklare oder fehlende Daten innerhalb eines Workflows schnell zu erkennen sind.
+Über eingehende und ausgehende Pfeile kann an den Sequenzdiagrammen abgelesen
+werden durch welche Aktionen der jeweilige Workflow angestoßen wird,
+beziehungsweise welche anderen Workflows durch Nutzerinteraktionen angestoßen
+werden können. Teile einzelner Elemente der grafischen Oberfläche werden
+zkizzenhaft dargestellt, um einen intuitiven Eindruck festzuhalten, wie die
+Nutzenden durch diesen Workflow navigieren und welche Steuerelemente sie auf
+dem Bildschirm verwenden können. Durch farbige Anmerkungen an einzelnen
+Elementen oder Arbeitsschritten wird auf bestimmte Details hingewiesen, die bei
+der Implementierung zu beachten sind. So kann beispielsweise angemerkt werden,
+dass nach einem Klick auf einen Button, ein Popup mit einer
+Bestätigungsaufforderung angezeigt werden soll. Die Sequenzdiagramme sind
+bewusst formlos gehalten und nur grob skizziert. Dies spiegelt die schnelle und
+intuitive Erstellung dieser Diagramme wieder. Es geht noch nicht darum den
+Prozess in einer sehr strukturierten Darstellungsform aufzuzeichnen, die man
+direkt in Code übersetzen könnte. Vielmehr soll intuitiv und spontan
+festgehalten werden, welche Schritte ein Nutzender durchlaufen könnte, wenn er
+jenen Workflow anstößt.
 
-\paragraph{Beispiel Workflow Diagramm [Vergebenen Termin aufrufen]}
-Beispielhaft für den Entstehungsprozess dieser Workflow Diagramme wir dim Folgenden ein DIagramm gezeigt und näher erläutert. Dieses Diagramm beschreibt den Workflow wenn ein Nutzender die Detailansicht eines bereits vergebenen Termins aufruft.
+\paragraph{Beispiel Sequenzdiagramm [Vergebenen Termin aufrufen]}
+Beispielhaft für den Entstehungsprozess dieser Sequenzdiagramme wird im
+Folgenden ein Diagramm gezeigt und näher erläutert. Dieses Diagramm beschreibt
+den Workflow wenn ein Nutzender die Detailansicht eines bereits vergebenen
+Termins aufruft.
 
 \begin{figure}[h]
-    \caption{Workflow Diagramm, Laden der Detailansicht für einen vergebenen Termin}
+    \caption{Sequenzdiagramm, Laden der Detailansicht für einen vergebenen Termin}
     \centering
     \includegraphics[width=0.9\textwidth]{flow_termin_aufrufen_unvergeben.jpeg}
 \end{figure}
 
-Die grünen Pfeile links oben beschreiben, auf welchem Weg Nutzenden diesen Workflow anstoßen können. Die Detailansicht eines vergebenen Termins kann in disem Falle auf zwei verschienden wegen geöffnet werden. Entweder klickt ein Nutzender auf einen Termin in der monatsüersicht oder er klickt auf ein Suchergebnis in der Ergebnisliste der Suche nach Teilnehmenden. Im rechten poberen Teil des Diagramms wird stischpunkartg festgehlaten, welhce Teilschritte notwendig sind um die Termindetails sinnvoll darstellen zu können: Zunächst muss das Modal\todo{Modal in Glossar} über dem bestehehden Bildschirminhalt eiongeblöendet werden. Im nächsten Schritt muss der Titel des MOdals angepasst werden. Der Standartitel \textit{Termin erstellen} macht in diesem Kontext keinen Sinnn, da der termin bereits existiert. Daher wird der Titel des MOdals in diesem Fall auf \textit{Termindetails} geändert. Im weiteren Verlauf müssen die Daten des Termins (Datum, Uhrzeit, Titel) in die enstperhcenden Inputfelder geladen werden. Diese Inputfelder sollen als \textit{disabled} dargestellt werden. Das bedeutet, dass man den eingetrangene Inhalt lesen kann, ihn jedoch nicht bearbeiten kann. EIn bereits an einen Kunden vergebener Termin kann nicht bearbeitet werden, solange der Datensatz des Kunden nicht entfernt wurde. So soll vermieden werden, dass beispielsweise das Datum des Beratungstermins nachträglich geändert wird, ohne das der Kunde darüber informiert wrid. Hier wird den Nutzenden also bewusst die Funkionalität des eidtierens verboten, um keine Missverständnisse mit der Kundschaft aufkmmen zu lassen. Sollte tatsächlich einmal as Datum eines Beratungstermins verändert werden, muss der Kundendfatensatz zunäcvhst enfertn und dann, nach dem Anpassen des Datums neu hinzugefügt werden, Dies hat den Vorteil, dass die entsprechednen Informationsmails (Terminabsage, Neue Terminbestätigung) korrekt an den Kunden und den Beratenden gesendet werden und somit für beide Parteien nachvollziebar ist, an welchem Datum der Termin nun tatsähclich stattfinden soll.
-
+Die grünen Pfeile links oben beschrieben, auf welchem Weg Nutzenden diesen
+Workflow anstoßen können. Die Detailansicht eines vergebenen Termins kann in
+diesem Fall auf zwei verschiedenen Wegen geöffnet werden. Entweder klickt ein
+Nutzender auf einen Termin in der Monatsübersicht oder er klickt auf ein
+Suchergebnis in der Ergebnisliste der Suche nach Teilnehmenden. Im rechten
+oberen Teil des Diagramms wird stichpunktartig festgehalten, welche
+Teilschritte notwendig sind um die Termindetails sinnvoll darstellen zu können:
+Zunächst muss das Modal\todo{Modal im Glossar} über dem bestehenden
+Bildschirminhalt eingeblendet werden. Im nächsten Schritt muss der Titel des
+Modals angepasst werden. Der Standardtitel \textit{Termin erstellen} macht in
+diesem Kontext keinen Sinn, da der Termin bereits existiert. Daher wird der
+Titel des Modals in diesem Fall auf \textit{Termindetails} geändert. Im
+weiteren Verlauf müssen die Daten des Termins (Datum, Uhrzeit, Titel) in die
+entsprechenden Input Felder geladen werden. Diese Input Felder sollen als
+\textit{disabled} dargestellt werden. Das bedeutet, dass man den eingetragenen
+Inhalt lesen, ihn jedoch nicht bearbeiten kann. Ein bereits an einen Kunden
+vergebener Termin kann nicht bearbeitet werden, solange der Datensatz des
+Kunden nicht entfernt wurde. So soll vermieden werden, dass beispielsweise das
+Datum des Beratungstermins nachträglich geändert wird, ohne dass der Kunde
+darüber informiert wird. Hier wird den Nutzenden also bewusst die
+Funktionalität des nachträglichen Änderns verboten, um keine Missverständnisse
+mit der Kundschaft aufkommen zu lassen. Sollte tatsächlich einmal das Datum
+eines Beratungstermins verändert werden, muss der Kundendatensatz zunächst
+entfernt und dann, nach dem Anpassen des Datums neu hinzugefügt werden, Dies
+hat den Vorteil, dass die entsprechenden Informationsmails (Terminabsage, Neue
+Terminbestätigung) korrekt an den Kunden und den Beratenden gesendet werden und
+somit für beide Parteien nachvollziehbar ist, an welchem Datum der Termin nun
+tatsächlich stattfinden soll.
 
 \begin{figure}[h]
     \caption{Verschiedene Bereiche des Modals mit Kontrollelementen}
@@ -1013,15 +1074,55 @@ Die grünen Pfeile links oben beschreiben, auf welchem Weg Nutzenden diesen Work
     \includegraphics[width=0.9\textwidth]{doodle_modal_overview.jpeg}
 \end{figure}
 
+Im unteren Teil des Diagramms wird durch kleine Skizzen festgehalten, welche
+Kontrollelemente den Nutzenden im Workflow zur Verfügung stehen. Die
+Textit{Vergabestelle} bezeichnet den Bereich, indem Buttons zum Interagieren
+mit den Kundendaten dargestellt werden. In diesem Fall ist lediglich der Button
+\textit{Kundendaten löschen} sichtbar. Ein nachträgliches Bearbeiten der
+Kundendaten soll nicht möglich sein, da auch hier inkonsistente Status beim
+Versand der Mails an den Kunden entstehen könnten. Wird beispielsweise die
+Mailadresse des Kunden geändert, nachdem er für den Versand eines
+Feedback-Fragebogens eingetragen wurde, kann der Link für den Fragebogen nicht
+mehr an die korrekte Adresse verschickt werden. Diese Problematik wird im
+Diagramm grafisch durch die orangene Infobox am rechten Rand verdeutlicht.
+Schlussendlich wird im Diagramm dargestellt welche Buttons in der Fußleiste des
+Modals angezeigt werden sollen. Hier soll lediglich der Button
+\textit{Abbrechen} aktiv sein. Über diesen Button wird das Modal ohne Übernahme
+von Änderungen geschlossen und ein anderer Termin kann aufgerufen werden. Die
+Buttons zum Speichern und Löschen des Termins sollten nicht angeklickt werden
+können. Wie bereits erwähnt, soll ein Ändern oder Löschen der Termindaten nur
+möglich sein, wenn die verknüpften Kundendaten entfernt wurden. Die Buttons
+sollen jedoch nicht vollkommen unsichtbar sein, sondern lediglich ausgegraut
+dargestellt werden. Die blaue Box im Diagramm ergänzt, das bei einem
+Mouse-Hover über diese ausgegrauten Buttons ein Hinweis angezeigt werden soll.
+Dass die Buttons nicht vollständig ausgeblendet werden, sondern stattdessen
+deaktiviert mit einem Hinweis dargestellt werden, soll dazu führen, dass
+Nutzende eine einheitliche Benutzeroberfläche vorfinden und bei dem Versuch mit
+den deaktivierten Buttons zu interagieren, automatisch darauf hingewiesen
+werden, welche Schritte notwendig sind, um die gewünschte Funktion nutzen zu
+können. Dieser Ansatz soll dazu beitragen, dass auch unerfahrene Nutzende
+schnell und intuitiv verstehen, wie eine Interaktion mit dem System gedacht
+ist.
 
-Im unteren Teil des Diagramms wird durch kleine Skizzen festgehlaten, welche KOntrollelemnte den Nutzenden in idsesm Workflow zur Verfügung stehen. Die \textit{Vergabeleiste} bezeichnet den Bereich, indem Buttons zum interagieren mit den kundensdaten dargestellt werden. In diesem Fall ist lediglich der BUtton \textit{Kundendaten löschen} sichtbar. Ein nachträgliches Bearbeiten der Kunden daten soll nciht mglöcih sein, da auch hier inkonsietene Status beim Versand der Mails an den Kunden enstehen könnten. Wir dbeispiels weise die Emailadresse des Kunden geändert, nachdem er für den Versand eines Feedbackfragebogens eingetragen wurde, kann der Link für den Fragebogen nicht mehr an die korrekte ADresse verschickt werden. Diese Prblematik wird im Diagramm grafisch durch die orangene infobox am rechten Rand verdeutlicht. schlussendlich wird im Idagramm dargestellt welche Buttons in der Fußleiste des mODals angezeigt werden sollen. Hier soll lediglich der BUtton \textit{Abbrechen} akitv sein. Über diesen Button wird das MOdal phne Übernahme von Änderungen geschlossen und ien anderer termin kann aufegerufen werden. Die Buttons zum sepicern und läöschen des Termins sollen angeklickt werden können. Wie bereits erwähnt soll ein Ändern oder löschen der Termindaten nur mgöch sein, wennzuvbopr die verknüpften Kundendaten etnfernt wurden. Die BUttons sollen jedoch nicht vollkommen unsichtbar sein, sondern ledglich ausgegraut argestellt werden. Die blaue Box im Diagramm ergänzt, das bei einem Mouse-Hover über diese ausgegrauten Buttons ein Hinweis angezeigt werden soll. Daruch das die BUttons nicht vollsätndig ausgelbendet werden sondern stattdessen deaktiviert mit einem Hinweis dargestellt werden, soll dazu fürhen ,kdass Nutzende ein enihetliche Benutzeroberflöche vorfinden und ebi dem Versuch mit den deaktivierten buttons zu interagieren,  automatischdarauf hinwwiesen werden, welche Schriteet notwdnig sind um die gewnüshte Fnktion nutzen zu können. Dieser Ansatz soll im Sinne des Human Centered Design sazu beitragen, dass auch unerfahrene Nutzende, scnhnell und intuitiv vestehen, wie iene INteraktion mit dem System gedacht ist.
-
-Im anahng \todo{Referenz einfügen} finden sich weitere drei Workflow DIagramme die folgende Prozesse beschrieben: \textit{Unvergebenen Termin aufrufen}, \textit{Neuen Termin erstellen} und \textit{Termin an Kunden vergeben}.
+Im Anhang \todo{Referenz einfügen} finden sich weitere drei Sequenzdiagramme
+die folgende Prozesse beschrieben: \textit{Vergebenen Termin aufrufen},
+\textit{Neuen Termin erstellen} und \textit{Termin an Kunden
+    vergeben}\todo{Diagramme einfügen}.
 
 \paragraph{Einführung Workflow Tabellen}
 
-Nach dem Erstellen der Workflow Diagramme wurden alle Diagramme nochmals genauer betrachtet und analysiert. In diesem Schritt wrude vescuht geminsamkeiten im Ablauf der einzelnen Workflows zu finden, die immer wieder auftreten und vereinheitlicht werden könnten. So wurden einige Kriterein gefunden, die eingeltich in jedem Workflow Diagramm vorkommen. Diese Kriterien wurden im folegnedne Schritt in einer Workflow Tabelle in strukturierterer Form nochmals festgehlaten. Zeil der Workflow tabelle ist es aus den informellen Workflow Diagrammen einen struktureirten ABlauf eines Workflows abzuleiten, der dann anschlie0end relativ direkt in Funkctionsaufrufe im Code übertragen werden wkann. Für alle Zeilen in der Workflow tabelle wird im spüaöteren Vwerlauf eine Methode impemetneiret, die entsürechdne der angekreuzen paramter die ensterpchednen Funkltionen aufruft.
-
+Nach dem Erstellen der Sequenzdiagramme wurden alle Diagramme nochmals genauer
+betrachtet und analysiert. In diesem Schritt wurde versucht gemeinsamkeiten im
+Ablauf der einzelnen Workflows zu finden, die immer wieder auftreten und
+vereinheitlicht werden könnten. So wurden einige Kriterien gefunden, die
+eigentlich in jedem Sequenzdiagramm vorkommen. Diese Kriterien wurden im
+folgendem Schritt in einer Workflow Tabelle in strukturierten Form nochmals
+festgehalten. Ziel der Workflow tabelle ist es aus den informellen
+Sequenzdiagrammen einen strukturierten ABlauf eines Workflows abzuleiten, der
+dann anschlie0end relativ direkt in Funktionsaufrufe im Code übertragen werden
+kann. Für alle Zeilen in der Workflow tabelle wird im späteren Verlauf eine
+Methode implementiert, die entsprechende der angekreuzten parameter die
+entsprechenden Funktionen aufruft.
 
 \begin{figure}[h]
     \caption{Workflow Tabelle, Laden der Detailansicht für einen vergebenen Termin}
@@ -1029,11 +1130,7 @@ Nach dem Erstellen der Workflow Diagramme wurden alle Diagramme nochmals genauer
     \includegraphics[width=0.9\textwidth]{chart_termin_aufrufen_vergeben.jpeg}
 \end{figure}
 
-Erklärung der Tabelle....
-Im anhang weiter Tabellen...
-
-
-
+Erklärung der Tabelle.... Im anhang weiter Tabellen...
 
 \paragraph{Kompakte Ansicht Kalender (mit Farben)}
 \paragraph{Suche nach Teilnehmern}
@@ -1054,7 +1151,8 @@ Objekte für fullcalendar bauen, fetch await server, DOM manipulation / reading)
 \subsection{Beschreibung des Ergebnis}
 \subsection{Beurteilung der Umsetzungsphase}
 Problem: Designpattern bei fertigem Softwareökosystem sehr eingeschränkt
-Fullcalendar Lib: Weniger Arbeit (billiger, robuster) dafür weniger Flexibilität
+Fullcalendar Lib: Weniger Arbeit (billiger, robuster) dafür weniger
+Flexibilität
 
 \subsection{Beurteilung der eingesetzten Methoden}
 
