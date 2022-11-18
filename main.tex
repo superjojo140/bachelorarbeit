@@ -5,6 +5,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{cite}
 \usepackage{todonotes}
+\usepackage{listings}
 
 %Bilder importieren
 \usepackage{graphicx}
@@ -995,37 +996,37 @@ können.
 \paragraph{Einführung Sequenzdiagramme}
 Um die erarbeiteten Nutzungsanforderungen in praktische Programmierung
 umzusetzen wurden zunächst Sequenzdiagramme erstellt. Diese Diagramme werden
-jeweils für einen zusammenhängenden Workflow gezeichnet und skizzieren auf
-informelle Art und Weise alle kleinere Teilschritte, die in diesem Workflow
-nacheinander abgearbeitet werden sollen. Ziel eines Sequenzdiagramms ist es,
-die einzelnen Aktivitäten, die ein Nutzender beim Verwenden der Software
-durchläuft, darzustellen. An solchen Diagrammen können auch die Zusammenhänge
-dieser Aktivitäten untereinander abgelesen werden. Karen L. McGraw verweist in
-\textit{User-centered Requirements} darauf, dass diese Art von Diagrammen sehr
-hilfreich sein können, um primäre Workflows und zusammenhängende Prozesse zu
-identifizieren\cite{sequenceDiagrams}. Ian Alexander führt in
-\textit{Scenarios, Stories, Use Cases} ganz ähnliche Diagramm ein, die er
-Scenario Process Models nennt. Auch hier geht es darum ein Abbild der
-Teilprozesse zu schaffen, die ein Nutzender beim Verwenden eine Software
-durchläuft. I. Alexander nennt als weiteren Vorteil dieser Diagramme, das noch
-unklare oder fehlende Daten innerhalb eines Workflows schnell zu erkennen sind.
-Über eingehende und ausgehende Pfeile kann an den Sequenzdiagrammen abgelesen
-werden durch welche Aktionen der jeweilige Workflow angestoßen wird,
-beziehungsweise welche anderen Workflows durch Nutzerinteraktionen angestoßen
-werden können. Teile einzelner Elemente der grafischen Oberfläche werden
-zkizzenhaft dargestellt, um einen intuitiven Eindruck festzuhalten, wie die
-Nutzenden durch diesen Workflow navigieren und welche Steuerelemente sie auf
-dem Bildschirm verwenden können. Durch farbige Anmerkungen an einzelnen
-Elementen oder Arbeitsschritten wird auf bestimmte Details hingewiesen, die bei
-der Implementierung zu beachten sind. So kann beispielsweise angemerkt werden,
-dass nach einem Klick auf einen Button, ein Popup mit einer
-Bestätigungsaufforderung angezeigt werden soll. Die Sequenzdiagramme sind
-bewusst formlos gehalten und nur grob skizziert. Dies spiegelt die schnelle und
-intuitive Erstellung dieser Diagramme wieder. Es geht noch nicht darum den
-Prozess in einer sehr strukturierten Darstellungsform aufzuzeichnen, die man
-direkt in Code übersetzen könnte. Vielmehr soll intuitiv und spontan
-festgehalten werden, welche Schritte ein Nutzender durchlaufen könnte, wenn er
-jenen Workflow anstößt.
+jeweils für einen zusammenhängenden Workflow gezeichnet und skizzieren alle
+kleinere Teilschritte, die in diesem Workflow nacheinander abgearbeitet werden
+sollen. Ziel eines Sequenzdiagramms ist es, die einzelnen Aktivitäten, die ein
+Nutzender beim Verwenden der Software durchläuft,
+darzustellen.\cite{holtzblattCDEvolved} An solchen Diagrammen können auch die
+Zusammenhänge dieser Aktivitäten untereinander abgelesen werden. Karen L.
+McGraw verweist in \textit{User-centered Requirements} darauf, dass diese Art
+von Diagrammen sehr hilfreich sein können, um primäre Workflows und
+zusammenhängende Prozesse zu identifizieren\cite{sequenceDiagrams}. Ian
+Alexander führt in \textit{Scenarios, Stories, Use Cases} ganz ähnliche
+Diagramm ein, die er Scenario Process Models nennt. Auch hier geht es darum ein
+Abbild der Teilprozesse zu schaffen, die ein Nutzender beim Verwenden eine
+Software durchläuft. I. Alexander nennt als weiteren Vorteil dieser Diagramme,
+das noch unklare oder fehlende Daten innerhalb eines Workflows schnell zu
+erkennen sind. Über eingehende und ausgehende Pfeile kann an den
+Sequenzdiagrammen abgelesen werden durch welche Aktionen der jeweilige Workflow
+angestoßen wird, beziehungsweise welche anderen Workflows durch
+Nutzerinteraktionen angestoßen werden können. Teile einzelner Elemente der
+grafischen Oberfläche werden zkizzenhaft dargestellt, um einen intuitiven
+Eindruck festzuhalten, wie die Nutzenden durch diesen Workflow navigieren und
+welche Steuerelemente sie auf dem Bildschirm verwenden können. Durch farbige
+Anmerkungen an einzelnen Elementen oder Arbeitsschritten wird auf bestimmte
+Details hingewiesen, die bei der Implementierung zu beachten sind. So kann
+beispielsweise angemerkt werden, dass nach einem Klick auf einen Button, ein
+Popup mit einer Bestätigungsaufforderung angezeigt werden soll. Die
+Sequenzdiagramme sind bewusst formlos gehalten und nur grob skizziert. Dies
+spiegelt die schnelle und intuitive Erstellung dieser Diagramme wieder. Es geht
+noch nicht darum den Prozess in einer sehr strukturierten Darstellungsform
+aufzuzeichnen, die man direkt in Code übersetzen könnte. Vielmehr soll intuitiv
+und spontan festgehalten werden, welche Schritte ein Nutzender durchlaufen
+könnte, wenn er jenen Workflow anstößt.
 
 \paragraph{Beispiel Sequenzdiagramm [Vergebenen Termin aufrufen]}
 Beispielhaft für den Entstehungsprozess dieser Sequenzdiagramme wird im
@@ -1109,35 +1110,93 @@ die folgende Prozesse beschrieben: \textit{Vergebenen Termin aufrufen},
 \textit{Neuen Termin erstellen} und \textit{Termin an Kunden
     vergeben}\todo{Diagramme einfügen}.
 
-\paragraph{Einführung Workflow Tabellen}
-
-Nach dem Erstellen der Sequenzdiagramme wurden alle Diagramme nochmals genauer
-betrachtet und analysiert. In diesem Schritt wurde versucht gemeinsamkeiten im
-Ablauf der einzelnen Workflows zu finden, die immer wieder auftreten und
-vereinheitlicht werden könnten. So wurden einige Kriterien gefunden, die
-eigentlich in jedem Sequenzdiagramm vorkommen. Diese Kriterien wurden im
-folgendem Schritt in einer Workflow Tabelle in strukturierten Form nochmals
-festgehalten. Ziel der Workflow tabelle ist es aus den informellen
-Sequenzdiagrammen einen strukturierten ABlauf eines Workflows abzuleiten, der
-dann anschlie0end relativ direkt in Funktionsaufrufe im Code übertragen werden
-kann. Für alle Zeilen in der Workflow tabelle wird im späteren Verlauf eine
-Methode implementiert, die entsprechende der angekreuzten parameter die
-entsprechenden Funktionen aufruft.
-
-\begin{figure}[h]
-    \caption{Workflow Tabelle, Laden der Detailansicht für einen vergebenen Termin}
-    \centering
-    \includegraphics[width=0.9\textwidth]{chart_termin_aufrufen_vergeben.jpeg}
-\end{figure}
-
-Erklärung der Tabelle.... Im anhang weiter Tabellen...
-
-\paragraph{Kompakte Ansicht Kalender (mit Farben)}
-\paragraph{Suche nach Teilnehmern}
-\paragraph{Telefonnummeranzeige ("Silbentrennung")}
-
 \subsubsection{Technische Umsetzung}
 %erst schreiben wenn (einigermaßen) fertig implementiert
+
+\begin{figure}[h]
+    \caption{UML Diagramm der Klasse Meeting. Stellt alle Methoden und Eigenschaften eines Objektes dar, das einen Termin repräsentiert}
+    \centering
+    \includegraphics[width=0.9\textwidth]{uml_meeting.jpeg}
+\end{figure}
+
+\begin{lstlisting}[language=Java]
+    static openAssignedMeeting(meetingId) {
+        let C = CalendarController;
+        let m = C.modal;
+
+        m.setModalVisible(true);
+        m.setModalTitle("Termindetails (Termin vergeben)");
+        m.resetAllForms();
+
+        const meeting = Meeting.getById(meetingId);
+        m.setMeetingDetailData(meeting);
+        m.enableDetailMeetingForm(false);
+
+        m.showAssignButtons(false, false, true, false);
+
+        m.setClientVisible(true);
+        m.enableClientForm(false);
+        m.setClientData(meeting.teilnehmer);
+
+        m.enableFooterButtons(false, false, false, true);
+
+        m.setInfoAlert('<i class="fas fa-info-circle"></i> Dieser Termin ist bereits an einen Kunden vergeben. Bearbeiten des Termins ist nur moeglich, nachdem die Kundendaten geloescht wurden.');
+    }
+\end{lstlisting}
+
+\begin{lstlisting}[language=Java]
+    addMeetings(meetingList) {
+        //Generate events for fullcalendar
+        let ownUserId = stubegru.currentUser.id;
+        let ownEvents = [];
+        let othersEvents = [];
+
+        for (let inMeeting of meetingList) {
+            let outMeeting = {
+                title: inMeeting.title,
+                start: `${inMeeting.date}T${inMeeting.start}`,
+                end: `${inMeeting.date}T${inMeeting.end}`,
+                extendedProps: inMeeting
+            };
+
+            if (inMeeting.ownerId == ownUserId) { ownEvents.push(outMeeting); } else { othersEvents.push(outMeeting); }
+        }
+
+        //Generate and add Eventsource
+        this.fullCalendar.addEventSource({
+            id: "stubegru-own-events",
+            events: ownEvents,
+            color: "#2196f3",
+            classNames: ["pointer"]
+        });
+
+        this.fullCalendar.addEventSource({
+            id: "stubegru-others-events",
+            events: othersEvents,
+            color: "#999ca1",
+            classNames: ["pointer"]
+        });
+    }
+\end{lstlisting}
+
+
+\begin{lstlisting}[language=Java]
+    /**
+    * Updates an existing meeting on the server for storage in database
+    */
+   async updateOnServer() {
+       let formData = this.toFormData();
+
+       const url = `${stubegru.constants.BASE_URL}/modules/calendar/dates/update_calendar_date.php`;
+       let meetingResp = await fetch(url, {
+           method: 'POST',
+           body: formData
+       });
+       meetingResp = await meetingResp.json();
+       return meetingResp;
+   }
+\end{lstlisting}
+
 Klassendiagramm verschiedene Klassen, static Controller Codeschnipsel (Meeting
 Objekte für fullcalendar bauen, fetch await server, DOM manipulation / reading)
 
