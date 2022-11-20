@@ -991,7 +991,7 @@ der Termine auch ein, sodass lediglich die angebotenen Ansichten
 (Monatsansicht, Wochenansicht, Tagesansicht, Terminliste) eingesetzt werden
 können.
 
-\subsubsection{User Scenarios}
+\subsubsection{Nutzungsanforderungen formalisieren | Sequenzdiagramme}
 
 \paragraph{Einführung Sequenzdiagramme}
 Um die erarbeiteten Nutzungsanforderungen in praktische Programmierung
@@ -1106,18 +1106,95 @@ schnell und intuitiv verstehen, wie eine Interaktion mit dem System gedacht
 ist.
 
 Im Anhang \todo{Referenz einfügen} finden sich weitere drei Sequenzdiagramme
-die folgende Prozesse beschrieben: \textit{Vergebenen Termin aufrufen},
+die folgende Prozesse beschreiben: \textit{Vergebenen Termin aufrufen},
 \textit{Neuen Termin erstellen} und \textit{Termin an Kunden
     vergeben}\todo{Diagramme einfügen}.
 
 \subsubsection{Technische Umsetzung}
-%erst schreiben wenn (einigermaßen) fertig implementiert
+
+\paragraph{Überleitung Technische Details}
+Im folgenden Abschnitt soll der Fokus nun auf die technischen Details der Implementierung gelegt werden. Wesentliche Fragestellungen sind hier: Wie werden die Nutzungsanforderung in der Praxis umgesetzt? Welche Designpattern und Softwarekonzepte werden verwendet? Wie werden Schnittstellen zwischen Frontend und Backend gestaltet? Und über welche Protokolle werden Daten ausgetauscht? Wichtig ist es, an dieser Stelle wieder im Blick zu behalten, dass es sich um eine Modul in einer bereits bestehenden Software handelt. Somit sollten bereits existierende Konzepte und Schnittstellen nach Möglichkeit wieder verwendet werden. Durch das Aufgreifen bestehender Lösungsstrategien und Entwurfsmuster wir das gesamte Softwarepaket einheitlich strukturiert und ist somit leichter zu warten. Gleichzeitig müssen einige Funktionen nicht von Grund auf neu implementiert werden, somit kann Zeit und Arbeit in diesem Prozess erspart werden.\cite{wiederverwSoftware}
+Im Folgenden werden einige Designentscheidung, Grafiken und Codeschnipsel präsentiert um einen groben Einblick in die technische Umsetzung zu erlauben. Der vollständige Sourcecode, sowie alle Commits zur Programmierung des Moduls sind im entsprechenden GitHub Repository einzusehen.\cite{stubegruRepo}
+
+\paragraph{Datenmodell}
+Die eigentlichen Datenmodelle mit denen in dem Modul zur Terminvereinbarung gearbeitet wird sind relativ simpel gehalten. Es gibt drei relevante Typen von Datensätzen: Termine, Mailtemplates und Beratungsräume. Die Datensätze, die einen Termin beschreiben, enthalten des Weiteren auch Informationen über den Ratsuchenden, der diesen Termin gebucht hat. Diese Datensätze werden im Folgenden als Meeting bezeichnet und sollen anhand eines UML Diagramms detailliert veranschaulicht werden.\todo{UML erklären?}
 
 \begin{figure}[h]
     \caption{UML Diagramm der Klasse Meeting. Stellt alle Methoden und Eigenschaften eines Objektes dar, das einen Termin repräsentiert}
     \centering
     \includegraphics[width=0.9\textwidth]{uml_meeting.jpeg}
 \end{figure}
+
+Die Klasse Meeting stellt zunächst eineige statische eigenschaften und Methoden zut Verfügung, Das Array \textit{meetingList} enthält zur Laufzeit alle aktuell bekannten Meetings in einer unsortierten Liste. druch die statische Funktion \textit{fetchMeetings()} werden alle Datensätze aus der DAtenbank geladen und in der \textit{meetingList} gespeicehrt. Über die Funktion \textit{getById()} kann ein bestimmtes Meeting aus der \textit{meetingList} angesprochen werden.
+Die weiteren Funktionen dinene dazu die Eigenschaften eines Meetings an das Backend zu senden um die neuen Werte in der Datenbank zu sopeicehrn, zu löschen oer abzutufen.
+Die statische Methode \textit{createOnServer(properties)} sendet die Daten eines neuen Meetings an den Server. Diese Methode erstellt bewusst keine neue Instanz vom Typ Meeting, da eskeinen Sinn macht ein Meeting Objekt zu verwenden solange der Server, dieses Meeting och gar nict kennt. Im Anschluss an die \textit{createOnServer(properties)} Methide sollte stets die methode \textit{fetchMeetings()} aufgerufen werden, um auf das neu erstelle Meetign zugreifen zu können.
+Die Funktion \textit{updateOnServer()} wird auf einem bestehenden Objekt vom Typ Meeting aufgerufen und sendet die aktuellen lokalen Eigenschaften an den Server. Hierbei wird die Funktion \textit{toFormData()} verwendet um die eingenschaften des Objektes in das passende Format zu brignen. Die so aufbereiteten Daten werden über den asynchrnen aufruf der \textit{fetch Api}\cite{fetchAPI} an das ensteprechden PHP skript auf dem Sever gesendet:\todo{fetch api referenz}
+
+
+\begin{lstlisting}[language=Java]
+    /**
+    * Updates an existing meeting on the server for storage in database
+    */
+   async updateOnServer() {
+       let formData = this.toFormData();
+
+       const url = `${stubegru.constants.BASE_URL}/modules/calendar/dates/update_calendar_date.php`;
+       let meetingResp = await fetch(url, {
+           method: 'POST',
+           body: formData
+       });
+       meetingResp = await meetingResp.json();
+       return meetingResp;
+   }
+\end{lstlisting}
+
+Über die Methode \textit{deleteOnServer} kann ein bestehednes Meeting auf dem Server gelöscht werden . Durch einen anschließenden Aufruf von \textit{fetchMeetings()} wird das Meeting dann auch in der lokalen \textit{meetingList} gelöscht. Außerdem stellt ein Objekt vom tyü Meeting och zwei Methoden zur Verfügung um Kundendaten zu verknüpfen bzw zu löschen. Dise Funktionen stoßen in den jeweiligen ÜHÜ skripten auf dem Server weiter Workflows an, wie besipielsweise das Versenden einer BEstätigungsemail an die Ratsuchende Person.
+
+\begin{lstlisting}[language=PHP]
+    <?php
+
+    // Dieses Script speichert einen neuen Kalendereintrag
+    $BASE_PATH = getenv("BASE_PATH");
+    require_once "$BASE_PATH/utils/auth_and_database.php";
+    require_once "$BASE_PATH/modules/user_utils/user_utils.php";
+    permissionRequest("MEETINGS_WRITE");
+    $creatorId = $_SESSION["id"];
+    
+    $date = $_POST["date"];
+    $ownerId = $_POST["ownerId"];
+    $room = $_POST["roomId"];
+    $start = $_POST["start"];
+    $end = $_POST["end"];
+    $title = $_POST["title"];
+    $template = $_POST["templateId"];
+    
+    //Channel attribute will only be set by calendar2 frontend
+    $channel = isset($_POST["channel"]) ? $_POST["channel"] : "unknown";
+    
+    $ownerName = getUserName($ownerId);
+    
+    try {
+        $insertStatement = $dbPdo->prepare("INSERT INTO `Termine` (`date`,`owner`,`ownerId`,`room`,`start`,`end`,`title`,`template`,`channel`) VALUES (:date,:ownerName,:ownerId,:room,:start,:end,:title,:template,:channel);");
+        $insertStatement->bindValue(':date', $date);
+        $insertStatement->bindValue(':ownerName', $ownerName);
+        $insertStatement->bindValue(':ownerId', $ownerId);
+        $insertStatement->bindValue(':room', $room);
+        $insertStatement->bindValue(':start', $start);
+        $insertStatement->bindValue(':end', $end);
+        $insertStatement->bindValue(':title', $title);
+        $insertStatement->bindValue(':template', $template);
+        $insertStatement->bindValue(':channel', $channel);
+        $insertStatement->execute();
+        //Id des neu hinzugefuegten Termins abrufen
+        $dateId = $dbPdo->lastInsertId();
+    } catch (Exception $e) {
+        echo json_encode(array("status" => "error", "message" => $e->getMessage()));
+        exit;
+    }
+    echo json_encode(array("status" => "success", "message" => "Der Termin wurde erstellt", "dateId" => $dateId));
+
+\end{lstlisting}
+
 
 \begin{lstlisting}[language=Java]
     static openAssignedMeeting(meetingId) {
@@ -1180,22 +1257,6 @@ die folgende Prozesse beschrieben: \textit{Vergebenen Termin aufrufen},
 \end{lstlisting}
 
 
-\begin{lstlisting}[language=Java]
-    /**
-    * Updates an existing meeting on the server for storage in database
-    */
-   async updateOnServer() {
-       let formData = this.toFormData();
-
-       const url = `${stubegru.constants.BASE_URL}/modules/calendar/dates/update_calendar_date.php`;
-       let meetingResp = await fetch(url, {
-           method: 'POST',
-           body: formData
-       });
-       meetingResp = await meetingResp.json();
-       return meetingResp;
-   }
-\end{lstlisting}
 
 Klassendiagramm verschiedene Klassen, static Controller Codeschnipsel (Meeting
 Objekte für fullcalendar bauen, fetch await server, DOM manipulation / reading)
