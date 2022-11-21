@@ -6,6 +6,13 @@
 \usepackage{cite}
 \usepackage{todonotes}
 \usepackage{listings}
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  frame=single,
+  breaklines=true,
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+}
 
 %Bilder importieren
 \usepackage{graphicx}
@@ -992,6 +999,7 @@ der Termine auch ein, sodass lediglich die angebotenen Ansichten
 können.
 
 \subsubsection{Nutzungsanforderungen formalisieren | Sequenzdiagramme}
+\label{subsection:sequenceDiagrams}
 
 \paragraph{Einführung Sequenzdiagramme}
 Um die erarbeiteten Nutzungsanforderungen in praktische Programmierung
@@ -1113,11 +1121,32 @@ die folgende Prozesse beschreiben: \textit{Vergebenen Termin aufrufen},
 \subsubsection{Technische Umsetzung}
 
 \paragraph{Überleitung Technische Details}
-Im folgenden Abschnitt soll der Fokus nun auf die technischen Details der Implementierung gelegt werden. Wesentliche Fragestellungen sind hier: Wie werden die Nutzungsanforderung in der Praxis umgesetzt? Welche Designpattern und Softwarekonzepte werden verwendet? Wie werden Schnittstellen zwischen Frontend und Backend gestaltet? Und über welche Protokolle werden Daten ausgetauscht? Wichtig ist es, an dieser Stelle wieder im Blick zu behalten, dass es sich um eine Modul in einer bereits bestehenden Software handelt. Somit sollten bereits existierende Konzepte und Schnittstellen nach Möglichkeit wieder verwendet werden. Durch das Aufgreifen bestehender Lösungsstrategien und Entwurfsmuster wir das gesamte Softwarepaket einheitlich strukturiert und ist somit leichter zu warten. Gleichzeitig müssen einige Funktionen nicht von Grund auf neu implementiert werden, somit kann Zeit und Arbeit in diesem Prozess erspart werden.\cite{wiederverwSoftware}
-Im Folgenden werden einige Designentscheidung, Grafiken und Codeschnipsel präsentiert um einen groben Einblick in die technische Umsetzung zu erlauben. Der vollständige Sourcecode, sowie alle Commits zur Programmierung des Moduls sind im entsprechenden GitHub Repository einzusehen.\cite{stubegruRepo}
+Im folgenden Abschnitt soll der Fokus nun auf die technischen Details der
+Implementierung gelegt werden. Wesentliche Fragestellungen sind hier: Wie
+werden die Nutzungsanforderung in der Praxis umgesetzt? Welche Designpattern
+und Softwarekonzepte werden verwendet? Wie werden Schnittstellen zwischen
+Frontend und Backend gestaltet? Und über welche Protokolle werden Daten
+ausgetauscht? Wichtig ist es, an dieser Stelle wieder im Blick zu behalten,
+dass es sich um eine Modul in einer bereits bestehenden Software handelt. Somit
+sollten bereits existierende Konzepte und Schnittstellen nach Möglichkeit
+wieder verwendet werden. Durch das Aufgreifen bestehender Lösungsstrategien und
+Entwurfsmuster wir das gesamte Softwarepaket einheitlich strukturiert und ist
+somit leichter zu warten. Gleichzeitig müssen einige Funktionen nicht von Grund
+auf neu implementiert werden, somit kann Zeit und Arbeit in diesem Prozess
+erspart werden.\cite{wiederverwSoftware} Im Folgenden werden einige
+Designentscheidung, Grafiken und Codeschnipsel präsentiert um einen groben
+Einblick in die technische Umsetzung zu erlauben. Der vollständige Sourcecode,
+sowie alle Commits zur Programmierung des Moduls sind im entsprechenden GitHub
+Repository einzusehen.\cite{stubegruRepo}
 
 \paragraph{Datenmodell}
-Die eigentlichen Datenmodelle mit denen in dem Modul zur Terminvereinbarung gearbeitet wird sind relativ simpel gehalten. Es gibt drei relevante Typen von Datensätzen: Termine, Mailtemplates und Beratungsräume. Die Datensätze, die einen Termin beschreiben, enthalten des Weiteren auch Informationen über den Ratsuchenden, der diesen Termin gebucht hat. Diese Datensätze werden im Folgenden als Meeting bezeichnet und sollen anhand eines UML Diagramms detailliert veranschaulicht werden.\todo{UML erklären?}
+Die eigentlichen Datenmodelle mit denen in dem Modul zur Terminvereinbarung
+gearbeitet wird sind relativ simpel gehalten. Es gibt drei relevante Typen von
+Datensätzen: Termine, Mailtemplates und Beratungsräume. Die Datensätze, die
+einen Termin beschreiben, enthalten außerdem auch Informationen über den
+Ratsuchenden, der diesen Termin gebucht hat. Diese Datensätze werden im
+Folgenden als Meeting bezeichnet und sollen anhand eines UML Diagramms
+detailliert veranschaulicht werden.\todo{UML erklären?}
 
 \begin{figure}[h]
     \caption{UML Diagramm der Klasse Meeting. Stellt alle Methoden und Eigenschaften eines Objektes dar, das einen Termin repräsentiert}
@@ -1125,13 +1154,29 @@ Die eigentlichen Datenmodelle mit denen in dem Modul zur Terminvereinbarung gear
     \includegraphics[width=0.9\textwidth]{uml_meeting.jpeg}
 \end{figure}
 
-Die Klasse Meeting stellt zunächst eineige statische eigenschaften und Methoden zut Verfügung, Das Array \textit{meetingList} enthält zur Laufzeit alle aktuell bekannten Meetings in einer unsortierten Liste. druch die statische Funktion \textit{fetchMeetings()} werden alle Datensätze aus der DAtenbank geladen und in der \textit{meetingList} gespeicehrt. Über die Funktion \textit{getById()} kann ein bestimmtes Meeting aus der \textit{meetingList} angesprochen werden.
-Die weiteren Funktionen dinene dazu die Eigenschaften eines Meetings an das Backend zu senden um die neuen Werte in der Datenbank zu sopeicehrn, zu löschen oer abzutufen.
-Die statische Methode \textit{createOnServer(properties)} sendet die Daten eines neuen Meetings an den Server. Diese Methode erstellt bewusst keine neue Instanz vom Typ Meeting, da eskeinen Sinn macht ein Meeting Objekt zu verwenden solange der Server, dieses Meeting och gar nict kennt. Im Anschluss an die \textit{createOnServer(properties)} Methide sollte stets die methode \textit{fetchMeetings()} aufgerufen werden, um auf das neu erstelle Meetign zugreifen zu können.
-Die Funktion \textit{updateOnServer()} wird auf einem bestehenden Objekt vom Typ Meeting aufgerufen und sendet die aktuellen lokalen Eigenschaften an den Server. Hierbei wird die Funktion \textit{toFormData()} verwendet um die eingenschaften des Objektes in das passende Format zu brignen. Die so aufbereiteten Daten werden über den asynchrnen aufruf der \textit{fetch Api}\cite{fetchAPI} an das ensteprechden PHP skript auf dem Sever gesendet:\todo{fetch api referenz}
+Die Klasse Meeting stellt zunächst einige statische Eigenschaften und Methoden
+zur Verfügung. Das Array \textit{meetingList} enthält zur Laufzeit alle aktuell
+bekannten Meetings in einer unsortierten Liste. Durch die statische Funktion
+\textit{fetchMeetings()} werden alle Datensätze aus der Datenbank geladen und
+in der \textit{meetingList} gespeichert. Über die Funktion \textit{getById()}
+kann ein bestimmtes Meeting aus der \textit{meetingList} angesprochen werden.
+Die weiteren Funktionen dienen dazu, die Eigenschaften eines Meetings an das
+Backend zu senden, um die neuen Werte in der Datenbank zu speichern oder zu
+löschen. Die statische Methode\textit{createOnServer(properties)} sendet die
+Daten eines neuen Meetings an den Server. Diese Methode erstellt bewusst keine
+neue Instanz vom Typ Meeting, da es keinen Sinn macht ein Meeting Objekt zu
+verwenden, solange der Server dieses Meeting noch gar nicht kennt. Im Anschluss
+an die \textit{createOnServer(properties)} Methode sollte stets die Methode
+\textit{fetchMeetings()} aufgerufen werden, um auf das neu erstellte Meeting
+zugreifen zu können. Die Funktion\textit{updateServer()} wird auf einem
+bestehenden Objekt vom Typ Meeting aufgerufen und sendet die aktuellen lokalen
+Eigenschaften an den Server. Hierbei wird die Funktion\textit{toFormData()}
+verwendet, um die Eigenschaften des Objektes in das passende Format zu bringen.
+Die so aufbereiteten Daten werden über den asynchronen Aufruf der
+\textit{fetchApi}\cite{fetchAPI} mit einer HTTP Request an das entsprechenden
+PHP Skript auf dem Server gesendet.
 
-
-\begin{lstlisting}[language=Java]
+\begin{lstlisting}[language=Java, caption=Senden von lokalen Änderungen eines Meetings an den Server]
     /**
     * Updates an existing meeting on the server for storage in database
     */
@@ -1148,9 +1193,9 @@ Die Funktion \textit{updateOnServer()} wird auf einem bestehenden Objekt vom Typ
    }
 \end{lstlisting}
 
-Über die Methode \textit{deleteOnServer} kann ein bestehednes Meeting auf dem Server gelöscht werden . Durch einen anschließenden Aufruf von \textit{fetchMeetings()} wird das Meeting dann auch in der lokalen \textit{meetingList} gelöscht. Außerdem stellt ein Objekt vom tyü Meeting och zwei Methoden zur Verfügung um Kundendaten zu verknüpfen bzw zu löschen. Dise Funktionen stoßen in den jeweiligen ÜHÜ skripten auf dem Server weiter Workflows an, wie besipielsweise das Versenden einer BEstätigungsemail an die Ratsuchende Person.
+Über die Methode \textit{deleteOnServer()} kann ein bestehendes Meeting auf dem Server gelöscht werden. Durch einen anschließenden Aufruf von \textit{fetchMeetings()} wird das Meeting dann auch in der lokalen \textit{meetingList} gelöscht. Außerdem stellt ein Objekt vom Typ Meeting noch zwei Methoden zur Verfügung um Kundendaten zu verknüpfen beziehungsweise zu löschen. Dise Funktionen stoßen in den jeweiligen PHP Skripten auf dem Server weitere Workflows an, wie beispielsweise das Versenden einer Bestätigungsemail an die ratsuchende Person.
 
-\begin{lstlisting}[language=PHP]
+\begin{lstlisting}[language=PHP, caption=PHP Skript zum Erstellen eines neuen Meetings in der Datenbank]
     <?php
 
     // Dieses Script speichert einen neuen Kalendereintrag
@@ -1195,8 +1240,11 @@ Die Funktion \textit{updateOnServer()} wird auf einem bestehenden Objekt vom Typ
 
 \end{lstlisting}
 
+\paragraph{Workflow: Vergebenen Beratungstermin aufrufen}
 
-\begin{lstlisting}[language=Java]
+In Kapitel \ref{subsection:sequenceDiagrams} wurden exemplarisch alle Teilschritte erklärt, die nötig sind um einen bereits vergebenen Beratungstermin aufzurufen und in der Detailansicht darzustellen. Für jeden dieser einzelenen Schritte wurde eine entsprechende Funktion in der Klasse \textit{CalendarModal} implementiert. Die Funktion \textit{setModalVisible(isVisible)} kann beipielsweise aufgerufen werden um das Modal ein- oder auszublenden. Die Klasse \textit{CalendarController} verwendet nun all diese Funktionen und bildet so den kompletten beschriebenen Workflow Schirtt für Schritt ab. Das folgende Listing beschreibt den Ablauf aller einzelnen Schritte druch den sequenziellen Aufruf der einzelnen Funktionen:
+
+\begin{lstlisting}[language=Java, caption=Öffnen der Detailansicht eines vergebenen Beratungstermins]
     static openAssignedMeeting(meetingId) {
         let C = CalendarController;
         let m = C.modal;
@@ -1221,7 +1269,12 @@ Die Funktion \textit{updateOnServer()} wird auf einem bestehenden Objekt vom Typ
     }
 \end{lstlisting}
 
-\begin{lstlisting}[language=Java]
+\paragraph{Monatsansicht mit fullcalendar darstellen}
+
+Als abschließendes Beispiel der konkreten Implementierung wird die Klasse \textit{CalendarView} vorgestellt. Diese ist für das Darstellen der Terminübersicht zuständig. An dieser Stelle wird die Javascript Bibliothek \textit{fullcalendar}\cite{fullCalendarWeb} verwendet um den Aufbau der Monatsansicht detilich zu vereinfachen. Die Klasse \textit{CalendarView} refenrenziert auf eine Instanz vom Typ \textit{FullCalendar} und kann darüber die wichtigsten Funktionen zum Löschen und Hinzufügen weiterer Termine aufrufen.
+Im folgenden Listing wird die Funktion \textit{addMeetings(meetingList)} gezeigt. Diesse Funktion wird vom \textit{CalendarController} aufgerufen und bekommt als Parameter eine Liste von Meetings übergeben. Aus den übergebenen Objekten vom Typ \textit{Meeting} werden zunächst Objekte generiert, die alle Eigenschaften erhalten, welche die \textit{fullcalendar} Bibliothek benötigt um die Termine in der Übersicht korrekt anzeigen zu können. Die so erstellten Datensätze werden anschließend in \textbf{eigene Termine} und \textbf{fremde Termine} sortiert. Über die Funktion \textit{fullCalendar.addEventSource(eventSource)} werden die Listen mit den eigenen und den fremden Terminen hinzugefügt. Über den weiteren Parameter \textit{color} wird in diesem Fall die farbliche Darstellung der Termine in der Monatsübersicht gesteuert.
+
+\begin{lstlisting}[language=Java, caption=Hinzufügen von Terminen in die Monatsübersicht von fullcalendar]
     addMeetings(meetingList) {
         //Generate events for fullcalendar
         let ownUserId = stubegru.currentUser.id;
@@ -1255,11 +1308,6 @@ Die Funktion \textit{updateOnServer()} wird auf einem bestehenden Objekt vom Typ
         });
     }
 \end{lstlisting}
-
-
-
-Klassendiagramm verschiedene Klassen, static Controller Codeschnipsel (Meeting
-Objekte für fullcalendar bauen, fetch await server, DOM manipulation / reading)
 
 \subsection{Testen / User-feedback}
 \subsubsection{Methode ???}
