@@ -1,5 +1,16 @@
 # Fragen an Claude
 
+
+## Evaluation
+
+Laufe n lassen
+Laut dneken auffrdern
+Feedback danach
+danch noch alles aufschreibenwa s einem aeinfaällt
+look and feel, wie gefällt die fotware...?
+
+Literaturverzeichniss ins Inhaltsverzechniss
+
 ## Beantwortet
 - alte Kasseler Version, Bremer Version, neue Kasseler Version... Wie erklärt man das am besten
  -> Abschnitt Historie der Sfotware ist gut.
@@ -10,6 +21,7 @@
 
 ## Unbeantwortet
 - Anonymisierung kennzeichnen?
+-> NOtiz oder fußnote?
 - Offizielle Erklärungen am Anfang der Arbeit...?
 - Was muss aufs Deckblatt?
 - Fettschreiben von Schlüsselwörtern (z.B. HCD, IIK)
