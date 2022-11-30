@@ -218,7 +218,7 @@ Beratungstermins mit wenigen Klicks über ein Date-/Timepicker mit der Maus
 eingeben werden können. Eine Datumseingabe über die Tastatur würde er nicht
 bevorzugen.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \caption{Datepicker im Formular zur Erstellung eines Zeitslots}
     \centering
     \includegraphics[width=0.9\textwidth]{screen_old_datepicker.png}
@@ -237,7 +237,7 @@ einer Spezialsituation, in der ein größerer Beratungstermin beispielsweise in
 einem gemeinsamen Gruppenraum stattfinden, ist aber auch solch eine Auswahl
 möglich.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \caption{Dropdown zur Auswahl des Beratungsraums. Der eigene Raum wird immer als oberstes angezeigt}
     \centering
     \includegraphics[width=0.9\textwidth]{screen_old_roomdropdown.png}
@@ -248,7 +248,7 @@ der Kalenderübersicht nun grün hinterlegt. Dies ist ein Zeichen für die
 Hilfskräfte der Erstinformation, dass an diesem Tag noch freie Zeitslots
 verfügbar sind.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \caption{Kalenderübersicht. Grüne gefärbte Tage zeigen noch freie Zeitslots an. Rot gefärbte Tage weisen auf vergeben Zeitslots hin}
     \centering
     \includegraphics[width=0.9\textwidth]{screen_old_module.png}
@@ -265,7 +265,7 @@ im Kalender rot markiert. \glqq So sehen Hilfskräfte mit einem Blick sofort,
 dass sie hier keinen Termin mehr vergeben werden können\grqq, erklärt \ipName
 \cite{claves}.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \caption{Bewegt man den Mauszeiger über einen Tag, erscheinen weiteren Informationen zu den Zeitslots an diesem Tag}
     \centering
     \includegraphics[width=0.9\textwidth]{screen_old_hover.png}
@@ -281,7 +281,7 @@ In einer Liste werden, nach Uhrzeit sortiert, alle Termine untereinander
 angezeigt. Neben jedem freien Termin steht ein Button zum Vergabe dieses
 Zeitslots zur Verfügung.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \caption{Der Detail-View: Eine Liste mit drei freien Zeitslots am entsprechenden Datum}
     \centering
     \includegraphics[width=0.9\textwidth]{screen_old_daylist.png}
@@ -292,7 +292,7 @@ Zeitslot vergeben könnte. Nach Klick auf den "Vergabe-Button" klappt ein
 Formular auf, indem Name, Kontaktdaten und Anliegen der Ratsuchenden erfasst
 werden können.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \caption{Formular zum vergeben eines Zeitslots an eine ratsuchende Person}
     \centering
     \includegraphics[width=0.9\textwidth]{screen_old_clientdata.png}
@@ -315,7 +315,7 @@ immer besonders hervorgehoben wird. Es wäre allerdings deutlich schlimmer einen
 Termin doppelt zu vergeben und somit mindestens einer ratsuchenden Person
 wieder absagen zu müssen, als einen Zeitslot versehentlich zu sperren.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \caption{Detail-View: Ein Zeitslot wurde nun vergeben und ist für den entsprechenden Kunden reserviert. Hilfskräfte können nur den Namen des Ratsuchenden einsehen}
     \centering
     \includegraphics[width=0.9\textwidth]{screen_old_assigned_hiwi.png}
@@ -332,7 +332,7 @@ Studienberatende, bei dem der Termin stattfindet, bekommt beim Aufruf des
 Detail-Views weitere Details wie Kontaktdaten und Anliegen der ratsuchenden
 Person angezeigt.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \caption{Detail-View: Der verantwortliche Beratende kann weitere personenbezogene Details einsehen}
     \centering
     \includegraphics[width=0.9\textwidth]{screen_old_assigned.png}
@@ -378,7 +378,7 @@ In der alten Softwareversion, die an der Uni Kassel bisher zum Einsatz kam,
 werden alle freien und vergeben Zeitslots der Beratungstermine in einer
 tabellarischen Monatsansicht dargestellt.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \caption{Tabellarische Ansicht der Zeitslots mit Einfärbungen der einzelnen Tage}
     \centering
     \includegraphics[width=0.9\textwidth]{screen_old_module.png}
@@ -396,7 +396,7 @@ kompakte tabellarische Übersicht durch eine größere umfangreiche Ansicht
 ausgetauscht, die durch die Javascript Bibliothek \textit{full
     calendar}\cite{fullCalendarWeb} gerendert wird.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \caption{Monatsübersicht der Beratungstermine in der Bremer Version}
     \centering
     \includegraphics[width=0.9\textwidth]{screen_bremen_month_view.png}
@@ -487,7 +487,7 @@ der Phase der Evaluation sollte Diese Problematik berücksichtigt werden und
 eine Abschätzung getroffen werden, wie viele Termine im praktische Einsatz
 tatsächlich pro Tag angelegt werden.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \caption{Monatsübersicht der Beratungstermine mit farblichen Markierungen}
     \centering
     \includegraphics[width=0.9\textwidth]{doodle_month_view.jpeg}
@@ -495,7 +495,7 @@ tatsächlich pro Tag angelegt werden.
 
 Über der tabellarischen Ansicht der Tage befindet sich eine horizontale Leiste, die den aktuell angezeigten Monat betitelt und Kontrollelemente beinhaltet um in den vorherigen bzw nächsten Monat zu wechseln. Ein Button, um nach einigem hin- und herblättern wieder den aktuelle Monat anzuzeigen, könnte in einigen Anwendungsszenarien viele Klicks ersparen. Über der Leiste mit dem Monat befindet sich eine weitere Kontrollleiste. Diese enthält einen Button um einen neuen Zeitslot anzulegen. Dieser Button sollte nur für Nutzeraccounts von Beratenden sichtbar sein. Hilfskräfte der Erstinformation sollen Zeitslots nur vergeben, aber nicht selbst anlegen können. Daneben befindet sich eine Suchleiste um schnell nach Namen von ratsuchenden Personen suchen zu können. Ganz rechts gibt es schließlich noch einen Button um weitere Einstellungen vorzunehmen. Durch einen Klick auf diesen Button mit einem Zahnrad Symbol soll ein Dropdown-Menü aufklappen, in dem Filter für die Ansicht der Termine gesetzt werden können.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \caption{Filtereinstellungen der Kalenderansicht. Das Dropdown Menü öffnet sich durch Klick auf den Zahnrad Button}
     \centering
     \includegraphics[width=0.9\textwidth]{example-image-a}
@@ -524,7 +524,7 @@ Uhrzeit aufgelistet. Neben jedem Datensatz erscheint ein Button mit einem
 Augensymbol. Durch einen Klick darauf wird der entsprechende Termin in der
 Detailansicht geöffnet.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \caption{Suche nach Terminen eines Ratsuchenden mit Ergebnisliste}
     \centering
     \includegraphics[width=0.9\textwidth]{doodle_search_view.jpeg}
@@ -555,7 +555,7 @@ aufgerufen werden. In dieser Ansicht können Nutzeraccounts mit der
 entsprechenden Berechtigung nochmals Details des Termins bearbeiten oder den
 Termin löschen.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \caption{Detailansicht eines Termins, der bereits an eine ratsuchende Person vergeben wurde}
     \centering
     \includegraphics[width=0.9\textwidth]{doodle_client_details.jpeg}
@@ -576,7 +576,7 @@ durch ein Leerzeichen vorgeschrieben. Weitere Formatierung, wie beispielsweise
 das aufteilen der Ziffern in kleinere Blöcke wird hier nicht thematisiert.
 \cite{din5008}
 
-\begin{figure}[h]
+\begin{figure}[H]
     caption{So werden nationale Festnetz- und Mobilfunknummern nach DIN 5008 richtig geschrieben. Quelle: \cite{phoneFormatBlog}}
     \centering
     \includegraphics[width=0.9\textwidth]{grafik-telefonnummer-national.png}
@@ -716,7 +716,7 @@ Folgenden ein Diagramm gezeigt und näher erläutert. Dieses Diagramm beschreibt
 den Workflow wenn ein Nutzender die Detailansicht eines bereits vergebenen
 Termins aufruft.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \caption{Sequenzdiagramm, Laden der Detailansicht für einen vergebenen Termin}
     \centering
     \includegraphics[width=0.9\textwidth]{flow_termin_aufrufen_unvergeben.jpeg}
@@ -751,7 +751,7 @@ Terminbestätigung) korrekt an den Kunden und den Beratenden gesendet werden und
 somit für beide Parteien nachvollziehbar ist, an welchem Datum der Termin nun
 tatsächlich stattfinden soll.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \caption{Verschiedene Bereiche des Modals mit Kontrollelementen}
     \centering
     \includegraphics[width=0.9\textwidth]{doodle_modal_overview.jpeg}
@@ -822,7 +822,7 @@ Ratsuchenden, der diesen Termin gebucht hat. Diese Datensätze werden im
 Folgenden als Meeting bezeichnet und sollen anhand eines UML Diagramms
 detailliert veranschaulicht werden.\todo{UML erklären?}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \caption{UML Diagramm der Klasse Meeting. Stellt alle Methoden und Eigenschaften eines Objektes dar, das einen Termin repräsentiert}
     \centering
     \includegraphics[width=0.9\textwidth]{uml_meeting.jpeg}
@@ -915,7 +915,7 @@ Der Nutzertest beginnt damit, dass \ipName die Software Stubegru im Browser
 aufruft und den View mit dem neuen Kalendermodul zur Terminvergabe öffnet. Sein
 erster Blick fällt auf die Monatsübersicht der Termine im November.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \caption{Monatsübersicht der Termine im November.}
     \centering
     \includegraphics[width=0.9\textwidth]{screen_new_month_view.png}
@@ -938,7 +938,7 @@ diskutieren wie viele Termine üblicherweise pro Tag angeboten werden und
 einigen uns darauf die aktuelle Ansicht zunächst beizubehalten und in der
 Praxis zu testen.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \caption{Toggles im Dropdown Menü um die angezeigten Termine zu filtern. Hier werden nur freie Termine dargestellt}
     \centering
     \includegraphics[width=0.9\textwidth]{screen_new_filter.png}
@@ -971,7 +971,7 @@ mich noch an den grünen Knopf zum Erstellen eines Termins. Früher war der Knop
 unter der Monatsübersicht, aber so fügt er sich elegant in die Leiste mit der
 Suche und den neuen Filtern ein.\grqq{}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \caption{Navigationsleiste über der Monatsansicht. Über den grünen Button kann eine neuer Zeitslot erstellt werden.}
     \centering
     \includegraphics[width=0.9\textwidth]{screen_new_create_button.png}
@@ -991,7 +991,7 @@ dieser vom ITS standardmäßig vorinstalliert ist. Ich verspreche mich dem
 Problem anzunehmen und einen zusätzlichen Timepicker einzubinden, der
 unabhängig vom verwendeten Browser funktioniert.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \caption{Erstellen eines neuen Termins und Ausfüllen der Eingabefelder. In diese Fall wird in Google Chrome ein Timepicker angezeigt.}
     \centering
     \includegraphics[width=0.9\textwidth]{screen_new_create_with_picker.png}
@@ -1036,7 +1036,7 @@ speichert den aktuellen Termin und lässt das Modal ohne zurücksetzen der
 Formularfelder geöffnet. Somit kann direkt ein neuer Termin mit ähnlichen
 Attributen eingetragen werden. \todo{Direkte Zitate von \ipName kennzeichnen?}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \caption{Ein freier Termin. Studienberatende können Änderungen am Termin vornehmen oder einen Kunden einbuchen.}
     \centering
     \includegraphics[width=0.9\textwidth]{screen_new_free_meeting.png}
@@ -1056,7 +1056,7 @@ Daten verhindert.
 Nachdem alle Felder vollständig ausgefüllt sind, speichert \ipName die
 Kundendaten und sieht eine leicht veränderte Detailansicht des Termins:
 
-\begin{figure}[h]
+\begin{figure}[H]
     \caption{Ein vergebener Termin. Terminattribute und neue Kundendaten können erst nach Löschen der aktuellen Kundendaten hinterlegt werden.}
     \centering
     \includegraphics[width=0.9\textwidth]{screen_new_assigned.png}
@@ -1083,7 +1083,7 @@ bestimmten Kunden schnell gefunden werden muss, wurde außerdem die Suchfunktion
 entwickelt. \ipName erinnert sich an die Suchfunktion und will diese direkt
 ausprobieren.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \caption{Suchfunktion um bereits vergebene Termine anhand des eingebuchten Kunden zu finden. Die Suchanfrage \glqq{}jo\grqq{} ergibt drei Treffer.}
     \centering
     \includegraphics[width=0.9\textwidth]{screen_new_search.png}
