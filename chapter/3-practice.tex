@@ -900,10 +900,17 @@ Monatsübersicht gesteuert.
 \subsubsection{Usertest}
 
 \paragraph{Einleitung Usertest}
-\todo{Usertest einleitung mit quellenverweisen...}
+Im vorherigen Kapitel wurden einzelne Aspekte der konkreten Implementierung der
+Gestaltungslösungen vorgestellt. Im nächsten Schritt sollen die so entwickelten
+Prototypen mit einem Nutzer getestet werden. Dies entspricht dem vierten
+Schritt \textit{Gestaltungslösungen aus der Benutzerperspektive evaluieren} im
+menschzentrierten Gestaltungsprozess der ISO Norm \cite{iso9241}. Christian
+Moser erklärt den möglichen Ablauf eines solchen Nutzertests wie folgt:
+\glqq{}Bei Tests mit Benutzern wird den Testteilnehmern der Kontext anhand des
+Szenarios erklärt und dann werden die Aufgaben gestellt. Dabei wird beobachtet,
+wie gut sie diese mit Hilfe des Prototyps lösen können.\grqq{}\cite{moserTesting}. In diesem Fall wird der Test gemeinsam mit \ipName von der allgemeinen Studienberatung der Universität Kassel durchgeführt. Gemeinsam haben wir uns eine Stunde Zeit genommen um das neu entwickelte Modul zur Terminvereinbarung zu testen. Wir sitzen gemeinsam im Büro von \ipName und können die Software so direkt an seinem Dienstrechner testen um den Nutzungskontext möglichst authentisch zu gestalten.
 
 \paragraph{Monatsübersicht}
-
 Der Nutzertest beginnt damit, dass \ipName die Software Stubegru im Browser
 aufruft und den View mit dem neuen Kalendermodul zur Terminvergabe öffnet. Sein
 erster Blick fällt auf die Monatsübersicht der Termine im November.
@@ -1010,7 +1017,24 @@ werden und es für die Studienberatenden nicht nötig sei, den erstellten Termin
 direkt vergeben zu können. Wir einigen uns darauf, dass ein Klick auf den
 Speichern Button das Modal, nach erfolgreichem Sichern der Daten, schließt.
 
-\todo{Ergänzen: Kein Datenreset => speichern und weiter button}
+Und noch eine weitere Sache fällt \ipName auf: Wenn er bereits einen Termin
+eingetragen hat und dann einen zweiten Termin erstellen möchte, werden alle
+Eingabefelder zurückgesetzt und sind wieder leer. \glqq{}Das war in der alten
+Version praktischer\grqq{}, sagt \ipName \glqq{}Oftmals trage ich viele Termine
+fpr den gleichen Tag mit den gleichen Attributen ein. Das einzige was ich
+bisher anpassen musste war dann die Uhrzeit. Nun brauche ich viel mehr Klicks
+weil ich jedes Mal wieder den Raum und das Mailtemplate auswählen muss.\grqq{}.
+Es stellt sich heraus, das es in der alten Softwareversion einen Bug gab,
+wodurch in eingen Fällen das zurücksetzen des Formulars nicht aufgerufen wurde.
+Dieser Bug hat sich in der Praxis dann allerdings als sehr praktisch etabliert.
+Die Formularfelder nie zurückzusetzen kann allerdings inkonsistente Status
+erzeugen, wenn zuvor beispielsweise ein bereits vergebener Termin im Modal
+angezeigt wurde. Wir einigen uns auf eine gemeinsame Idee: Wenn das Modal zum
+Erstellen eines Termins angezeigt wird, erscheint in der Fußleiste ein weiterer
+Button mit der Aufschrift: \textit{Speichern und nächster}. Dieser Button
+speichert den aktuellen Termin und lässt das Modal ohne zurücksetzen der
+Formularfelder geöffnet. Somit kann direkt ein neuer Termin mit ähnlichen
+Attributen eingetragen werden. \todo{Direkte Zitate von \ipName kennzeichnen?}
 
 \begin{figure}[h]
     \caption{Ein freier Termin. Studienberatende können Änderungen am Termin vornehmen oder einen Kunden einbuchen.}
@@ -1074,4 +1098,12 @@ Buchstaben angezeigt werden und kein Bestätigen der Suche mit Enter notwendig
 ist.
 
 \paragraph{Abschluss Usertest}
-Der Nutzertest ist nun beendet und \ipName bedankt sich für die entgegengebrachte Aufmerksamkeit. Er ist sichtlich begeistert, dass die Nutzenden des Systems in diesem Designprozess im Fokus stehen und freut sich auf die Einführung der neuen Softwareversion: \glqq{} Wir müssen dann sicherlich eine Schulung für die Hilfskräfte machen um sie mit den neuen Features vertraut zu machen. Aber eigentlich ist ja fast alles so, wie sie es schon gewohnt sind.\grqq{}, beendet \ipName unser Gespräch. Ich bedanke mich ebenfalls für die Zeit und die konstruktive Kritik, die eine Diskussion über Verbesserungspotenziale erst möglich gemacht hat.
+Der Nutzertest ist nun beendet und \ipName bedankt sich für die
+entgegengebrachte Aufmerksamkeit. Er ist sichtlich begeistert, dass die
+Nutzenden des Systems in diesem Designprozess im Fokus stehen und freut sich
+auf die Einführung der neuen Softwareversion: \glqq{} Wir müssen dann
+sicherlich eine Schulung für die Hilfskräfte machen um sie mit den neuen
+Features vertraut zu machen. Aber eigentlich ist ja fast alles so, wie sie es
+schon gewohnt sind.\grqq{}, beendet \ipName unser Gespräch. Ich bedanke mich
+ebenfalls für die Zeit und die konstruktive Kritik, die eine Diskussion über
+Verbesserungspotenziale erst möglich gemacht hat.
