@@ -1,3 +1,14 @@
+# Beachten beim Drübergucken
+
+- Claudes Bewertungsgrundlage lesen
+
+- Zitat Referenzen **vor** dem Satzpunkt?
+- Darstellung der Literaturverweise: z.b. bei Websiten und Normen...
+- Caption von Grafiken (Abstand, unter das Bild...?, Kasten drum?)
+
+
+
+
 # Fragen an Claude
 
 
