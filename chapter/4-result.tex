@@ -29,39 +29,43 @@ die hier gewonnen Ergebnisse zu vertiefen und weiter zu verwenden.
 
 \paragraph{Was war geplant, was wurde umgesetzt?}
 Ziel dieses Abschnittes soll es sein, den Bogen zu spannen zwischen den
-anfängliche erarbeiteten Nutzungsanforderungen und den am Ende tatsächlich
-umgestzten Ergebnissen.
+anfänglich erarbeiteten Nutzungsanforderungen und den am Ende tatsächlich
+umgesetzten Ergebnissen.
 
 Wenn man sich die Auswertung des Interviews im Kontext in Abschnitt
-\ref{subsection:IIK} ansieht, wir dklar, dass eines der wichtigsten Bedürfnisse
-des INterviewten stets das schnelle und intuitve Nutzen der Sfotware war. Es
-sollten möglichst viele Informationen auf ienen Blick sichtbar sein, ohne die
-NUtzenden von den wesentlichen DIngen abzulenekne. Wenn Workflows durch die
-NUtzendenn abzuarbeiten sind, sollten diese möglichst schnell und mit
-möglischst wenigen Klicks zu erledigen sein. Ein großer DEtailgrad der Asuwahl
-und KOinfigurationsmgölcihkeitne stand adbei eher im Hintergrund.
+\ref{subsection:IIK} ansieht, wird klar, dass eines der wichtigsten Bedürfnisse
+der Nutzenden stets das schnelle und intuitive Nutzen der Software ist. Es
+sollten möglichst viele Informationen auf einen Blick sichtbar sein, ohne die
+Nutzenden von den wesentlichen Dingen abzulenken. Wenn Workflows durch die
+Nutzenden abzuarbeiten sind, sollten diese möglichst schnell und mit möglichst
+wenigen Klicks zu erledigen sein. Ein großer Detailgrad der Auswahl- und
+Konfigurationsmöglichkeiten sind dagegen in diesem Kontext nicht relevant. Wo
+die Software eine halbwegs sinnvolle Vorauswahl treffen kann, sollte dies
+automatisch passieren und den Nutzenden somit unnötige Eintragungen ersparen.
 
-Um hierfür konkrete ANhaltspunkte zu geben, werden im folgenden die drei
+Um hierfür konkrete Anhaltspunkte zu geben, werden im Folgenden die drei
 exemplarisch vorgestellten Nutzungsanforderungen aus Abschnitt
-\ref{subsection:SpannendeErkenntnisse} nochmals aufgegriffen. Gefordert wurde
-da eine kompakte Kalenderansicht, die durch farbliiche Markierungen auf den
-ersten Blick darstellt an welchen Tagen noch freie termine verfügbar sind.
-Diese Anforderung konnte durch die tabellarische MOnatsansicht umgesetzt
-werden. Durch die roten und grünen Punkte neben jedem angezeigten Termin, aknn
-direkt auf den ersten Blick erkannt weerden, ob es sich um einen bereits
-verrgebene oder freien Termin hadelt. Durch die neue verwendete Bibliothek
-\textit{fullcalender} zum Darstellen der Monatsübersicht ist dieser
-Tabellarische üBerblick nicht mehr ganz so kompakt wie in der alten
-Softwareversion. Dies ist auuch \ipName beim nutzertest negativ aufgefallen.
-Ein positiver Ausgliech hierfür ist allersigns, das in der noeunen Übersicht
-direkt die einzelenen ZeTermineitslots eines Tages dargestellt werden. In der
-alten Version war es nätig zunächst den Tag anzuklicken und erst in dem danach
-erschienden Modal konnten die inzlenen Termine und die entsprecheden Uhrzeiten
-eigensehen werden. DEr etwas ausführlichere neue View nimmt also mehr Plaz auf
-dem Bilschirm aein und kann bei sehr vielen Temrinen an einzelnen Tagen sehr
-lang werden, bietet dafür aber eine umfassende Übersicht über freie und
-vergebene Termine uns stellt weiterführenden INformationen mit nunr einem Lick
-in der Detailsnasicht zur VEüfungn.
+\ref{subsection:SpannendeErkenntnisse} nochmals aufgegriffen.
+
+Gefordert wurde da eine kompakte Kalenderansicht, die durch farbliche
+Markierungen auf den ersten Blick darstellt, an welchen Tagen noch freie
+Termine verfügbar sind. Diese Anforderung konnte durch die tabellarische
+Monatsansicht mithilfe der Javascript Bibliothek \textit{fullcalendar}
+umgesetzt werden. Durch die roten und grünen Punkte neben jedem angezeigten
+Termin, kann direkt auf den ersten Blick erkannt werden, ob es sich um einen
+bereits vergebenen oder freien Termin handelt. Durch die verwendete Bibliothek
+zum Darstellen der Monatsübersicht ist dieser tabellarische Überblick nicht
+mehr ganz so kompakt wie in der alten Softwareversion. Dies ist auch \ipName
+beim Nutzertest negativ aufgefallen. Ein positiver Ausgleich hierfür ist
+allerdings, das in der neuen Übersicht direkt die einzelnen Termine eines Tages
+dargestellt werden. In der alten Version war es nötig zunächst den Tag
+anzuklicken und erst in dem danach erscheinenden Modal konnten die einzelnen
+Termine und die entsprechenden Uhrzeiten eigensehen werden. Der etwas
+ausführlichere neue View nimmt also mehr Platz auf dem Bildschirm ein und kann
+bei sehr vielen Terminen an einzelnen Tagen sehr lang werden, bietet dafür aber
+eine umfassende Übersicht über freie und vergebene Termine uns stellt
+weiterführenden Informationen mit nur einem Klick in der Detailansicht zur
+Verfügung.
 
 \begin{figure}[H]
     \caption{Vergleich der Monatsübersicht in der alten und neuen Softwareversion}
@@ -69,20 +73,20 @@ in der Detailsnasicht zur VEüfungn.
     \includegraphics[width=\textwidth]{screen_past_now_month_view.pdf}
 \end{figure}
 
-Als nächstes wurde beim Interivew Im ontext deutlich, dass eine Funktion
-ootwendig ist um im Nachhinein den Termin eines Ratsuchednen schnel und
-unkolizert finden zu können. Hierfür wurde die Suchfunktion impementiert.
-Bereist nach dem eingeben eingier Buchstaben aus dem Namen der Ratsuchednen
-PErson schlägt diese neue Suchfunktion passende ERgebnisse vor und bietet in
-einer tabellarischen Übersicht direkt die wichtigsten Daten zum zugehörigen
-BEratungstermine. Druch einen Klick auf ein Suchergebniss kann der Termin
-schnell und einfach in der Detailsansiht geöffnet werden. Im Vergleich zu alten
-Softwareversion sind die Suchergebnisse sehr viel ausführlicher und
-strukturierter dargestellt. Dies wurde auch im Nutzertest positiv wargenommen.
-In weiteren test schein der EIndruck, dass die alte Suchfunktion etwa schneller
-ergebnisse anzeigt. Dies kann aber erst objektiv bewertet werden, wenn die neue
-Impemntierung auch auf den gelichen Produktiv servern installiert und im
-Enisatz ist.
+Als nächstes wurde beim Interview im Kontext deutlich, dass eine Funktion
+notwendig ist, um im Nachhinein den Termin eines Ratsuchenden schnell und
+unkompliziert finden zu können. Hierfür wurde die Suchfunktion neu
+implementiert. Bereist nach dem Eingeben einiger Buchstaben aus dem Namen der
+ratsuchenden Person schlägt diese neue Suchfunktion passende Ergebnisse vor und
+bietet in einer tabellarischen Übersicht direkt die wichtigsten Daten zum
+zugehörigen Beratungstermin. Durch einen Klick auf ein Suchergebnis kann der
+Termin schnell und einfach in der Detailansicht geöffnet werden. Im Vergleich
+zur alten Softwareversion sind die Suchergebnisse sehr viel ausführlicher und
+strukturierter dargestellt. Dies wurde auch im Nutzertest positiv wahrgenommen.
+In weiteren Tests erscheint der Eindruck, dass die alte Suchfunktion etwas
+schneller gearbeitet hat. Dies kann aber erst objektiv bewertet werden, wenn
+die neue Implementierung auch auf den gleichen Produktiv-Servern installiert
+und im Einsatz ist.
 
 \begin{figure}[H]
     \caption{Vergleich der Suchfunktion in der alten und neuen Softwareversion}
@@ -91,19 +95,19 @@ Enisatz ist.
 \end{figure}
 
 Als letztes wurde im Anschnitt \ref{subsection:SpannendeErkenntnisse} das
-elegante DArstellen der Telefonnummern gefordert. Diess Feature lieiß sich in
-der PRaxis leicht impemtneiren, idem in die aus der DAtenbank abgerufenen
-Telefonnummer einfach an jeder vierten Stelle ien Leerzeichen eingefügt wird.
-Somit kann die telfonnummer von den Stfudienberatenden bei BEdarf in leicht zu
-merkenden Viererblöcken in da sTelefno eingeben werden. Für andere
-Nutzeraccounts als den zuständigen Beratenden werden persnliche Details der
-Ratsuchednen nicht angezeigt. Diese Funktion gab es auch in der alten Version
-ebretis, allerdings wird in der neune VEriosn statt den eigentlichen DAten ein
-Hinweis angezeigt. Inde ralten Version wurde einfach agr nichts angezeigt, was
-manchmal zu unsicherheiten geführt hat, b hier überhaput daten eingtragen und
-jorrekt gespeichert wurden. DAs feedback aus dem Nutertest zeigt: Die neue
-Vrinate braucht etwas mehr paltz auf dem Biildschirm, ist dafür aber klarer zu
-verstehen und intuitiver zu erfassen. 
+elegante Darstellen der Telefonnummern gefordert. Dieses Feature ließ sich in
+der Praxis leicht implementieren, indem in die, aus der Datenbank abgerufene,
+Telefonnummer an jeder vierten Stelle ein Leerzeichen eingefügt wird. Somit
+kann die Telefonnummer von den Studienberatenden bei Bedarf in leicht zu
+merkenden Vierer-Blöcken in das Telefon eingeben werden. Für andere
+Nutzeraccounts als den zuständigen Beratenden werden persönliche Details der
+Ratsuchenden nicht angezeigt. Diese Funktion gab es auch in der alten Version
+bereits, allerdings wird in der neuen Version statt den eigentlichen Daten ein
+Hinweis angezeigt. In der alten Version wurde an dieser Stelle gar nichts
+angezeigt, was manchmal zu Unsicherheiten geführt hat, ob hier überhaupt Daten
+eingetragen und korrekt gespeichert wurden. Das Feedback aus dem Nutzertest
+zeigt: Die neue Variante braucht etwas mehr Platz auf dem Bildschirm, ist dafür
+aber klarer zu verstehen und intuitiver zu erfassen.
 
 \begin{figure}[H]
     \caption{Vergleich der Detailansicht eines vergebenen Termins in der alten und neuen Softwareversion}
@@ -113,11 +117,26 @@ verstehen und intuitiver zu erfassen.
 
 \paragraph{Umsetzung von Feedback des Usertests}
 
-\begin{figure}[H]
-    \caption{Details eines vergebenen Termins aus Ansicht einer Hilfskraft.}
-    \centering
-    \includegraphics[width=0.9\textwidth]{screen_feedback_client_censorship.png}
-\end{figure}
+In Kapitel \ref{chapterPractice} wurde das Durchlaufen des Designzyklus anhand
+einer Iteration ausführlich beschrieben. Ein essentielles Grundkonzept des
+Human Centered Design beinhaltet allerdings auch das Durchlaufen weiterer
+Iterationen. Mit einem durchgeführten Nutzertest sollte der Entwicklungsprozess
+noch nicht als abgeschlossen gelten. Die herausgearbeiteten Kritikpunkte und
+Verbesserungsvorschläge, die sich aus dem Nutzertest ergeben haben, sollten
+auch in den Gestaltungsprozess der Software mit einfließen. Dies ist im
+Schaubild nach ISO9241 durch die gestrichelten Pfeile erkennbar. Nach der
+Evaluierung sollte der Prozess erneut durchlaufen werden. Der Einstieg erfolgt
+dabei je nach Feedback der Nutzenden in Phase 1 bis 3\cite{iso9241}. Diese
+weiteren Iterationen ausführlich zu beschreiben würde den Rahmen dieser Arbeit
+überstrapazieren. Daher werden im Folgenden lediglich die Ergebnisse eines
+zweiten Durchlaufes nach dem Nutzertest exemplarisch präsentiert:
+
+Ein neuer Button \textit{Speichern und Nächster} wird beim Erstellen eines
+neuen Termins angezeigt. Somit kann mit einem Klick der aktuelle Termin
+gespeichert werden und direkt ein neuer Datensatz eingetragen werden. Die
+Besonderheit ist, dass die Formularfelder in diesem Fall nicht auf
+Standardwerte zurückgesetzt werden. Somit können viele Termine mit ähnlichen
+Attributen besonders schnell hintereinander Eingetragen werden.
 
 \begin{figure}[H]
     \caption{Neuer Button: Mit \textit{Speichern und Nächster} kann direkt der nächste Termin eingetragen werden.}
@@ -125,18 +144,140 @@ verstehen und intuitiver zu erfassen.
     \includegraphics[width=0.9\textwidth]{screen_feedback_save_next.png}
 \end{figure}
 
+\ipName hat während des Nutzertests angemerkt, dass nicht nur das Beratungsanliegen der ratsuchenden Personen besonderem Datenschutz unterliegt. Auch persönliche Kontaktdaten wie Mailadresse und Telefonnummer sollten nur dem zuständigen Beratenden angezeigt werden. In der nochmals überarbeiteten Version werden somit nun auch die Telefonnummer und die Mailadresse des Kunden zensiert.
+
+\begin{figure}[H]
+    \caption{Details eines vergebenen Termins aus Ansicht einer Hilfskraft.}
+    \centering
+    \includegraphics[width=0.9\textwidth]{screen_feedback_client_censorship.png}
+\end{figure}
+
 \subsection{Reflektion der eingesetzen Methoden}
 \label{subsection:reflection}
 
+Um dem wissenschaftlichen Anspruch dieser Arbeit Genüge zu tragen, sollen die
+vorgestellten Methoden und Theorien nicht nur in der Praxis erprobt, sondern
+auch kritisch hinterfragt werden. Im folgenden Abschnitt werden die Methoden
+des Human Centered Design und des Interview im Kontext nochmals aufgegriffen
+und deren Praxistauglichkeit reflektiert. Des Weiteren wird auch die Umsetzung
+und Implementierung der Gestaltungslösungen in Frage gestellt und unter
+Einbeziehung des Feedbacks aus dem Nutzertest analysiert.
+
 \paragraph{Human Centered Design und IIK}
-% Einfache Umsetzung vs Nutzerfreundliche Lösung
-% IIK sehr ertragreich, Prototypen wichtig für Feedback, Vorstellung
+Die Theorie des Human Centered Design wurde zu Beginn dieser Arbeit motiviert
+mit der technischen Entwicklung von interaktiven Systemen. Software ist im
+Laufe der letzten Jahrzehnte immer interaktiver geworden. Der Schnittstelle
+zwischen Mensch und Maschine kommt dabei eine immer größer werdenden Bedeutung
+zu. Der Ansatz des Human Centered Design versucht an dieser Stelle alle
+Beteiligten einzubeziehen und eine einfache, intuitive Bedienung der Systeme zu
+ermöglichen, die ganz bewusst aus Perspektive der Nutzenden gestaltet wurde.
+Diese Theorie wurde in diesem Fall anhand des Designzyklus nach ISO9241 in die
+Praxis umgesetzt. Für die Durchführung der ersten Phase \textit{Den
+    Nutzungskontext verstehen und Beschreiben} wurde hier die Methode des
+Interviews im Kontext verwendet. Hierbei ging es darum alle Menschen, die mit
+dem System zu tun haben einzubeziehen und Ihre Arbeitsabläufe zu verstehen. Wie
+der Name der Methode bereits impliziert liegt der Fokus hierbei auch auf dem
+Kontext in dem diese Arbeitsabläufe stattfinden. Das Interview im Kontext wurde
+deshalb mit \ipName in seinem Büro an seinem Dienstrechner durchgeführt um eine
+möglichst realistische Alltagssituation zu schaffen.
+
+Der Einsatz dieser Methoden lässt sich im Großen und Ganzen als sehr
+ertragreich beschreiben. Durch den engen Austausch mit \ipName konnte der
+Nutzungskontext sehr gut verstanden und aufgearbeitet werden. Das Interview im
+Kontext hat überraschend viele neue Ideen hervorgebracht, die wohl keiner der
+Beteiligten im Vorhinein hätte formulieren können. Durch das gemeinsame
+Benutzen der alten Softwareversion vor Ort wurde ganz klar deutlich, welche
+Features wirklich wichtig sind für den tägliche Einsatz, an welchen Stellen es
+schnell gehen muss und wo detaillierte Einstellungsmöglichkeiten unbedingt
+notwendig sind. Die Erkenntnisse und Beobachtungen aus dem Interview im Kontext
+wurden auf dem I-Pad unstrukturiert schriftlich festgehalten. Beim Auswerten
+dieser Notizen ist aufgefallen, das viele Details aus dem Gespräch nicht so
+schnell aufgeschrieben werden konnten. Dies Notizen waren somit nicht ganz
+vollständig. Daher war es sehr wichtig die Auswertung des Interviews im Kontext
+zeitlich sehr nah an der Durchführung zu planen. Somit konnten viele Details
+aus der Erinnerung an das Interview selbst bei der Auswertung ergänzt werden.
+Der Austausch mit Menschen aus allgemeinen Studienberatung hat sich auf den
+Kontakt mit \ipName beschränkt. Dieser Austausch war sehr ertragreich, dennoch
+wäre es interessant gewesen auch noch Nutzungsanforderungen anderer
+Nutzergruppen wie beispielsweise der Hilfskräfte der Erstinformation mit
+einzubeziehen. Die Erfahrungen und Ideen andere Nutzenden hätten noch weitere
+hilfreiche Aspekte in den Gestaltungsprozess einbringen können. Somit hätte ein
+System entstehen können, das noch inklusiver und reibungsloser alle beteiligten
+Personen mit einbezieht. In der Praxis war es allerdings schon sehr aufwendig
+Termine mit \ipName zu organisieren. Wären noch weitere Nutzungsgruppen mit
+einbezogen worden, wäre der organisatorische und zeitliche Aufwand der Software
+deutlich höher gewesen. Dies kann grade in gewinnorientierten Softwarehäusern
+einen hemmenden Faktor für den Einsatz von Human Centered Design mit sich
+bringen.
+
+Um noch einmal Bezug auf die vier Phasen des Gestaltungsprozesses nach ISO9241
+zu nehmen, kann man festhalten, dass die klare Zuordnung der Arbeitsschritte in
+eine dieser Phasen sehr gut funktioniert hat. Somit wurde jede Arbeitsphase
+klar strukturiert und war einem definierten Ergebnis zugeordnet. Ein
+zielführendes und effizientes Arbeiten wurde somit erleichtert.
 
 \paragraph{Implementierung und Usertests}
+
+Im Folgenden soll nun auch die Implementierung der Software kritisch
+hinterfragt werden. Die Ergebnisse der Nutzertests sollen hierbei mit
+einbezogen werden und das Meinungsbild mit ersten Testerfahrungen bestärken.
+
+% Einfache Umsetzung vs Nutzerfreundliche Lösung
+Zunächst fällt allgemein auf, dass besonders nutzungsfreundliche Lösungen
+oftmals technisch verhältnismäßig aufwendig umzusetzen sind. Wird Software von
+Seite der technischen Möglichkeiten und Datenstrukturen her gestaltet, drängen
+sich bestimme Herangehensweisen oftmals fast unumgänglich auf. Diese
+Herangehensweisen sind dann meist sehr technisch geprägt und für unerfahrene
+Nutzende manchmal schwierig zu verstehen. Wenn man diesen Prozess im Sinne des
+Human Centered Design bewusst umdreht und die Gestaltung bei den Nutzenden und
+ihrem Umfeld beginnt, können oftmals deutlich passendere und einfachere
+Workflows und Views geschaffen werden. Diese sind in der Implementierung
+allerdings oftmals aufwendig zu realisieren.
+
 % Problem: Designpattern bei fertigem Softwareökosystem sehr eingeschränkt
-% Fullcalendar Lib: Weniger Arbeit (billiger, robuster) dafür weniger Flexibilität
 % Objektorientierter Ansatz sinnvoll für start serverlastige Anwendung?
+Als nächstes soll nochmal in Erinnerung gerufen werden, dass es sich bei dieser
+Umsetzung um ein Modul in einer bereits bestehenden Software handelt. Es
+mussten also alle bestehenden Schnittstellen und Programmierkonzepte der
+bereits existierenden Module eingehalten werden. Beispielsweise wurde für die
+Termindatensätze, sowie für Beratungsräume und Mailtemplates ein
+objektorientierter Ansatz gewählt. Ziel war es damit die Beziehungen dieser
+Datentypen untereinander klarer modellieren und elegant in Code umsetzen zu
+können. Im Rahmen der gesamten Software Stubegru hat sich allerdings gezeigt,
+das es eher wenig Sinn macht lokale Instanzen von Objekten zu erstellen und zu
+referenzieren. Die restlichen Module funktionieren so, dass Daten meist nur vom
+Server abgerufen und angezeigt werden. Weitere Referenzen oder Methodenaufrufe
+auf diesen Daten sind nicht vorgesehen und machen in diesem Anwendungsfall auch
+wenig Sinn. Die erhofften Vorteile der objektorientierten Umsetzung in diesem
+Modul konnten somit nicht vollständig erreicht werden. Viele Methoden wurden
+letztendlich als \textit{static} implementiert und werden somit unabhängig von
+der Instanz einer Klasse aufgerufen.
+
+% Prototypen wichtig für Feedback, Vorstellung
 % Evtl frühere Tests
+Im Nutzertest hat sich herausgestellt, dass es extrem hilfreich ist, wenn man
+eine Gestaltungslösung vorzeigen und gemeinsam durchspielen kann. Beim
+gemeinsamen Nutzen der implementierten Funktionen fallen oft wichtige Details
+auf, die im Vorhinein bei der Planung noch nicht berücksichtigt wurden. Somit
+war es also extrem hilfreich für den Nutzertest bereits das fast vollständig
+fertig implementierte Modul zur Terminvereinbarung präsentieren zu können und
+somit eine greifbare Gesprächsgrundlage zu bieten. Vielleicht wäre es hilfreich
+gewesen, schon früher im Gestaltungsprozess erste Prototypen zu entwickeln, die
+noch nicht voll funktionstüchtig sind, allerdings schon die wichtigsten
+Nutzungsinteraktionen wiedergeben können. Dann hätte man schon früher im
+Designprozess ein anschauliches Beispiel für konkrete Gestaltungslösungen
+bieten können. Somit hätten etwaige Mängel schon schneller erkannt und direkt
+korrigiert werden können. Da das Ergebnis des Nutzertests in diesem Fall
+allerdings sehr positiv ausgefallen ist, gab es sowieso nicht mehr viel
+Änderungsbedarf. Wären beim Nutzertest noch größere Unstimmigkeiten aufgefallen
+hätte man vermutlich wesentliche Teile des Codes neu schreiben müssen. In solch
+einem Fall hätte man mit früheren Prototypen viel doppelte Arbeit ersparen
+können. Allerdings lässt sich abschließend auch festhalten, dass durch das
+ausführliche Interview im Kontext bereits ein sehr guter Überblick entstanden
+ist, wie die Software aussehen sollte, um die Nutzenden möglichst gut zu
+unterstützen. Dies zeigt auf, dass eine ausführliche und gewissenhafte
+Durchführung der ersten Phasen im Gestaltungsprozess, die Wahrscheinlichkeit
+für Missverständnisse oder größere Änderungswünschen im Nutzertest senkt.
 
 \subsection{Zusammenfassender Abschluss}
 \label{subsection:conclusion}
