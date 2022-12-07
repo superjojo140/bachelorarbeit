@@ -1,4 +1,3 @@
-%Standard imports für Artikel
 \documentclass[12pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
@@ -6,19 +5,22 @@
 \usepackage{cite}
 \usepackage{float}
 \usepackage{todonotes}
+
+%Listings
 \usepackage{listings}
 \lstset{
-  basicstyle=\ttfamily,
-  columns=fullflexible,
-  frame=single,
-  breaklines=true,
-  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+    basicstyle=\ttfamily,
+    columns=fullflexible,
+    frame=single,
+    breaklines=true,
+    postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
 }
 
 %Bilder importieren
 \usepackage{graphicx}
 \graphicspath{ {./img/} }
 
+%Referenzen
 \usepackage{hyperref}
 \hypersetup{
     colorlinks,
@@ -27,51 +29,78 @@
     linkcolor=black,
     urlcolor=black
 }
-\setlength{\parskip}{1em}
 
 %Variable Textbausteine
 \newcommand{\ipName}{Herr Maier }
 \newcommand{\thesisTitle}{Menschzentrierte Gestaltung einer Terminvereinbarungssoftware}
 
+%Metadaten
 \title{\thesisTitle}
 \author{Johannes Schnirring}
 
+%Hier beginnt der Inhalt
 \begin{document}
 
+%Titelseite
 \begin{titlepage}
     \centering
-    {\scshape\LARGE \thesisTitle \par}
+    {\scshape\Huge \thesisTitle \par}
     \vspace{1cm}
-
-    {\scshape\Large Bachelorarbeit\par}
+    {\scshape\Large \textbf{Bachelorarbeit}\par}
     \vspace{1.5cm}
-
     \begin{tabular}{r l}
-        {\Large Studierender:} & {\Large Johannes Schnirring}             \\ \\
-        {\Large Betreuung:}    & {\Large Prof. Dr. Claude Draude        } \\ \\
-        {\Large Semester:}     & {\Large Wintersemester 2022}             \\ \\
-        {\Large Datum:}        & {\Large \today}                          \\ \\
+        {\Large Studierender:}   & {\Large Johannes Schnirring}                     \\ \\
+        {\Large Matrikelnummer:} & {\Large 33422833}                                \\ \\
+        {\Large Studiengang:}    & {\Large Informatik (PO 2018) }                   \\ \\ \\ \\
+        {\Large Erstprüferin:}   & {\Large Prof. Dr. Claude Draude }                \\
+                                 & {\Large Gender/Diversity in Informatiksystemen } \\ \\
+        {\Large Zweitprüfer:}    & {\Large Prof. Dr. Albert Zündorf }               \\
+                                 & {\Large Software Engineering }                   \\ \\ \\ \\
+        {\Large Semester:}       & {\Large Wintersemester 2022}                     \\ \\
+        {\Large Datum:}          & {\Large \today}                                  \\ \\
     \end{tabular}
     \vfill
     {\large Universität Kassel}
-
-    % Bottom of the page
-
 \end{titlepage}
 
-%\maketitle
+%Eidesstattliche Erklärung
+\thispagestyle{empty}
+\begin{center}
+    \Large\scshape Eidesstattliche Erklärung
+\end{center}
+Ich erkläre an Eides statt, dass ich die vorliegende Arbeit selbständig
+verfasst, andere als die angegebenen Quellen/Hilfsmittel nicht benutzt, und die
+den benutzten Quellen wörtlich und inhaltlich entnommenen Stellen als solche
+kenntlich gemacht habe.
+\vspace*{5cm}
+\noindent
+\begin{minipage}[h]{0.4\linewidth}
+    Kassel, am\dotfill\\
+    \vspace*{2.5mm}
+\end{minipage}
+\hspace*{0.1\linewidth}
+\begin{minipage}[h]{0.5\linewidth}
+    \begin{center}
+        \dotfill\\
+        (Unterschrift)
+    \end{center}
+\end{minipage}
+\newpage
+
+%Inhaltsverzeichnis
 \tableofcontents
 \newpage
 
+%Einbinden der eigentlichen Kapitel
 \input{chapter/1-introduction.tex}
 \input{chapter/2-methods.tex}
 \input{chapter/3-practice.tex}
 \input{chapter/4-result.tex}
 
-
+%Literaturverzeichnis
 \newpage
-
 \bibliographystyle{apalike}
 \bibliography{refs}
 
+%Ende
 \end{document}
