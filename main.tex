@@ -6,7 +6,7 @@
 \usepackage{float} %Bilder da anzeigen wo sie eingebunden werden
 \usepackage{todonotes} %Todo Notizen am Rand
 \usepackage{fancyhdr} %Kopfzeile mit Chaptername
-\usepackage[nottoc,numbib]{tocbibind} %Literaturverz. in Inhaltsverz.
+%\usepackage[nottoc,numbib]{tocbibind} %Literaturverz. in Inhaltsverz.
 
 %Listings
 \usepackage{listings} %Codeschnipsel
@@ -66,7 +66,12 @@
 \input{chapter/6-test.tex}
 \input{chapter/7-result.tex}
 \input{chapter/glossary.tex}
+
+\chapter{Referenzen}
+\addcontentsline{toc}{section}{Literaturverzeichnis}
 \bibliographystyle{apalike}\bibliography{refs} %Literaturverzeichnis
+\addcontentsline{toc}{section}{Abbildungsverzeichnis}\listoffigures
+
 \input{chapter/attachments.tex}
 
 %Ende

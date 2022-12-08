@@ -3,9 +3,9 @@
 ## Vorher noch machen
 - [OK] Claudes Bewertungsgrundlage lesen
     - [OK] Was muss aufs Deckblatt?
-- Kapitel aufteilen...?
+- [OK] Kapitel aufteilen
 - Anhang erstellen
-    - Link auf repo einbauen (auch link auf milestone)
+    - Link auf repo einbauen (auch link auf milestone und livedemo)
     - Weitere Sequenzdiagramme
 - Glossar erstellen
     - Modal
@@ -37,12 +37,12 @@
 - Überschriften aufhübschen
 
 ## Latex Gedöns
-- Formatvorlage verwenden...?
-- Seitennummerierung und Kapitel in Kopfzeile
+- [OK] Formatvorlage report verwenden
+- [OK] Seitennummerierung und Kapitel in Kopfzeile
 - Darstellung der Literaturverweise: z.b. bei Websiten und Normen...
 - Caption von Grafiken (Abstand, unter das Bild...?, Kasten drum?)
-- Literaturverzeichnis ins Inhaltsverzeichnis (mit Kapitelnummer)
-- Paragraph überschriften mit neuer Zeile versehen
+- [OK] Literaturverzeichnis ins Inhaltsverzeichnis (mit Kapitelnummer)
+- [OK] Paragraph überschriften mit neuer Zeile versehen
 
 
 
