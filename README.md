@@ -4,14 +4,15 @@
 - [OK] Claudes Bewertungsgrundlage lesen
     - [OK] Was muss aufs Deckblatt?
 - [OK] Kapitel aufteilen
-- Anhang erstellen
-    - Link auf repo einbauen (auch link auf milestone und livedemo)
-    - Weitere Sequenzdiagramme
+- [OK] Anhang erstellen
+    - [OK] Link auf repo einbauen (auch link auf milestone und livedemo)
+    - [OK] Weitere Sequenzdiagramme
 - Glossar erstellen
     - Modal
     - View
     - UML
     - Timepicker
+    - Usertest
 - [OK] Eidesstattliche Erklärung
 - [OK] Listing mit color Attributen
 - [OK] Todo notes durchgehen
@@ -43,6 +44,10 @@
 - Caption von Grafiken (Abstand, unter das Bild...?, Kasten drum?)
 - [OK] Literaturverzeichnis ins Inhaltsverzeichnis (mit Kapitelnummer)
 - [OK] Paragraph überschriften mit neuer Zeile versehen
+
+## Ganz am Ende
+- Seitenumbrüche checken
+- Grafik Positionierung
 
 
 
