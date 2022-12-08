@@ -24,7 +24,7 @@
     - [OK] Softwareentwicklung ist auch teil der Arbeit!
     - [OK] In Einleitung konkrete Referenzen auf Kapitel
     - [OK] Wenn der Begriff HCD fällt, direkt Quelle dahinter
-- Anonymisierung kennzeichnen als Fußnote
+- [OK] Anonymisierung kennzeichnen als Fußnote
 
 
 ## Beim Durchgucken beachten
@@ -42,7 +42,7 @@
 - [OK] Formatvorlage report verwenden
 - [OK] Seitennummerierung und Kapitel in Kopfzeile
 - Darstellung der Literaturverweise: z.b. bei Websiten und Normen...
-- Caption von Grafiken (Abstand, unter das Bild...?, Kasten drum?)
+- [OK] Caption von Grafiken (Abstand, unter das Bild...?, Kasten drum?)
 - [OK] Literaturverzeichnis ins Inhaltsverzeichnis (mit Kapitelnummer)
 - [OK] Paragraph überschriften mit neuer Zeile versehen
 

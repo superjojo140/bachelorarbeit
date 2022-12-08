@@ -3,10 +3,13 @@
 \usepackage[ngerman]{babel} %Deutsche Formate benutzen
 \usepackage[T1]{fontenc}
 \usepackage{cite} %Zitate
-\usepackage{float} %Bilder da anzeigen wo sie eingebunden werden
 \usepackage{todonotes} %Todo Notizen am Rand
 \usepackage{fancyhdr} %Kopfzeile mit Chaptername
-%\usepackage[nottoc,numbib]{tocbibind} %Literaturverz. in Inhaltsverz.
+
+%Bilder da anzeigen wo sie eingebunden werden, Rahmen um Bilder
+\usepackage{float}
+\floatstyle{plain} 
+\restylefloat{figure}
 
 %Listings
 \usepackage{listings} %Codeschnipsel
