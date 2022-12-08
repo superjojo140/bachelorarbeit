@@ -1,15 +1,15 @@
 \documentclass[12pt]{report}
 \usepackage[utf8]{inputenc}
-\usepackage[ngerman]{babel}
+\usepackage[ngerman]{babel} %Deutsche Formate benutzen
 \usepackage[T1]{fontenc}
-\usepackage{cite}
-\usepackage{float}
-\usepackage{todonotes}
-\usepackage{fancyhdr}
-\usepackage[nottoc,numbib]{tocbibind}
+\usepackage{cite} %Zitate
+\usepackage{float} %Bilder da anzeigen wo sie eingebunden werden
+\usepackage{todonotes} %Todo Notizen am Rand
+\usepackage{fancyhdr} %Kopfzeile mit Chaptername
+\usepackage[nottoc,numbib]{tocbibind} %Literaturverz. in Inhaltsverz.
 
 %Listings
-\usepackage{listings}
+\usepackage{listings} %Codeschnipsel
 \lstset{
     basicstyle=\ttfamily,
     columns=fullflexible,
@@ -46,7 +46,6 @@
 %Hier beginnt der Inhalt
 \begin{document}
 
-
 %Kopfzeile mit Kapitel und Seitennummer
 \pagestyle{fancy}
 \renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
@@ -54,57 +53,11 @@
 \fancyhead[L]{\chaptername\ \thechapter\ --\ \leftmark}
 
 
-%Titelseite
-\begin{titlepage}
-    \centering
-    {\scshape\Huge \thesisTitle \par}
-    \vspace{1cm}
-    {\scshape\Large \textbf{Bachelorarbeit}\par}
-    \vspace{1.5cm}
-    \begin{tabular}{r l}
-        {\Large Studierender:}   & {\Large Johannes Schnirring}                     \\ \\
-        {\Large Matrikelnummer:} & {\Large 33422833}                                \\ \\
-        {\Large Studiengang:}    & {\Large Informatik (PO 2018) }                   \\ \\ \\ \\
-        {\Large Erstprüferin:}   & {\Large Prof. Dr. Claude Draude }                \\
-                                 & {\Large Gender/Diversity in Informatiksystemen } \\ \\
-        {\Large Zweitprüfer:}    & {\Large Prof. Dr. Albert Zündorf }               \\
-                                 & {\Large Software Engineering }                   \\ \\ \\ \\
-        {\Large Semester:}       & {\Large Wintersemester 2022}                     \\ \\
-        {\Large Datum:}          & {\Large \today}                                  \\ \\
-    \end{tabular}
-    \vfill
-    {\large Universität Kassel}
-\end{titlepage}
 
-%Eidesstattliche Erklärung
-\thispagestyle{empty}
-\begin{center}
-    \Large\scshape Eidesstattliche Erklärung
-\end{center}
-Ich erkläre an Eides statt, dass ich die vorliegende Arbeit selbständig
-verfasst, andere als die angegebenen Quellen/Hilfsmittel nicht benutzt, und die
-den benutzten Quellen wörtlich und inhaltlich entnommenen Stellen als solche
-kenntlich gemacht habe.
-\vspace*{5cm}
-\noindent
-\begin{minipage}[h]{0.4\linewidth}
-    Kassel, am\dotfill\\
-    \vspace*{2.5mm}
-\end{minipage}
-\hspace*{0.1\linewidth}
-\begin{minipage}[h]{0.5\linewidth}
-    \begin{center}
-        \dotfill\\
-        (Unterschrift)
-    \end{center}
-\end{minipage}
-\newpage
-
-%Inhaltsverzeichnis
-\setcounter{tocdepth}{1}
-\tableofcontents
-
-%Einbinden der eigentlichen Kapitel
+%Einbinden der einzelnen Kapitel
+\input{chapter/title.tex} %Titelseite
+\input{chapter/eidesstatt.tex} %Eidesstattliche Erklärung
+\setcounter{tocdepth}{1}\tableofcontents %Inhaltsverzeichnis
 \input{chapter/1-introduction.tex}
 \input{chapter/2-methods.tex}
 \input{chapter/3-basics.tex}
@@ -113,14 +66,8 @@ kenntlich gemacht habe.
 \input{chapter/6-test.tex}
 \input{chapter/7-result.tex}
 \input{chapter/glossary.tex}
-
-%Literaturverzeichnis
-%\chapter{Literaturverzeichnis}
-\bibliographystyle{apalike}
-\bibliography{refs}
-
+\bibliographystyle{apalike}\bibliography{refs} %Literaturverzeichnis
 \input{chapter/attachments.tex}
-
 
 %Ende
 \end{document}
