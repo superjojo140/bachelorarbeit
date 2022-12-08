@@ -6,6 +6,7 @@
 \usepackage{float}
 \usepackage{todonotes}
 \usepackage{fancyhdr}
+\usepackage[nottoc,numbib]{tocbibind}
 
 %Listings
 \usepackage{listings}
@@ -31,6 +32,9 @@
     urlcolor=black
 }
 
+%Keine Einrückung neuer Absätze
+\setlength\parindent{0pt}
+
 %Variable Textbausteine
 \newcommand{\ipName}{Herr Maier }
 \newcommand{\thesisTitle}{Menschzentrierte Gestaltung einer Terminvereinbarungssoftware}
@@ -41,6 +45,9 @@
 
 %Hier beginnt der Inhalt
 \begin{document}
+
+
+%Kopfzeile mit Kapitel und Seitennummer
 \pagestyle{fancy}
 \renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
 \fancyhead[R]{\thepage}
@@ -94,19 +101,26 @@ kenntlich gemacht habe.
 \newpage
 
 %Inhaltsverzeichnis
+\setcounter{tocdepth}{1}
 \tableofcontents
-\newpage
 
 %Einbinden der eigentlichen Kapitel
 \input{chapter/1-introduction.tex}
 \input{chapter/2-methods.tex}
-\input{chapter/3-practice.tex}
-\input{chapter/4-result.tex}
+\input{chapter/3-basics.tex}
+\input{chapter/4-analyse.tex}
+\input{chapter/5-implement.tex}
+\input{chapter/6-test.tex}
+\input{chapter/7-result.tex}
+\input{chapter/glossary.tex}
 
 %Literaturverzeichnis
-\newpage
+%\chapter{Literaturverzeichnis}
 \bibliographystyle{apalike}
 \bibliography{refs}
+
+\input{chapter/attachments.tex}
+
 
 %Ende
 \end{document}
