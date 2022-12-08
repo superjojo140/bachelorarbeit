@@ -42,6 +42,12 @@
 - [OK] Formatvorlage report verwenden
 - [OK] Seitennummerierung und Kapitel in Kopfzeile
 - Darstellung der Literaturverweise: z.b. bei Websiten und Normen...
+    - Im Literaturverzeichnis:
+        - Anzeigen des Typs (Buch,Website,Paper...)
+        - Anzeigen des vollen Namen
+        - Bei Websiten: Abrufdatum
+    - Im Text:
+        - Komische Abkürzungen bei Organisationen (iso, websites)
 - [OK] Caption von Grafiken (Abstand, unter das Bild...?, Kasten drum?)
 - [OK] Literaturverzeichnis ins Inhaltsverzeichnis (mit Kapitelnummer)
 - [OK] Paragraph überschriften mit neuer Zeile versehen
