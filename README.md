@@ -17,13 +17,13 @@
 - [OK] Listing mit color Attributen
 - [OK] Todo notes durchgehen
 - Struktur im Fazit-Kapitel sortieren
-- Einleitung überarbeiten
-    - HCD: Warum HCD statt UCD (nicht nur Nutzer sondern alle betroffen)
-    - Was mache ich, was gibt es noch, warum mache ich das was ich mache...?
-    - Themenfeld Mensch.Computer Interaktion
-    - Softwareentwicklung ist auch teil der Arbeit!
-    - In Einleitung konkrete Referenzen auf Kapitel
-    - Wenn der Begriff HCD fällt, direkt Quelle dahinter
+- [OK] Einleitung überarbeiten
+    - [OK] HCD: Warum HCD statt UCD (nicht nur Nutzer sondern alle betroffen)
+    - [Naja...] Was mache ich, was gibt es noch, warum mache ich das was ich mache...?
+    - [OK] Themenfeld Mensch.Computer Interaktion
+    - [OK] Softwareentwicklung ist auch teil der Arbeit!
+    - [OK] In Einleitung konkrete Referenzen auf Kapitel
+    - [OK] Wenn der Begriff HCD fällt, direkt Quelle dahinter
 - Anonymisierung kennzeichnen als Fußnote
 
 
@@ -31,11 +31,12 @@
 - Zitat Referenzen **vor** dem Satzpunkt?
 - Schlüsselwörter **nicht** fett schreiben, aber kursiv.
 - Anführungszeichen mit glqq und grqq
+- iso oder ISO oder Iso?
 - Einheitlich gendern
 - Verwendete Technologien (jquery, fullcalendar, PHP, JS) referenzieren und hervorheben
     - https://www.scribbr.de/apa-standard/beispiel/software/
     - Titel der Software (Versionsnummer) [Software]. (Jahr). Herausgebende. URL
-- Überschriften aufhübschen
+- Überschriften sinnvoll benennen
 
 ## Latex Gedöns
 - [OK] Formatvorlage report verwenden
