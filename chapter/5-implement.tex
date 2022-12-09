@@ -6,7 +6,7 @@ und Ideen für passende Gestaltungslösungen formuliert. Nun soll das folgende
 Unterkapitel sich mit der praktischen Umsetzung der Anforderungen beschäftigen.
 Dieser Prozess entspricht dem dritten Schritt \glqq{}Gestaltungslösungen
 entwickeln, die die Nutzungsanforderungen erfüllen\grqq{} des Designzyklus im
-Human Centered Design nach ISO 9241\cite{iso9241}.
+Human Centered Design nach ISO 9241\cite{ISO9241}.
 
 \section{Kundenwünsche und technische Machbarkeit}
 Auch wenn im Human Centered Design immer die Nutzenden und nicht das technische
@@ -49,17 +49,17 @@ lassen und somit einige Standards und Schnittstellen der Software zur Verfügung
 implementieren.
 
 Die Software Stubegru ist webbasiert und wird über einen Browser aufgerufen.
-Dementsprechend sind die verwendeten Technologien im Frontend Html, Css und
-Javascript. Die Kommunikation mit dem Backend wird durch asynchrone
+Dementsprechend sind die verwendeten Technologien im Frontend \gls{Html}, \gls{Css} und
+\gls{Javascript}. Die Kommunikation mit dem Backend wird durch asynchrone
 Http-Requests umgesetzt, die durch Javascript Methoden initiiert werden. Das
-Backend besteht aus vielen einzelnen Php Dateien, welche die per Http
+Backend besteht aus vielen einzelnen \gls{Php} Dateien, welche die per Http
 übermittelten Daten auslesen und aufarbeiten. Als Datenbank kommt eine
 relationale mySQL Datenbank zum Einsatz, die von den Php Skripten über
 Php-Database-Objects (PDO) angesprochen wird. Die abgerufenen Daten der Php
 Skripte werden, als JSON codiert zurück an das Frontend geschickt und dort von
-Javascript Methoden weiterverarbeitet. Mithilfe der Javascript Library jQuery
+Javascript Methoden weiterverarbeitet. Mithilfe der Javascript Library \gls{jQuery}
 werden die entsprechende Element im Document Object Model (DOM) angepasst und
-somit für den Nutzenden grafisch dargestellt. Das Softwarepaket Stubegru ist
+somit für den Nutzenden grafisch dargestellt. Um den Nutzenden eine einheitliche und vertraute Nutzungsoberfläche zu bieten kommt das Framework \gls{Bootstrap} zum Einsatz. Das Softwarepaket Stubegru ist
 grundlegend modular aufgebaut, sodass für jede Funktionalität oder jeden
 Prozess ein eigenes Modul programmiert wird, das genau diese Aufgabe übernimmt.
 Jedes Modul besteht aus den entsprechenden Anzeigeelementen, die in einer Html
@@ -222,8 +222,8 @@ gearbeitet wird sind relativ simpel gehalten. Es gibt drei relevante Typen von
 Datensätzen: Termine, Mailtemplates und Beratungsräume. Die Datensätze, die
 einen Termin beschreiben, enthalten außerdem auch Informationen über den
 Ratsuchenden, der diesen Termin gebucht hat. Diese Datensätze werden im
-Folgenden als Meeting bezeichnet und sollen anhand eines UML Diagramms
-detailliert veranschaulicht werden.\todo{UML erklären?}
+Folgenden als Meeting bezeichnet und sollen anhand eines \gls{UML} Diagramms
+detailliert veranschaulicht werden.
 
 \begin{figure}[H]
     \caption{UML Diagramm der Klasse Meeting. Stellt alle Methoden und Eigenschaften eines Objektes dar, das einen Termin repräsentiert}
@@ -251,13 +251,13 @@ Eigenschaften an den Server. Hierbei wird die Funktion\textit{toFormData()}
 verwendet, um die Eigenschaften des Objektes in das passende Format zu bringen.
 Die so aufbereiteten Daten werden über den asynchronen Aufruf der
 \textit{fetchApi}\cite{fetchAPI} mit einer HTTP Request an das entsprechenden
-PHP Skript auf dem Server gesendet.
+Php Skript auf dem Server gesendet.
 
 \lstinputlisting[language=Java, caption=Senden von lokalen Änderungen eines Meetings an den Server]{listings/updateOnServer.js}
 
-Über die Methode \textit{deleteOnServer()} kann ein bestehendes Meeting auf dem Server gelöscht werden. Durch einen anschließenden Aufruf von \textit{fetchMeetings()} wird das Meeting dann auch in der lokalen \textit{meetingList} gelöscht. Außerdem stellt ein Objekt vom Typ Meeting noch zwei Methoden zur Verfügung um Kundendaten zu verknüpfen beziehungsweise zu löschen. Diese Funktionen stoßen in den jeweiligen PHP Skripten auf dem Server weitere Workflows an, wie beispielsweise das Versenden einer Bestätigungsmail an die ratsuchende Person.
+Über die Methode \textit{deleteOnServer()} kann ein bestehendes Meeting auf dem Server gelöscht werden. Durch einen anschließenden Aufruf von \textit{fetchMeetings()} wird das Meeting dann auch in der lokalen \textit{meetingList} gelöscht. Außerdem stellt ein Objekt vom Typ Meeting noch zwei Methoden zur Verfügung um Kundendaten zu verknüpfen beziehungsweise zu löschen. Diese Funktionen stoßen in den jeweiligen Php Skripten auf dem Server weitere Workflows an, wie beispielsweise das Versenden einer Bestätigungsmail an die ratsuchende Person.
 
-\lstinputlisting[language=PHP, caption=PHP Skript zum Erstellen eines neuen Meetings in der Datenbank]{listings/save_meeting.php}
+\lstinputlisting[language=Php, caption=Php Skript zum Erstellen eines neuen Meetings in der Datenbank]{listings/save_meeting.Php}
 
 \subsubsection{Workflow: Vergebenen Beratungstermin aufrufen}
 
