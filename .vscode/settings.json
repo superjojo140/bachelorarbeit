@@ -33,6 +33,12 @@
                 "pdflatex"
             ]
         },
+        {
+            "name": "Fast Compile",
+            "tools": [
+                "pdflatex"
+            ]
+        },
     ],
     "latex-workshop.latex.tools": [
         {

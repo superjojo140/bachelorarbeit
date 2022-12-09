@@ -5,9 +5,10 @@
 \usepackage{todonotes} %Todo Notizen am Rand
 \usepackage{fancyhdr} %Kopfzeile mit Chaptername
 
-%Literatur
+%Literatur 
 \usepackage[backend=bibtex,style=ieee,natbib=true]{biblatex}
 \addbibresource{refs.bib}
+
 
 %Bilder da anzeigen wo sie eingebunden werden, Rahmen um Bilder
 \usepackage{float}
@@ -38,7 +39,7 @@
     urlcolor=black
 }
 
-\usepackage{glossaries} %Glossar (muss nach hyperref eingebunden werden)
+\usepackage[nopostdot]{glossaries} %Glossar (muss nach hyperref eingebunden werden)
 \renewcommand{\glstextformat}[1]{\textbf{\em #1}}
 \input{chapter/glossary.tex}
 
@@ -78,14 +79,14 @@
 \input{chapter/6-test.tex}
 \input{chapter/7-result.tex}
 
+\phantomsection\addcontentsline{toc}{chapter}{Glossar}
+\setglossarystyle{altlist}\printglossaries
+
 \phantomsection\addcontentsline{toc}{chapter}{Literaturverzeichnis}
 \printbibliography
 
 \phantomsection\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
 \listoffigures
-
-\phantomsection\addcontentsline{toc}{chapter}{Glossar}
-\setglossarystyle{altlist}\printglossaries
 
 \phantomsection\addcontentsline{toc}{chapter}{Anhang}
 \input{chapter/attachments.tex}
