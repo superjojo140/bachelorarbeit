@@ -7,16 +7,15 @@
 - [OK] Anhang erstellen
     - [OK] Link auf repo einbauen (auch link auf milestone und livedemo)
     - [OK] Weitere Sequenzdiagramme
-- Glossar erstellen
-    - Modal
-    - View
-    - UML
-    - Timepicker
-    - Usertest
+- [OK] Glossar erstellen
+    - [OK] Modal
+    - [OK] View
+    - [OK] UML
+    - [OK] Timepicker
+    - [OK] Usertest
 - [OK] Eidesstattliche Erklärung
 - [OK] Listing mit color Attributen
 - [OK] Todo notes durchgehen
-- Struktur im Fazit-Kapitel sortieren
 - [OK] Einleitung überarbeiten
     - [OK] HCD: Warum HCD statt UCD (nicht nur Nutzer sondern alle betroffen)
     - [Naja...] Was mache ich, was gibt es noch, warum mache ich das was ich mache...?
@@ -25,17 +24,16 @@
     - [OK] In Einleitung konkrete Referenzen auf Kapitel
     - [OK] Wenn der Begriff HCD fällt, direkt Quelle dahinter
 - [OK] Anonymisierung kennzeichnen als Fußnote
+- Struktur im Fazit-Kapitel sortieren
 
 
 ## Beim Durchgucken beachten
 - Zitat Referenzen **vor** dem Satzpunkt?
 - Schlüsselwörter **nicht** fett schreiben, aber kursiv.
 - Anführungszeichen mit glqq und grqq
-- iso oder ISO oder Iso?
+- [OK] iso oder ISO oder Iso? (Html,Php,Css,Javascript)
 - Einheitlich gendern
-- Verwendete Technologien (jquery, fullcalendar, PHP, JS) referenzieren und hervorheben
-    - https://www.scribbr.de/apa-standard/beispiel/software/
-    - Titel der Software (Versionsnummer) [Software]. (Jahr). Herausgebende. URL
+- [OK-via-Glossar] Verwendete Technologien (jquery, fullcalendar, PHP, JS) referenzieren und hervorheben
 - Überschriften sinnvoll benennen
 
 ## Latex Gedöns
@@ -46,11 +44,14 @@
         - Anzeigen des Typs (Buch,Website,Paper...)
         - Anzeigen des vollen Namen
         - Bei Websiten: Abrufdatum
+        - Für Software: Titel der Software (Versionsnummer) [Software]. (Jahr). Herausgebende. URL
     - Im Text:
         - Komische Abkürzungen bei Organisationen (iso, websites)
 - [OK] Caption von Grafiken (Abstand, unter das Bild...?, Kasten drum?)
 - [OK] Literaturverzeichnis ins Inhaltsverzeichnis (mit Kapitelnummer)
 - [OK] Paragraph überschriften mit neuer Zeile versehen
+- Seitenzahlen und Referenzen bei manuellen TOC Punkten
+- Kopfzeile bei unnummerierten Kapiteln
 
 ## Ganz am Ende
 - Seitenumbrüche checken

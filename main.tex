@@ -2,10 +2,12 @@
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel} %Deutsche Formate benutzen
 \usepackage[T1]{fontenc}
-\usepackage{cite} %Zitate
 \usepackage{todonotes} %Todo Notizen am Rand
 \usepackage{fancyhdr} %Kopfzeile mit Chaptername
 
+%Literatur
+\usepackage[backend=bibtex,style=ieee,natbib=true]{biblatex}
+\addbibresource{refs.bib}
 
 %Bilder da anzeigen wo sie eingebunden werden, Rahmen um Bilder
 \usepackage{float}
@@ -36,7 +38,7 @@
     urlcolor=black
 }
 
-\usepackage[toc]{glossaries} %Glossar (muss nach hyperref eingebunden werden)
+\usepackage{glossaries} %Glossar (muss nach hyperref eingebunden werden)
 \renewcommand{\glstextformat}[1]{\textbf{\em #1}}
 \input{chapter/glossary.tex}
 
@@ -76,12 +78,16 @@
 \input{chapter/6-test.tex}
 \input{chapter/7-result.tex}
 
-\addcontentsline{toc}{chapter}{Literaturverzeichnis}
-\bibliographystyle{apalike}\bibliography{refs} %Literaturverzeichnis
-\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}\listoffigures
+\phantomsection\addcontentsline{toc}{chapter}{Literaturverzeichnis}
+\printbibliography
+
+\phantomsection\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+\listoffigures
+
+\phantomsection\addcontentsline{toc}{chapter}{Glossar}
 \setglossarystyle{altlist}\printglossaries
 
-\addcontentsline{toc}{chapter}{Anhang}
+\phantomsection\addcontentsline{toc}{chapter}{Anhang}
 \input{chapter/attachments.tex}
 
 %Ende
