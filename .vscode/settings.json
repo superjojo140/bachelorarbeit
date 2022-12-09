@@ -23,10 +23,12 @@
     ],
     "latex-workshop.latex.recipes": [
         {
-            "name": "pdflatex, makeglossaries, pdflatex (2x)",
+            "name": "Compile (glossary+bibtex)",
             "tools": [
                 "pdflatex",
                 "makeglossaries",
+                "pdflatex",
+                "bibtex",
                 "pdflatex",
                 "pdflatex"
             ]
@@ -46,6 +48,13 @@
         {
             "name": "makeglossaries",
             "command": "makeglossaries",
+            "args": [
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
             "args": [
                 "%DOCFILE%"
             ]
