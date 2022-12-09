@@ -6,6 +6,7 @@
 \usepackage{todonotes} %Todo Notizen am Rand
 \usepackage{fancyhdr} %Kopfzeile mit Chaptername
 
+
 %Bilder da anzeigen wo sie eingebunden werden, Rahmen um Bilder
 \usepackage{float}
 \floatstyle{plain} 
@@ -35,6 +36,10 @@
     urlcolor=black
 }
 
+\usepackage[toc]{glossaries} %Glossar (muss nach hyperref eingebunden werden)
+\renewcommand{\glstextformat}[1]{\textbf{\em #1}}
+\input{chapter/glossary.tex}
+
 %Keine Einrückung neuer Absätze
 \setlength\parindent{0pt}
 
@@ -45,6 +50,8 @@
 %Metadaten
 \title{\thesisTitle}
 \author{Johannes Schnirring}
+
+
 
 %Hier beginnt der Inhalt
 \begin{document}
@@ -68,12 +75,12 @@
 \input{chapter/5-implement.tex}
 \input{chapter/6-test.tex}
 \input{chapter/7-result.tex}
-\input{chapter/glossary.tex}
 
 \chapter{Referenzen}
 \addcontentsline{toc}{section}{Literaturverzeichnis}
 \bibliographystyle{apalike}\bibliography{refs} %Literaturverzeichnis
 \addcontentsline{toc}{section}{Abbildungsverzeichnis}\listoffigures
+\setglossarystyle{altlist}\printglossaries
 
 \input{chapter/attachments.tex}
 
