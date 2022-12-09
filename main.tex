@@ -39,7 +39,8 @@
     urlcolor=black
 }
 
-\usepackage[nopostdot]{glossaries} %Glossar (muss nach hyperref eingebunden werden)
+\usepackage[nopostdot,section=section]{glossaries} %Glossar (muss nach hyperref eingebunden werden)
+\renewcommand{\glossarysection}[2][]{}
 \renewcommand{\glstextformat}[1]{\textbf{\em #1}}
 \input{chapter/glossary.tex}
 
@@ -79,16 +80,19 @@
 \input{chapter/6-test.tex}
 \input{chapter/7-result.tex}
 
-\phantomsection\addcontentsline{toc}{chapter}{Glossar}
+\chapter{Glossar}
 \setglossarystyle{altlist}\printglossaries
 
-\phantomsection\addcontentsline{toc}{chapter}{Literaturverzeichnis}
-\printbibliography
+\chapter{Literaturverzeichnis}
+\printbibliography[heading=none]
 
-\phantomsection\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+\chapter{Abbildungsverzeichnis}
+\begingroup
+\let\clearpage\relax
+\renewcommand{\listfigurename}{}
 \listoffigures
+\endgroup
 
-\phantomsection\addcontentsline{toc}{chapter}{Anhang}
 \input{chapter/attachments.tex}
 
 %Ende
