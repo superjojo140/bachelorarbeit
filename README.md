@@ -24,7 +24,7 @@
     - [OK] In Einleitung konkrete Referenzen auf Kapitel
     - [OK] Wenn der Begriff HCD fällt, direkt Quelle dahinter
 - [OK] Anonymisierung kennzeichnen als Fußnote
-- Struktur im Fazit-Kapitel sortieren
+- [OK] Struktur im Fazit-Kapitel sortieren
 
 
 ## Beim Durchgucken beachten
@@ -39,19 +39,19 @@
 ## Latex Gedöns
 - [OK] Formatvorlage report verwenden
 - [OK] Seitennummerierung und Kapitel in Kopfzeile
-- Darstellung der Literaturverweise: z.b. bei Websiten und Normen...
-    - Im Literaturverzeichnis:
-        - Anzeigen des Typs (Buch,Website,Paper...)
-        - Anzeigen des vollen Namen
-        - Bei Websiten: Abrufdatum
-        - Für Software: Titel der Software (Versionsnummer) [Software]. (Jahr). Herausgebende. URL
-    - Im Text:
-        - Komische Abkürzungen bei Organisationen (iso, websites)
+- [OK] Darstellung der Literaturverweise: z.b. bei Websiten und Normen...
+    - [OK] Im Literaturverzeichnis:
+        - [NEIN] Anzeigen des Typs (Buch,Website,Paper...)
+        - [OK] Anzeigen des vollen Namen
+        - [OK] Bei Websiten: Abrufdatum
+        - [NEIN] Für Software: Titel der Software (Versionsnummer) [Software]. (Jahr). Herausgebende. URL
+    - [OK] Im Text:
+        - [OK] Komische Abkürzungen bei Organisationen (iso, websites)
 - [OK] Caption von Grafiken (Abstand, unter das Bild...?, Kasten drum?)
 - [OK] Literaturverzeichnis ins Inhaltsverzeichnis (mit Kapitelnummer)
 - [OK] Paragraph überschriften mit neuer Zeile versehen
-- Seitenzahlen und Referenzen bei manuellen TOC Punkten
-- Kopfzeile bei unnummerierten Kapiteln
+- [OK] Seitenzahlen und Referenzen bei manuellen TOC Punkten
+- Kopfzeile bei Kapitel Abbildungsverzeichnis
 
 ## Ganz am Ende
 - Seitenumbrüche checken
