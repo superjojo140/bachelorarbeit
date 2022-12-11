@@ -217,7 +217,7 @@ sowie alle Commits zur Programmierung dieses Moduls sind im entsprechenden
 GitHub Repository einzusehen. Weitere Details dazu im Anhang unter Abschnitt
 \ref{section:stubegru-refs}.
 
-\subsection{Datenmodell}
+\subsection{Die Klasse \code{Meeting}}
 Die eigentlichen Datenmodelle, mit denen in dem Modul zur Terminvereinbarung
 gearbeitet wird sind relativ simpel gehalten. Es gibt drei relevante Typen von
 Datensätzen: Termine, Mailtemplates und Beratungsräume. Die Datensätze, die
@@ -261,8 +261,9 @@ entsprechende Php Skript auf dem Server gesendet.
 
 \lstinputlisting[language=Php, caption=Php Skript zum Erstellen eines neuen Meetings in der Datenbank]{listings/save_meeting.Php}
 
-\subsubsection{Workflow: Vergebenen Beratungstermin aufrufen}
-\label{HIER WEITER KORRIGIEREN}
+
+
+\subsection{Vergebenen Beratungstermin aufrufen}
 
 In Kapitel \ref{subsection:sequenceDiagrams} wurden exemplarisch alle
 Teilschritte erklärt, die nötig sind um einen bereits vergebenen
@@ -277,25 +278,27 @@ einzelnen Schritte durch den sequenziellen Aufruf der einzelnen Funktionen:
 
 \lstinputlisting[language=Java, caption=Öffnen der Detailansicht eines vergebenen Beratungstermins]{listings/openAssignedMeeting.js}
 
-\subsubsection{Monatsansicht mit fullcalendar darstellen}
+
+
+
+\subsection{Monatsansicht mit fullcalendar darstellen}
 
 Als abschließendes Beispiel der konkreten Implementierung wird die Klasse
 \code{CalendarView} vorgestellt. Diese ist für das Darstellen der
 Terminübersicht zuständig. An dieser Stelle wird die Javascript Bibliothek
-\textit{fullcalendar}\cite{fullCalendarWeb} verwendet um den Aufbau der
-Monatsansicht deutlich zu vereinfachen. Die Klasse \code{CalendarView}
+\gls{fullcalendar} verwendet um den Aufbau der Monatsansicht deutlich zu vereinfachen. Die Klasse \code{CalendarView}
 referenziert auf eine Instanz vom Typ \code{FullCalendar} und kann darüber die
 wichtigsten Funktionen zum Löschen und Hinzufügen weiterer Termine aufrufen. Im
 folgenden Listing wird die Funktion \code{addMeetings(meetingList)} gezeigt.
 Diese Funktion wird vom \code{CalendarController} aufgerufen und bekommt als
 Parameter eine Liste von Meetings übergeben. Aus den übergebenen Objekten vom
 Typ \code{Meeting} werden zunächst Objekte generiert, die alle Eigenschaften
-erhalten, welche die \textit{fullcalendar} Bibliothek benötigt um die Termine
+erhalten, welche die fullcalendar Bibliothek benötigt um die Termine
 in der Übersicht korrekt anzeigen zu können. Die so erstellten Datensätze
-werden anschließend in \textbf{eigene Termine} und \textbf{fremde Termine}
+werden anschließend in \textit{freie Termine} und \textit{vergebene Termine}
 sortiert. Über die Funktion \code{fullCalendar.addEventSource(eventSource)}
-werden die Listen mit den eigenen und den fremden Terminen hinzugefügt. Über
+werden die Listen mit den freien und den vergebenen Terminen hinzugefügt. Über
 den weiteren Parameter \code{color} wird in diesem Fall die farbliche
-Darstellung der Termine in der Monatsübersicht gesteuert.
+Darstellung der Termine (grün = frei, rot = vergeben) in der Monatsübersicht gesteuert.
 
 \lstinputlisting[language=Java, caption=Hinzufügen von Terminen in die Monatsübersicht von fullcalendar]{listings/addMeetings.js}
