@@ -38,11 +38,13 @@
 - Einheitlich gendern
 - [OK-via-Glossar] Verwendete Technologien (jquery, fullcalendar, PHP, JS) referenzieren und hervorheben
 - Überschriften sinnvoll benennen
+- Werden alle Glossary items benutzt?
+. Wikipedia Zitate raus, dafür projekt websiten wenn verfügbar
 
 – [OK] Kapitel 1
 – [OK] Kapitel 2
 – [OK] Kapitel 3
-– Kapitel 4
+– [OK] Kapitel 4
 – Kapitel 5
 – Kapitel 6
 – Kapitel 7
