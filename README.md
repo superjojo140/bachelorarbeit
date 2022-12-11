@@ -25,9 +25,11 @@
     - [OK] Wenn der Begriff HCD fällt, direkt Quelle dahinter
 - [OK] Anonymisierung kennzeichnen als Fußnote
 - [OK] Struktur im Fazit-Kapitel sortieren
+- [Naja...] Einführung Skkizzen der Elemente, klarer machen was hier passiert
 - Kapitelnamen vs Iso Phasen...? (rolle von Kapitel 3)
 - subsections mit nummern (mit *)? konsequent durchziehen
-- [Naja...] Einführung Skkizzen der Elemente, klarer machen was hier passiert
+- Werden alle Glossary items benutzt?
+- [Warten-auf-Caude] Wikipedia Zitate raus, dafür projekt websiten wenn verfügbar 
 
 
 ## Beim Durchgucken beachten
@@ -38,14 +40,13 @@
 - Einheitlich gendern
 - [OK-via-Glossar] Verwendete Technologien (jquery, fullcalendar, PHP, JS) referenzieren und hervorheben
 - Überschriften sinnvoll benennen
-- Werden alle Glossary items benutzt?
-. Wikipedia Zitate raus, dafür projekt websiten wenn verfügbar
+
 
 – [OK] Kapitel 1
 – [OK] Kapitel 2
 – [OK] Kapitel 3
 – [OK] Kapitel 4
-– Kapitel 5
+– [OK] Kapitel 5
 – Kapitel 6
 – Kapitel 7
 

@@ -16,7 +16,7 @@ Phase die Bedürfnisse und Erwartungen der Nutzenden nicht aus den Augen zu
 verlieren. Eine klare und intuitive Schnittstelle für die Nutzenden sollte in
 diesem Prozess eine höhere Priorität einnehmen als eine Lösung, die technisch
 am einfachsten umzusetzen ist. K. Holtzblatt verwendet hier den Begriff
-\textbf{Kohärenz} und meint damit, das sich ein System für den Nutzer so
+\textit{Kohärenz} und meint damit, das sich ein System für den Nutzer so
 zusammenhängend und natürlich wie möglich anfühlen soll: \glqq{}The challenge
 is to keep the system work model coherent, so that it supports the users and
 fits with their expectations while extending and transforming their work
@@ -255,11 +255,11 @@ passende Format zu bringen. Die so aufbereiteten Daten werden über den
 asynchronen Aufruf der \gls{fetch-api} mit einer Http Request an das
 entsprechende Php Skript auf dem Server gesendet.
 
-\lstinputlisting[language=Java, caption=Senden von lokalen Änderungen eines Meetings an den Server]{listings/updateOnServer.js}
+\lstinputlisting[style=ES6, caption=Senden von lokalen Änderungen eines Meetings an den Server]{listings/updateOnServer.js}
 
 Über die Methode \code{deleteOnServer()} kann ein bestehendes Meeting auf dem Server gelöscht werden. Durch einen anschließenden Aufruf von \code{fetchMeetings()} wird das Meeting dann auch in der lokalen \code{meetingList} gelöscht. Außerdem stellt ein Objekt vom Typ \code{Meeting} noch zwei Methoden zur Verfügung um Kundendaten zu verknüpfen, beziehungsweise zu löschen. Diese Funktionen stoßen in den jeweiligen Php Skripten auf dem Server weitere Workflows an, wie beispielsweise das Versenden einer Bestätigungsmail an die ratsuchende Person.
 
-\lstinputlisting[language=Php, caption=Php Skript zum Erstellen eines neuen Meetings in der Datenbank]{listings/save_meeting.Php}
+\lstinputlisting[style=PHP-colored, caption=Php Skript zum Erstellen eines neuen Meetings in der Datenbank]{listings/save_meeting.Php}
 
 
 
@@ -276,7 +276,7 @@ nun all diese Funktionen und bildet so den kompletten beschriebenen Workflow
 Schritt für Schritt ab. Das folgende Listing beschreibt den Ablauf aller
 einzelnen Schritte durch den sequenziellen Aufruf der einzelnen Funktionen:
 
-\lstinputlisting[language=Java, caption=Öffnen der Detailansicht eines vergebenen Beratungstermins]{listings/openAssignedMeeting.js}
+\lstinputlisting[style=ES6, caption=Öffnen der Detailansicht eines vergebenen Beratungstermins]{listings/openAssignedMeeting.js}
 
 
 
@@ -301,4 +301,4 @@ werden die Listen mit den freien und den vergebenen Terminen hinzugefügt. Über
 den weiteren Parameter \code{color} wird in diesem Fall die farbliche
 Darstellung der Termine (grün = frei, rot = vergeben) in der Monatsübersicht gesteuert.
 
-\lstinputlisting[language=Java, caption=Hinzufügen von Terminen in die Monatsübersicht von fullcalendar]{listings/addMeetings.js}
+\lstinputlisting[style=ES6, caption=Hinzufügen von Terminen in die Monatsübersicht von fullcalendar]{listings/addMeetings.js}

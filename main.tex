@@ -4,6 +4,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{todonotes} %Todo Notizen am Rand
 \usepackage{fancyhdr} %Kopfzeile mit Chaptername
+\usepackage{color}
 
 %Literatur 
 \usepackage[backend=bibtex,style=ieee,natbib=true]{biblatex}
@@ -17,13 +18,7 @@
 
 %Listings
 \usepackage{listings} %Codeschnipsel
-\lstset{
-    basicstyle=\ttfamily,
-    columns=fullflexible,
-    frame=single,
-    breaklines=true,
-    postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
-}
+\input{listings/js_style.tex} %Js styling
 
 %Bilder importieren
 \usepackage{graphicx}

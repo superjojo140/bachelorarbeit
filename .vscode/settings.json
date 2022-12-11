@@ -24,6 +24,12 @@
     ],
     "latex-workshop.latex.recipes": [
         {
+            "name": "Fast Compile",
+            "tools": [
+                "pdflatex"
+            ]
+        },
+        {
             "name": "Compile (glossary+bibtex)",
             "tools": [
                 "pdflatex",
@@ -34,12 +40,7 @@
                 "pdflatex"
             ]
         },
-        {
-            "name": "Fast Compile",
-            "tools": [
-                "pdflatex"
-            ]
-        },
+        
     ],
     "latex-workshop.latex.tools": [
         {
