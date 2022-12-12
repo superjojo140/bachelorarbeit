@@ -1,6 +1,6 @@
 # Beachten beim Drübergucken
 
-- Abbildung 4.12 Bild fehlt
+- [OK] Abbildung 4.12 Bild fehlt
 
 
 ## Vorher noch machen
