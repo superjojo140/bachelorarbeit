@@ -1,5 +1,8 @@
 # Beachten beim Drübergucken
 
+- Abbildung 4.12 Bild fehlt
+
+
 ## Vorher noch machen
 - [OK] Claudes Bewertungsgrundlage lesen
     - [OK] Was muss aufs Deckblatt?
@@ -26,7 +29,7 @@
 - [OK] Anonymisierung kennzeichnen als Fußnote
 - [OK] Struktur im Fazit-Kapitel sortieren
 - [Naja...] Einführung Skkizzen der Elemente, klarer machen was hier passiert
-- subsections mit nummern (mit *)? konsequent durchziehen
+- [OK] subsections mit nummern (mit *)? konsequent durchziehen
 - [OK] Werden alle Glossary items benutzt?
 - [Warten-auf-Caude] Wikipedia Zitate raus, dafür projekt websiten wenn verfügbar 
 - Kapitelnamen vs Iso Phasen...? (rolle von Kapitel 3)

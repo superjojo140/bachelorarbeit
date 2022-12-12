@@ -82,7 +82,7 @@ Tagesansicht, Terminliste) eingesetzt werden können.
 \section{Nutzungsanforderungen formalisieren}
 \label{subsection:sequenceDiagrams}
 
-\subsection{Einführung Sequenzdiagramme}
+\subsection*{Einführung Sequenzdiagramme}
 Um die erarbeiteten Nutzungsanforderungen in praktische Programmierung
 umzusetzen wurden zunächst Sequenzdiagramme erstellt. Diese Diagramme werden
 jeweils für einen zusammenhängenden Workflow gezeichnet und skizzieren alle
@@ -115,7 +115,7 @@ Code übersetzen könnte. Vielmehr soll intuitiv und spontan festgehalten werden
 welche Schritte ein Nutzender durchlaufen könnte, wenn er jenen Workflow
 anstößt.
 
-\subsection{Sequenzdiagramm \textit{Vergebenen Termin aufrufen}}
+\subsection*{Sequenzdiagramm \textit{Vergebenen Termin aufrufen}}
 Beispielhaft für den Entstehungsprozess dieser Sequenzdiagramme wird im
 Folgenden ein Diagramm gezeigt und näher erläutert. Dieses Diagramm beschreibt
 den Workflow, wenn ein Nutzender die Detailansicht eines bereits vergebenen
@@ -192,8 +192,7 @@ sind, um die gewünschte Funktion nutzen zu können. Dies soll dazu beitragen,
 dass auch unerfahrene Nutzende schnell und intuitiv verstehen, wie eine
 Interaktion mit dem System gedacht ist.
 
-Im Anhang (Kapitel \ref{section:anhang:Sequenzdiagramme}) finden sich weitere
-drei Sequenzdiagramme, die folgende Prozesse beschreiben: \textit{Vergebenen
+Im Anhang (Kapitel \ref{section:anhang:Sequenzdiagramme}) finden sich alle angefertigten Sequenzdiagramme, die auch weitere Prozesse beschreiben: \textit{Vergebenen
     Termin aufrufen}, \textit{Neuen Termin erstellen} und \textit{Termin an Kunden
     vergeben}.
 
@@ -217,7 +216,7 @@ sowie alle Commits zur Programmierung dieses Moduls sind im entsprechenden
 GitHub Repository einzusehen. Weitere Details dazu im Anhang unter Abschnitt
 \ref{section:stubegru-refs}.
 
-\subsection{Die Klasse \code{Meeting}}
+\subsection*{Die Klasse \code{Meeting}}
 Die eigentlichen Datenmodelle, mit denen in dem Modul zur Terminvereinbarung
 gearbeitet wird sind relativ simpel gehalten. Es gibt drei relevante Typen von
 Datensätzen: Termine, Mailtemplates und Beratungsräume. Die Datensätze, die
@@ -263,7 +262,7 @@ entsprechende Php Skript auf dem Server gesendet.
 
 
 
-\subsection{Vergebenen Beratungstermin aufrufen}
+\subsection*{Vergebenen Beratungstermin aufrufen}
 
 In Kapitel \ref{subsection:sequenceDiagrams} wurden exemplarisch alle
 Teilschritte erklärt, die nötig sind um einen bereits vergebenen
@@ -281,7 +280,7 @@ einzelnen Schritte durch den sequenziellen Aufruf der einzelnen Funktionen:
 
 
 
-\subsection{Monatsansicht mit fullcalendar darstellen}
+\subsection*{Monatsansicht mit fullcalendar darstellen}
 
 Als abschließendes Beispiel der konkreten Implementierung wird die Klasse
 \code{CalendarView} vorgestellt. Diese ist für das Darstellen der
