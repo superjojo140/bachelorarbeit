@@ -26,20 +26,20 @@
 - [OK] Anonymisierung kennzeichnen als Fußnote
 - [OK] Struktur im Fazit-Kapitel sortieren
 - [Naja...] Einführung Skkizzen der Elemente, klarer machen was hier passiert
-- Kapitelnamen vs Iso Phasen...? (rolle von Kapitel 3)
 - subsections mit nummern (mit *)? konsequent durchziehen
-- Werden alle Glossary items benutzt?
+- [OK] Werden alle Glossary items benutzt?
 - [Warten-auf-Caude] Wikipedia Zitate raus, dafür projekt websiten wenn verfügbar 
+- Kapitelnamen vs Iso Phasen...? (rolle von Kapitel 3)
 
 
 ## Beim Durchgucken beachten
-- Zitat Referenzen **vor** dem Satzpunkt?
-- Schlüsselwörter **nicht** fett schreiben, aber kursiv.
-- Anführungszeichen mit glqq und grqq
+- [OK] Zitat Referenzen **vor** dem Satzpunkt?
+- [OK] Schlüsselwörter **nicht** fett schreiben, aber kursiv.
+- [OK] Anführungszeichen mit glqq und grqq
 - [OK] iso oder ISO oder Iso? (Html,Php,Css,Javascript)
-- Einheitlich gendern
+- [OK] Einheitlich gendern
 - [OK-via-Glossar] Verwendete Technologien (jquery, fullcalendar, PHP, JS) referenzieren und hervorheben
-- Überschriften sinnvoll benennen
+- [OK] Überschriften sinnvoll benennen
 
 
 – [OK] Kapitel 1
@@ -47,8 +47,8 @@
 – [OK] Kapitel 3
 – [OK] Kapitel 4
 – [OK] Kapitel 5
-– Kapitel 6
-– Kapitel 7
+– [OK] Kapitel 6
+– [OK] Kapitel 7
 
 ## Latex Gedöns
 - [OK] Formatvorlage report verwenden
