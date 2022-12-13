@@ -1,9 +1,17 @@
+# Fragen an Claude
+
+- Schönes Gendern...
+    - Interviewter und Interviewender
+    - Studienberatende
+- Softwarereferenzen (z.B. Javascript) Version angeben, Glossar->Wikipedia Okay?
+- Public on github?
+
+
+
+
 # Beachten beim Drübergucken
-
-- [OK] Abbildung 4.12 Bild fehlt
-
-
 ## Vorher noch machen
+- [OK] Abbildung 4.12 Bild fehlt
 - [OK] Claudes Bewertungsgrundlage lesen
     - [OK] Was muss aufs Deckblatt?
 - [OK] Kapitel aufteilen
@@ -73,18 +81,6 @@
 ## Ganz am Ende
 - Seitenumbrüche checken
 - Grafik Positionierung
-
-
-
-
-
-# Fragen an Claude
-
-- Schönes Gendern...
-    - Interviewter und Interviewender
-    - Studienberatende
-
-
 
 # Q&A
 - Quellenangaben im Fazit?
