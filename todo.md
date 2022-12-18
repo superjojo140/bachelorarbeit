@@ -1,19 +1,10 @@
 # Fragen an Claude
 
-- Schönes Gendern...
-    - Interviewter und Interviewender
-    - Studienberatende
-- Softwarereferenzen (z.B. Javascript) Version angeben, Glossar->Wikipedia Okay?
-- Public on github?
-
-- RefleXion
-- Tech Glossar (mit Projektwebsite)
-
-
-
 
 # Beachten beim Drübergucken
 ## Vorher noch machen
+- [OK] RefleXion statt RefleKTion
+- [OK] Tech Glossar (mit Projektwebsite)
 - [OK] Abbildung 4.12 Bild fehlt
 - [OK] Claudes Bewertungsgrundlage lesen
     - [OK] Was muss aufs Deckblatt?
@@ -42,10 +33,10 @@
 - [Naja...] Einführung Skkizzen der Elemente, klarer machen was hier passiert
 - [OK] subsections mit nummern (mit *)? konsequent durchziehen
 - [OK] Werden alle Glossary items benutzt?
-- [Warten-auf-Caude] Wikipedia Zitate raus, dafür projekt websiten wenn verfügbar 
-- Kapitelnamen vs Iso Phasen...? (rolle von Kapitel 3)
-- Punkt am Ende von Captions
-- Zitate VOR dem Punkt
+- [OK] Wikipedia Zitate raus, dafür projekt websiten wenn verfügbar 
+- [Passt-schon] Kapitelnamen vs Iso Phasen...? (rolle von Kapitel 3)
+- [OK] Punkt am Ende von Captions
+- [OK] Zitate VOR dem Punkt
 
 
 ## Beim Durchgucken beachten
@@ -58,6 +49,7 @@
 - [OK] Überschriften sinnvoll benennen
 
 
+### Korrekturlesen (selber)
 – [OK] Kapitel 1
 – [OK] Kapitel 2
 – [OK] Kapitel 3
@@ -81,7 +73,7 @@
 - [OK] Literaturverzeichnis ins Inhaltsverzeichnis (mit Kapitelnummer)
 - [OK] Paragraph überschriften mit neuer Zeile versehen
 - [OK] Seitenzahlen und Referenzen bei manuellen TOC Punkten
-- Kopfzeile bei Kapitel Abbildungsverzeichnis
+- [Egal] Kopfzeile bei Kapitel Abbildungsverzeichnis
 
 ## Ganz am Ende
 - Seitenumbrüche checken
