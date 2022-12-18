@@ -6,6 +6,9 @@
 - Softwarereferenzen (z.B. Javascript) Version angeben, Glossar->Wikipedia Okay?
 - Public on github?
 
+- RefleXion
+- Tech Glossar (mit Projektwebsite)
+
 
 
 
@@ -41,6 +44,8 @@
 - [OK] Werden alle Glossary items benutzt?
 - [Warten-auf-Caude] Wikipedia Zitate raus, dafür projekt websiten wenn verfügbar 
 - Kapitelnamen vs Iso Phasen...? (rolle von Kapitel 3)
+- Punkt am Ende von Captions
+- Zitate VOR dem Punkt
 
 
 ## Beim Durchgucken beachten
