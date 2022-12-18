@@ -6,7 +6,7 @@ und Ideen für passende Gestaltungslösungen formuliert. Das folgende
 Kapitel soll sich mit der praktischen Umsetzung der Anforderungen beschäftigen.
 Dieser Prozess entspricht dem dritten Schritt \textit{Gestaltungslösungen
     entwickeln, die die Nutzungsanforderungen erfüllen} des Designzyklus im Human
-Centered Design nach ISO 9241 \cite{ISO9241}.
+Centered Design nach ISO 9241~\cite{ISO9241}.
 
 \section{Kundenwünsche und technische Machbarkeit}
 Auch wenn im Human Centered Design immer die Nutzenden und nicht das technische
@@ -20,7 +20,7 @@ am einfachsten umzusetzen ist. K. Holtzblatt verwendet hier den Begriff
 zusammenhängend und natürlich wie möglich anfühlen soll: \glqq{}The challenge
 is to keep the system work model coherent, so that it supports the users and
 fits with their expectations while extending and transforming their work
-practice as prescribed by the vision.\grqq{} \cite{contextualDesign}
+practice as prescribed by the vision.\grqq{}~\cite{contextualDesign}
 Gleichzeitig müssen alle Lösungsansätze natürlich auch tatsächlich programmiert
 werden können. Hierbei kann nicht ignoriert werden, dass viele externe Faktoren
 die Machbarkeit bestimmter Lösungskonzepte in der Praxis einschränken. G.A. Boy
@@ -28,10 +28,10 @@ erwähnt in \textit{The Handbook of Human-Machine Interaction} einige dieser
 Faktoren: \glqq{}Design work is often constrained by various external factors
 in the development organization and the marketplace (policies, standards,
 competitive products, past and planned products, schedules, resource
-budgets).\grqq \cite{HMI-HCD} So ermöglichen verwendete Programmiersprachen,
+budgets).\grqq~\cite{HMI-HCD} So ermöglichen verwendete Programmiersprachen,
 eingesetzte Frameworks und bereits existierende Softwareteile es, bestimmte
 Konzepte sehr elegant umzusetzen. Andere Gestaltungsideen sind, beschränkt
-durch äußere Faktoren, unter Umständen gar nicht realisierbar \cite{HMI-HCD}.
+durch äußere Faktoren, unter Umständen gar nicht realisierbar~\cite{HMI-HCD}.
 
 \section{Technische Grundlagen Stubegru}
 In dem konkreten Fall des Moduls zur Terminvergabe für die Studienberatung ist
@@ -89,11 +89,11 @@ jeweils für einen zusammenhängenden Workflow gezeichnet und skizzieren alle
 kleineren Teilschritte, die in diesem Workflow nacheinander abgearbeitet werden
 sollen. Ziel eines Sequenzdiagramms ist es, die einzelnen Aktivitäten
 darzustellen, die ein Nutzender beim Verwenden der Software
-durchläuft \cite{holtzblattCDEvolved}. An solchen Diagrammen können auch die
+durchläuft~\cite{holtzblattCDEvolved}. An solchen Diagrammen können auch die
 Zusammenhänge dieser Aktivitäten untereinander abgelesen werden. Karen McGraw
 verweist in \textit{User-centered Requirements} darauf, dass diese Art von
 Diagrammen sehr hilfreich sein kann, um primäre Workflows und zusammenhängende
-Prozesse zu identifizieren \cite{sequenceDiagrams}. Ian Alexander führt in
+Prozesse zu identifizieren~\cite{sequenceDiagrams}. Ian Alexander führt in
 \textit{Scenarios, Stories, Use Cases} ganz ähnliche Diagramme ein, die er
 \textit{Scenario Process Models} nennt. Auch hier geht es darum, ein Abbild der
 Teilprozesse zu schaffen, die ein Nutzender beim Verwenden einer Software
@@ -192,7 +192,7 @@ sind, um die gewünschte Funktion nutzen zu können. Dies soll dazu beitragen,
 dass auch unerfahrene Nutzende schnell und intuitiv verstehen, wie eine
 Interaktion mit dem System gedacht ist.
 
-Im Anhang (Kapitel \ref{section:anhang:Sequenzdiagramme}) finden sich alle angefertigten Sequenzdiagramme, die auch weitere Prozesse beschreiben: \textit{Vergebenen
+Im Anhang (Kapitel~\ref{section:anhang:Sequenzdiagramme}) finden sich alle angefertigten Sequenzdiagramme, die auch weitere Prozesse beschreiben: \textit{Vergebenen
     Termin aufrufen}, \textit{Neuen Termin erstellen} und \textit{Termin an Kunden
     vergeben}.
 
@@ -209,7 +209,7 @@ wieder verwendet werden. Durch das Aufgreifen bestehender Lösungsstrategien und
 Entwurfsmuster wird das gesamte Softwarepaket einheitlich strukturiert und ist
 somit leichter zu warten. Gleichzeitig müssen einige Funktionen nicht von Grund
 auf neu implementiert werden, somit kann Zeit und Arbeit in diesem Prozess
-erspart werden \cite{wiederverwSoftware}. Im Folgenden werden einige
+erspart werden~\cite{wiederverwSoftware}. Im Folgenden werden einige
 Designentscheidungen, Grafiken und Codeschnipsel präsentiert, um einen groben
 Einblick in die technische Umsetzung zu erlauben. Der vollständige Sourcecode,
 sowie alle Commits zur Programmierung dieses Moduls sind im entsprechenden
@@ -264,7 +264,7 @@ entsprechende Php Skript auf dem Server gesendet.
 
 \subsection*{Vergebenen Beratungstermin aufrufen}
 
-In Kapitel \ref{subsection:sequenceDiagrams} wurden exemplarisch alle
+In Kapitel~\ref{subsection:sequenceDiagrams} wurden exemplarisch alle
 Teilschritte erklärt, die nötig sind, um einen bereits vergebenen
 Beratungstermin aufzurufen und in der Detailansicht darzustellen. Für jeden
 dieser einzelnen Schritte wurde eine entsprechende Funktion in der Klasse
