@@ -8,7 +8,7 @@ hinterfragt. Zunächst wird im Abschnitt \ref{subsection:resultDescription} das
 Ergebnis des Gestaltungs- und Entwicklungsprozesses resümiert. Hier wird
 nochmals darauf eingegangen, wie der Nutzungskontext erfasst wurde, die
 Nutzungsanforderungen spezifiziert, die entsprechenden Gestaltungslösungen
-umgesetzt und evaluiert wurden. Somit wird der, in den Kapiteln
+umgesetzt und evaluiert wurden. Somit wird der in den Kapiteln
 \ref{chapter:user-context} bis \ref{chapter:evaluation} ausführlich
 dokumentierte Entwicklungsprozess nochmals anhand der vier Phasen des Human
 Centered Design aufgegriffen und eingeordnet\cite{ISO9241}. Zusätzlich wird
@@ -16,7 +16,7 @@ kurz präsentiert, welche Änderungen an der Software nach der Auswertung des
 Usertests noch vorgenommen wurden. Als nächstes werden die eingesetzten
 Methoden im Abschnitt \ref{subsection:reflection} aufgegriffen und kritisch
 hinterfragt. Der Fokus liegt dabei auf der Methode des Interviews im Kontext
-und dem Designzyklus des Human Centered Design nach ISO9241. Hierbei soll an
+und auf dem Designzyklus des Human Centered Design nach ISO9241. Hierbei soll an
 die Fragestellung der Einleitung angeknüpft werden und eine Verbindung zu den
 gewonnenen Resultaten hergestellt werden. Als Letztes wird in Abschnitt
 \ref{subsection:outlook} ein Ausblick gegeben, wie die entwickelte Software nun
@@ -53,19 +53,19 @@ Markierungen auf den ersten Blick darstellt, an welchen Tagen noch freie
 Termine verfügbar sind. Diese Anforderung konnte durch die tabellarische
 Monatsansicht mithilfe der Javascript Bibliothek \textit{fullcalendar}
 umgesetzt werden. Durch die roten und grünen Punkte neben jedem angezeigten
-Termin, kann direkt auf den ersten Blick erkannt werden, ob es sich um einen
+Termin kann direkt auf den ersten Blick erkannt werden, ob es sich um einen
 bereits vergebenen oder freien Termin handelt. Durch die verwendete Bibliothek
 zum Darstellen der Monatsübersicht ist dieser tabellarische Überblick nicht
 mehr ganz so kompakt wie in der alten Softwareversion. Dies ist auch \ipName
 beim Usertest negativ aufgefallen. Ein positiver Ausgleich hierfür ist
 allerdings, das in der neuen Übersicht direkt die einzelnen Termine eines Tages
-dargestellt werden. In der alten Version war es nötig zunächst den Tag
+dargestellt werden. In der alten Version war es nötig, zunächst den Tag
 anzuklicken und erst in dem danach erscheinenden Modal konnten die einzelnen
 Termine und die entsprechenden Uhrzeiten eigensehen werden. Der etwas
 ausführlichere neue View nimmt also mehr Platz auf dem Bildschirm ein und kann
 bei sehr vielen Terminen an einzelnen Tagen sehr lang werden, bietet dafür aber
 eine umfassende Übersicht über freie und vergebene Termine und stellt
-weiterführenden Informationen mit nur einem Klick in der Detailansicht zur
+weiterführende Informationen mit nur einem Klick in der Detailansicht zur
 Verfügung.
 
 \begin{figure}[H]
@@ -86,7 +86,7 @@ Planungsphase war hierfür ein extra Button mit einem Augensymbol vorgesehen.
 Ein einfacher Klick auf die entsprechende Zeile in der Tabelle hat sich aber
 als praktischer erwiesen. Im Vergleich zur alten Softwareversion sind die
 Suchergebnisse sehr viel ausführlicher und strukturierter dargestellt. Dies
-wurde auch im Usertest positiv wahrgenommen. In weiteren Tests erscheint der
+wurde auch im Usertest positiv wahrgenommen. In weiteren Tests entsteht der
 Eindruck, dass die alte Suchfunktion etwas schneller gearbeitet hat. Dies kann
 aber erst objektiv bewertet werden, wenn die neue Implementierung auch auf den
 gleichen Produktiv-Servern installiert und im Einsatz ist.
@@ -97,15 +97,14 @@ gleichen Produktiv-Servern installiert und im Einsatz ist.
     \includegraphics[width=\textwidth]{screen_past_now_search.pdf}
 \end{figure}
 
-Als letztes wurde im Anschnitt \ref{subsection:SpannendeErkenntnisse} das
+Als letztes wurde im Abschnitt \ref{subsection:SpannendeErkenntnisse} das
 elegante Darstellen der Telefonnummern gefordert. Dieses Feature ließ sich in
-der Praxis leicht implementieren. In die, aus der Datenbank abgerufene,
-Telefonnummer, wird an jeder vierten Stelle ein Leerzeichen eingefügt. Somit
+der Praxis leicht implementieren. In die aus der Datenbank abgerufene 
+Telefonnummer wird an jeder vierten Stelle ein Leerzeichen eingefügt. Somit
 kann die Telefonnummer von den Studienberatenden bei Bedarf in leicht zu
 merkenden Vierer-Blöcken in das Telefon eingeben werden. Für andere
 Nutzeraccounts als den zuständigen Beratenden werden persönliche Details der
-Ratsuchenden nicht angezeigt. Diese Funktion gab es auch in der alten Version
-bereits, allerdings wird in der neuen Version statt den eigentlichen Daten ein
+Ratsuchenden nicht angezeigt. Diese Funktion gab es bereits in der alten Version, allerdings wird in der neuen Version statt den eigentlichen Daten ein
 Hinweis angezeigt. In der alten Version wurde an dieser Stelle gar nichts
 angezeigt, was manchmal zu Unsicherheiten geführt hat, ob hier überhaupt Daten
 eingetragen und korrekt gespeichert wurden. Das Feedback aus dem Usertest
@@ -142,7 +141,7 @@ neuen Termins angezeigt. Somit kann mit einem Klick der aktuelle Termin
 gespeichert werden und direkt ein neuer Datensatz eingetragen werden. Die
 Besonderheit ist, dass die Formularfelder in diesem Fall nicht auf
 Standardwerte zurückgesetzt werden. Somit können viele Termine mit ähnlichen
-Attributen besonders schnell hintereinander Eingetragen werden.
+Attributen besonders schnell hintereinander eingetragen werden.
 
 \begin{figure}[H]
     \caption{Neuer Button: Mit \textit{Speichern und Nächster} kann direkt der nächste Termin eingetragen werden.}
@@ -181,12 +180,12 @@ gestaltet wurde\cite{sequenceDiagrams}. Diese Theorie wurde in diesem Fall
 anhand des Designzyklus nach ISO9241 in die Praxis umgesetzt. Für die
 Durchführung der ersten Phase \textit{Den Nutzungskontext verstehen und
     Beschreiben} wurde hier die Methode des Interviews im Kontext verwendet.
-Hierbei ging es darum alle Menschen, die mit dem System zu tun haben
-einzubeziehen und Ihre Arbeitsabläufe zu verstehen. Wie der Name der Methode
-bereits impliziert liegt der Fokus hierbei auch auf dem Kontext in dem diese
+Hierbei ging es darum, alle Menschen, die mit dem System zu tun haben
+einzubeziehen und ihre Arbeitsabläufe zu verstehen. Wie der Name der Methode
+bereits impliziert, liegt der Fokus hierbei auch auf dem Kontext, in dem diese
 Arbeitsabläufe stattfinden\cite{hciHandbook}. Das Interview im Kontext wurde
-deshalb mit \ipName in seinem Büro an seinem Dienstrechner durchgeführt um eine
-möglichst realistische Alltagssituation zu schaffen.
+deshalb mit \ipName in seinem Büro an seinem Dienstrechner durchgeführt, um eine
+möglichst realistische Alltagssituation abzubilden.
 
 Eine zentrale Fragestellung dieser Arbeit war folgendermaßen beschrieben
 worden: \textit{An welchen Stellen können die theoretischen Grundlagen des
@@ -197,26 +196,26 @@ Nutzungskontext sehr gut verstanden und aufgearbeitet werden. Das Interview im
 Kontext hat überraschend viele neue Ideen hervorgebracht, die wohl keiner der
 Beteiligten im Vorhinein hätte formulieren können. Durch das gemeinsame
 Benutzen der alten Softwareversion vor Ort wurde ganz klar deutlich, welche
-Features wirklich wichtig sind für den tägliche Einsatz, an welchen Stellen es
+Features wirklich wichtig sind für den täglichen Einsatz, an welchen Stellen es
 schnell gehen muss und wo detaillierte Einstellungsmöglichkeiten unbedingt
 notwendig sind. Die Erkenntnisse und Beobachtungen aus dem Interview im Kontext
 wurden unstrukturiert schriftlich festgehalten. Beim Auswerten dieser Notizen
-ist aufgefallen, das viele Details aus dem Gespräch nicht so schnell
+ist aufgefallen, dass viele Details aus dem Gespräch nicht so schnell
 aufgeschrieben werden konnten. Die Notizen waren somit nicht ganz vollständig.
-Daher war es sehr wichtig die Auswertung des Interviews im Kontext zeitlich
+Daher war es sehr wichtig, die Auswertung des Interviews im Kontext zeitlich
 sehr nah an der Durchführung zu planen. Somit konnten viele Details aus der
 Erinnerung an das Interview selbst bei der Auswertung ergänzt werden. Der
-Austausch mit Menschen aus allgemeinen Studienberatung hat sich auf den Kontakt
+Austausch mit Menschen aus der allgemeinen Studienberatung hat sich auf den Kontakt
 mit \ipName beschränkt. Dieser Austausch war sehr ertragreich, dennoch wäre es
 interessant gewesen, auch noch Nutzungsanforderungen anderer Nutzergruppen wie
 beispielsweise der Hilfskräfte der Erstinformation mit einzubeziehen. Die
 Erfahrungen und Ideen anderer Nutzenden hätten noch weitere hilfreiche Aspekte
 in den Gestaltungsprozess einbringen können. Somit hätte ein System entstehen
 können, das noch inklusiver und reibungsloser alle beteiligten Personen mit
-einbezieht. In der Praxis war es allerdings schon sehr aufwendig Termine mit
+einbezieht. In der Praxis war es allerdings schon sehr aufwendig, Termine mit
 \ipName zu organisieren. Wären noch weitere Nutzungsgruppen mit einbezogen
 worden, wäre der organisatorische und zeitliche Aufwand der Software deutlich
-höher gewesen. Dies kann grade in gewinnorientierten Softwarehäusern einen
+höher gewesen. Dies kann gerade in gewinnorientierten Softwarehäusern einen
 hemmenden Faktor für den Einsatz von Human Centered Design mit sich bringen.
 
 Um noch einmal Bezug auf die vier Phasen des Gestaltungsprozesses nach ISO9241
@@ -250,10 +249,10 @@ Umsetzung um ein Modul in einer bereits bestehenden Software handelt. Es
 mussten also alle bestehenden Schnittstellen und Programmierkonzepte der
 bereits existierenden Module eingehalten werden. Beispielsweise wurde für die
 Termindatensätze, sowie für Beratungsräume und Mailtemplates, ein
-objektorientierter Ansatz gewählt. Ziel war es damit die Beziehungen dieser
+objektorientierter Ansatz gewählt. Ziel war es, damit die Beziehungen dieser
 Datentypen untereinander klarer modellieren und elegant in Code umsetzen zu
 können. Im Rahmen der gesamten Software Stubegru hat sich allerdings gezeigt,
-das es eher wenig Sinn macht lokale Instanzen von Objekten zu erstellen und zu
+das es eher wenig Sinn macht, lokale Instanzen von Objekten zu erstellen und zu
 referenzieren. Die restlichen Module funktionieren so, dass Daten meist nur vom
 Server abgerufen und angezeigt werden. Weitere Referenzen oder Methodenaufrufe
 auf diesen Daten sind nicht vorgesehen und machen in diesem Anwendungsfall auch
@@ -268,7 +267,7 @@ Im Usertest hat sich herausgestellt, dass es extrem hilfreich ist, wenn man
 eine Gestaltungslösung vorzeigen und gemeinsam durchspielen kann. Beim
 gemeinsamen Nutzen der implementierten Funktionen fallen oft wichtige Details
 auf, die im Vorhinein bei der Planung noch nicht berücksichtigt wurden. Somit
-war es also extrem hilfreich für den Usertest bereits das fast vollständig
+war es also extrem hilfreich, für den Usertest bereits das fast vollständig
 fertig implementierte Modul zur Terminvereinbarung präsentieren zu können und
 somit eine greifbare Gesprächsgrundlage zu bieten. Vielleicht wäre es hilfreich
 gewesen, schon früher im Gestaltungsprozess erste Prototypen zu entwickeln, die
@@ -276,20 +275,20 @@ noch nicht voll funktionstüchtig sind, allerdings schon die wichtigsten
 Nutzungsinteraktionen wiedergeben können. Dann hätte man den Nutzenden schon
 früher im Designprozess ein anschauliches Beispiel für konkrete
 Gestaltungslösungen präsentieren können. Somit hätten etwaige Mängel schon
-schneller erkannt und direkt korrigiert werden können. Allerdings lässt sich
+früher erkannt und direkt korrigiert werden können. Allerdings lässt sich
 auch festhalten, dass durch das ausführliche Interview im Kontext bereits ein
 sehr guter Überblick entstanden ist, wie die Software aussehen sollte, um die
 Nutzenden möglichst gut zu unterstützen. Somit waren nach dem Usertest gar
 keine großen, grundlegenden Änderungen mehr notwendig. Dies zeigt auf, dass
 eine ausführliche und gewissenhafte Durchführung der ersten Phasen im
-Gestaltungsprozess, die Wahrscheinlichkeit für Missverständnisse oder größere
+Gestaltungsprozess die Wahrscheinlichkeit für Missverständnisse oder größere
 Änderungswünsche in späteren Usertests senkt.
 
 \section{Ausblick}
 \label{subsection:outlook}
 
 Als abschließender Abschnitt dieser Ausarbeitung soll die weitere Perspektive
-des Forschungsthemas betrachtet werden. Hierbei ist es interessant den weiteren
+des Forschungsthemas betrachtet werden. Hierbei ist es interessant, den weiteren
 Einsatz des praktisch entwickelten Moduls zur Terminvereinbarung zu skizzieren.
 Wie wird sich das Modul in das gesamte Softwarepaket Stubegru eingliedern? In
 welchem Kontext kann es tatsächlich produktiven Einsatz finden und welche
@@ -300,9 +299,9 @@ eine weitere wissenschaftliche Forschung spannende neue Erkenntnisse?
 
 \subsection*{Werdegang der Software Stubegru}
 Wie bereits in Abschnitt \ref{paragraph:weitereIteration} erwähnt, sind noch
-weitere Iterationen und Feedbackrunden mit den Nutzenden nötig um das neu
+weitere Iterationen und Feedbackrunden mit den Nutzenden nötig, um das neu
 entwickelte Modul zur Terminvereinbarung tatsächlich sinnvoll im Arbeitsalltag
-zu verwenden. Es ist konkret geplant diese weiteren Entwicklungszyklen zu
+zu verwenden. Es ist konkret geplant, diese weiteren Entwicklungszyklen zu
 durchlaufen und eine neue Version der Software Stubegru in der Abteilung
 Studium und Lehre produktiv einzusetzen. Ist das Modul zur Terminvereinbarung
 fertig, werden noch andere Module und Workflows der Software überarbeitet
@@ -318,7 +317,7 @@ betreut werden.
 Die Durchführung und Auswertung dieser Arbeit hat gezeigt, dass die verwendeten
 Theorien des Human Centered Design schon sehr ausgereift und vor allem sehr
 praxisnah formuliert sind. Die Umsetzung der methodischen Grundkonzepte ließ
-sich somit sehr gut in die Praxis übertragen. Spannend wäre es allerdings sich
+sich somit sehr gut in die Praxis übertragen. Spannend wäre es allerdings, sich
 noch tiefgreifender mit den verschiedenen Nutzungsgruppen einer Software
 auseinander zu setzen. In dieser Arbeit bedeutete der Austausch mit den
 Nutzenden größtenteils der Kontakt mit einem Studienberater der allgemeinen
@@ -329,26 +328,26 @@ Hilfskräfte beispielsweise sind oftmals nur für einen kurzen Zeitraum mit
 geringen Wochenstunden angestellt. Eine jahrelange Einarbeitung in die Prozesse
 des Arbeitsalltags kann hier nicht vorausgesetzt werden. Wie könnte man also
 diese Nutzungsgruppe besser in der Bedienung der verwendeten Software
-unterstützen. Könnten zum Beispiel kleine interaktive Hilfetexte helfen, die
+unterstützen? Könnten zum Beispiel kleine interaktive Hilfetexte helfen, die
 Arbeitsprozesse spielerisch bei der Verwendung der Software zu erlernen?
 Hierfür wäre sicherlich ein intensiverer und direkter Austausch mit
 Hilfskräften der Abteilung notwendig gewesen.
 
-Des Weiteren wäre es relevant die Unterschiede in der direkten Interaktion mit
+Des Weiteren wäre es relevant, die Unterschiede in der direkten Interaktion mit
 dem Computer der einzelnen Nutzenden genauer zu untersuchen. In den hier
-verwendeten Grundlagen zum Human Centered Design lag der Fokus immer darauf
-eine Gestaltungslösung zu finden die möglichst nutzungsfreundliche
+verwendeten Grundlagen zum Human Centered Design lag der Fokus immer darauf,
+eine Gestaltungslösung zu finden, die möglichst nutzungsfreundliche
 Schnittstellen bietet\cite{hcd}. Oftmals bevorzugen verschiedene Nutzende
 allerdings verschiedene Schnittstellen. Ich persönlich, als technisch sehr
 erfahrener Nutzer, bevorzuge beispielsweise Eingaben über die Tastatur und
 arbeite gerne mit Shortcuts. In den Usertests hat sich schnell gezeigt, dass
 der Testkandidat am liebsten alle Formularfelder mit der Maus ausfüllt. Somit
-ist für ihn ein grafischer Timepicker beispielsweise sehr wichtig für eine gute
-User Experience. Für mich wäre es allerdings viel wichtiger die Möglichkeit zu
+ist für ihn beispielsweise ein grafischer Timepicker sehr wichtig für eine gute
+User Experience. Für mich wäre es allerdings viel wichtiger, die Möglichkeit zu
 haben, jedes Eingabefeld auch über Tastaturbefehle zu erreichen. Dieses kleine
 Beispiel soll illustrieren, dass selbst einzelne Menschen einer Nutzungsgruppe
 oftmals ganz verschiedene Vorstellungen von einer \textit{angenehmen} und
 \textit{schönen} Nutzungsoberfläche haben. Diese Differenzen weiter zu
 untersuchen und allen Nutzenden eine adäquate Schnittstelle zu bieten, wäre also
-eine weitere spannende Richtung um die Ergebnisse dieser Arbeit noch weiter zu
+eine weitere spannende Richtung, um die Ergebnisse dieser Arbeit noch weiter zu
 vertiefen.

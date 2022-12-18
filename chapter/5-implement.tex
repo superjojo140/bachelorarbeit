@@ -2,21 +2,21 @@
 \label{chapter:implementation}
 
 Im vorherigen Schritt wurden konkrete Nutzungsanforderungen herausgearbeitet
-und Ideen für passende Gestaltungslösungen formuliert. Nun soll das folgende
-Kapitel sich mit der praktischen Umsetzung der Anforderungen beschäftigen.
+und Ideen für passende Gestaltungslösungen formuliert. Das folgende
+Kapitel soll sich mit der praktischen Umsetzung der Anforderungen beschäftigen.
 Dieser Prozess entspricht dem dritten Schritt \textit{Gestaltungslösungen
     entwickeln, die die Nutzungsanforderungen erfüllen} des Designzyklus im Human
 Centered Design nach ISO 9241\cite{ISO9241}.
 
 \section{Kundenwünsche und technische Machbarkeit}
 Auch wenn im Human Centered Design immer die Nutzenden und nicht das technische
-System im Fokus stehen sollte, kommt man nicht drumherum die technischen
-Details genauer zu betrachten. Dadurch ist es ganz besonders wichtig in dieser
+System im Fokus stehen sollte, kommt man nicht drumherum, die technischen
+Details genauer zu betrachten. Dadurch ist es ganz besonders wichtig, in dieser
 Phase die Bedürfnisse und Erwartungen der Nutzenden nicht aus den Augen zu
 verlieren. Eine klare und intuitive Schnittstelle für die Nutzenden sollte in
 diesem Prozess eine höhere Priorität einnehmen als eine Lösung, die technisch
 am einfachsten umzusetzen ist. K. Holtzblatt verwendet hier den Begriff
-\textit{Kohärenz} und meint damit, das sich ein System für den Nutzer so
+\textit{Kohärenz} und meint damit, dass sich ein System für den Nutzer so
 zusammenhängend und natürlich wie möglich anfühlen soll: \glqq{}The challenge
 is to keep the system work model coherent, so that it supports the users and
 fits with their expectations while extending and transforming their work
@@ -57,22 +57,22 @@ eine relationale \gls{MySQL} Datenbank zum Einsatz, die von den Php Skripten
 über \gls{PDO} angesprochen wird. Die abgerufenen Daten der Php Skripte werden,
 als \gls{JSON} codiert zurück an das Frontend geschickt und dort von Javascript
 Methoden weiterverarbeitet. Mithilfe der Javascript Library \gls{jQuery} werden
-die entsprechenden Element im \gls{Document-Object-Model} angepasst und somit
+die entsprechenden Elemente im \gls{Document-Object-Model} angepasst und somit
 für den Nutzenden grafisch dargestellt. Um den Nutzenden eine einheitliche und
-vertraute Nutzungsoberfläche zu bieten kommt das Framework \gls{Bootstrap} zum
+vertraute Nutzungsoberfläche zu bieten, kommt das Framework \gls{Bootstrap} zum
 Einsatz.
 
 Das Softwarepaket Stubegru ist grundlegend modular aufgebaut, sodass für jede
 Funktionalität oder jeden Prozess ein eigenes Modul programmiert wird, das
 genau diese Aufgabe übernimmt. Jedes Modul besteht aus den entsprechenden
-Anzeigeelementen, die in einer Html Datei formuliert werden. Des weiteren
-grafische Designregeln, die als CSS Datei angelegt werden und der eigentlichen
+Anzeigeelementen, die in einer Html Datei formuliert werden. Des weiteren aus
+grafischen Designregeln, die als CSS Datei angelegt werden und der eigentlichen
 Logik, die in Javascript implementiert werden muss. Im Modul zur
 Terminvereinbarung kommt zusätzlich die Javascript Library \gls{fullcalendar}
-zum Einsatz. Diese bietet eine einfache Schnittstelle um Termindaten in einer
+zum Einsatz. Diese bietet eine einfache Schnittstelle, um Termindaten in einer
 monatlichen Übersicht darzustellen und bietet den Nutzenden standardisierte
 Kontrollelemente zum Interagieren mit der Kalenderansicht. Funktionalitäten wie
-das Rendern einer Monatsübersicht, oder das Wechseln zwischen den einzelnen
+das Rendern einer Monatsübersicht oder das Wechseln zwischen den einzelnen
 Monaten sind über diese Bibliothek bereits abgedeckt und müssen nicht
 eigenständig implementiert werden. Gleichzeitig schränkt die Verwendung dieser
 Bibliothek die Möglichkeiten in der Darstellung der Termine ein, sodass
@@ -84,9 +84,9 @@ Tagesansicht, Terminliste) eingesetzt werden können.
 
 \subsection*{Einführung Sequenzdiagramme}
 Um die erarbeiteten Nutzungsanforderungen in praktische Programmierung
-umzusetzen wurden zunächst Sequenzdiagramme erstellt. Diese Diagramme werden
+umzusetzen, wurden zunächst Sequenzdiagramme erstellt. Diese Diagramme werden
 jeweils für einen zusammenhängenden Workflow gezeichnet und skizzieren alle
-kleinere Teilschritte, die in diesem Workflow nacheinander abgearbeitet werden
+kleineren Teilschritte, die in diesem Workflow nacheinander abgearbeitet werden
 sollen. Ziel eines Sequenzdiagramms ist es, die einzelnen Aktivitäten
 darzustellen, die ein Nutzender beim Verwenden der Software
 durchläuft\cite{holtzblattCDEvolved}. An solchen Diagrammen können auch die
@@ -95,21 +95,21 @@ verweist in \textit{User-centered Requirements} darauf, dass diese Art von
 Diagrammen sehr hilfreich sein kann, um primäre Workflows und zusammenhängende
 Prozesse zu identifizieren\cite{sequenceDiagrams}. Ian Alexander führt in
 \textit{Scenarios, Stories, Use Cases} ganz ähnliche Diagramme ein, die er
-\textit{Scenario Process Models} nennt. Auch hier geht es darum ein Abbild der
+\textit{Scenario Process Models} nennt. Auch hier geht es darum, ein Abbild der
 Teilprozesse zu schaffen, die ein Nutzender beim Verwenden einer Software
 durchläuft. I. Alexander nennt als weiteren Vorteil dieser Diagramme, das noch
 unklare oder fehlende Daten innerhalb eines Workflows schnell zu erkennen sind.
 Über eingehende und ausgehende Pfeile kann an den Sequenzdiagrammen abgelesen
-werden durch welche Aktionen der jeweilige Workflow angestoßen wird,
+werden, durch welche Aktionen der jeweilige Workflow angestoßen wird,
 beziehungsweise welche anderen Workflows durch Nutzerinteraktionen gestartet
 werden können. Teile einzelner Elemente der grafischen Oberfläche werden
-zkizzenhaft dargestellt um einen intuitiven Eindruck festzuhalten, wie die
+skizzenhaft dargestellt, um einen intuitiven Eindruck festzuhalten, wie die
 Nutzenden durch diesen Workflow navigieren und welche Steuerelemente sie auf
 dem Bildschirm verwenden können. Durch farbige Anmerkungen an einzelnen
 Elementen oder Arbeitsschritten wird auf bestimmte Details hingewiesen, die bei
 der Implementierung zu beachten sind. Die Sequenzdiagramme sind bewusst formlos
 gehalten und nur grob skizziert. Dies spiegelt die schnelle und intuitive
-Erstellung dieser Diagramme wieder. Es geht noch nicht darum den Prozess in
+Erstellung dieser Diagramme wieder. Es geht noch nicht darum, den Prozess in
 einer sehr strukturierten Darstellungsform aufzuzeichnen, die man direkt in
 Code übersetzen könnte. Vielmehr soll intuitiv und spontan festgehalten werden,
 welche Schritte ein Nutzender durchlaufen könnte, wenn er jenen Workflow
@@ -127,13 +127,13 @@ Termins aufruft.
     \includegraphics[width=0.9\textwidth]{flow_termin_aufrufen_unvergeben.jpeg}
 \end{figure}
 
-Die grünen Pfeile links oben beschreiben, auf welchem Weg Nutzenden diesen
+Die grünen Pfeile links oben beschreiben, auf welchem Weg die Nutzenden diesen
 Workflow anstoßen können. Die Detailansicht eines vergebenen Termins kann in
 diesem Fall auf zwei verschiedenen Wegen geöffnet werden. Entweder klickt ein
 Nutzender auf einen Termin in der Monatsübersicht oder er klickt auf ein
 Suchergebnis in der Ergebnisliste der Suche nach Teilnehmenden. Im rechten
 oberen Teil des Diagramms wird stichpunktartig festgehalten, welche
-Teilschritte notwendig sind um die Termindetails sinnvoll darstellen zu können:
+Teilschritte notwendig sind, um die Termindetails sinnvoll darstellen zu können:
 Zunächst muss das \gls{Modal} über dem bestehenden Bildschirminhalt
 eingeblendet werden. Im nächsten Schritt muss der Titel des Modals angepasst
 werden. Der Standardtitel \textit{Termin erstellen} macht in diesem Kontext
@@ -164,7 +164,7 @@ tatsächlich stattfinden soll.
 
 Im unteren Teil des Diagramms wird durch kleine Skizzen festgehalten, welche
 Kontrollelemente den Nutzenden im Workflow zur Verfügung stehen. Die
-\textit{Vergabeleiste} bezeichnet den Bereich, indem Buttons zum Interagieren
+\textit{Vergabeleiste} bezeichnet den Bereich, in dem Buttons zum Interagieren
 mit den Kundendaten dargestellt werden. In diesem Fall ist lediglich der Button
 \textit{Kundendaten löschen} sichtbar. Ein nachträgliches Bearbeiten der
 Kundendaten soll nicht möglich sein, da auch hier inkonsistente Status beim
@@ -181,12 +181,12 @@ Buttons zum Speichern und Löschen des Termins sollten nicht angeklickt werden
 können. Wie bereits erwähnt, soll ein Ändern oder Löschen der Termindaten nur
 möglich sein, wenn die verknüpften Kundendaten entfernt wurden. Die Buttons
 sollen jedoch nicht vollkommen unsichtbar sein, sondern lediglich ausgegraut
-dargestellt werden. Die blaue Box im Diagramm ergänzt, dass in diesem Fal ein
-Hinweis angezeigt werden soll, indem den Nutzenden erklärt wird, dass zunächst
+dargestellt werden. Die blaue Box im Diagramm ergänzt, dass in diesem Fall ein
+Hinweis angezeigt werden soll, in dem den Nutzenden erklärt wird, dass zunächst
 die Kundendaten entfernt werden müssen, bevor diese Buttons wieder genutzt
 werden können. Dass die Buttons ausgegraut und mit einem Hinweis dargestellt
-werden soll dazu führen, dass Nutzende eine einheitliche Benutzeroberfläche
-vorfinden. Bei dem Versuch mit den deaktivierten Buttons zu interagieren,
+werden, soll dazu führen, dass Nutzende eine einheitliche Benutzeroberfläche
+vorfinden. Bei dem Versuch, mit den deaktivierten Buttons zu interagieren,
 sollen sie automatisch darauf hingewiesen werden, welche Schritte notwendig
 sind, um die gewünschte Funktion nutzen zu können. Dies soll dazu beitragen,
 dass auch unerfahrene Nutzende schnell und intuitiv verstehen, wie eine
@@ -203,14 +203,14 @@ werden die Nutzungsanforderung in der Praxis umgesetzt? Welche Designpattern
 und Softwarekonzepte werden verwendet? Wie werden Schnittstellen zwischen
 Frontend und Backend gestaltet? Und über welche Protokolle werden Daten
 ausgetauscht? Wichtig ist es, an dieser Stelle wieder im Blick zu behalten,
-dass es sich um eine Modul in einer bereits bestehenden Software handelt. Somit
+dass es sich um ein Modul in einer bereits bestehenden Software handelt. Somit
 sollten bereits existierende Konzepte und Schnittstellen nach Möglichkeit
 wieder verwendet werden. Durch das Aufgreifen bestehender Lösungsstrategien und
-Entwurfsmuster wir das gesamte Softwarepaket einheitlich strukturiert und ist
+Entwurfsmuster wird das gesamte Softwarepaket einheitlich strukturiert und ist
 somit leichter zu warten. Gleichzeitig müssen einige Funktionen nicht von Grund
 auf neu implementiert werden, somit kann Zeit und Arbeit in diesem Prozess
 erspart werden\cite{wiederverwSoftware}. Im Folgenden werden einige
-Designentscheidung, Grafiken und Codeschnipsel präsentiert um einen groben
+Designentscheidungen, Grafiken und Codeschnipsel präsentiert, um einen groben
 Einblick in die technische Umsetzung zu erlauben. Der vollständige Sourcecode,
 sowie alle Commits zur Programmierung dieses Moduls sind im entsprechenden
 GitHub Repository einzusehen. Weitere Details dazu im Anhang unter Abschnitt
@@ -218,7 +218,7 @@ GitHub Repository einzusehen. Weitere Details dazu im Anhang unter Abschnitt
 
 \subsection*{Die Klasse \code{Meeting}}
 Die eigentlichen Datenmodelle, mit denen in dem Modul zur Terminvereinbarung
-gearbeitet wird sind relativ simpel gehalten. Es gibt drei relevante Typen von
+gearbeitet wird, sind relativ simpel gehalten. Es gibt drei relevante Typen von
 Datensätzen: Termine, Mailtemplates und Beratungsräume. Die Datensätze, die
 einen Termin beschreiben, enthalten außerdem auch Informationen über den
 Ratsuchenden, der diesen Termin gebucht hat. Diese Datensätze werden im
@@ -242,7 +242,7 @@ eines Meetings an das Backend zu senden, um die neuen Werte in der Datenbank zu
 speichern oder zu löschen. Die statische Methode
 \code{createOnServer(properties)} sendet die Daten eines neuen Meetings an den
 Server. Diese Methode erstellt bewusst keine neue Instanz vom Typ
-\code{Meeting}, da es keinen Sinn macht ein Meeting Objekt zu verwenden,
+\code{Meeting}, da es keinen Sinn macht, ein Meeting Objekt zu verwenden,
 solange der Server dieses Meeting noch gar nicht kennt. Im Anschluss an die
 \code{createOnServer(properties)} Methode sollte stets die Methode
 \code{fetchMeetings()} aufgerufen werden, um auf das neu erstellte Meeting
@@ -256,7 +256,7 @@ entsprechende Php Skript auf dem Server gesendet.
 
 \lstinputlisting[style=ES6, caption=Senden von lokalen Änderungen eines Meetings an den Server]{listings/updateOnServer.js}
 
-Über die Methode \code{deleteOnServer()} kann ein bestehendes Meeting auf dem Server gelöscht werden. Durch einen anschließenden Aufruf von \code{fetchMeetings()} wird das Meeting dann auch in der lokalen \code{meetingList} gelöscht. Außerdem stellt ein Objekt vom Typ \code{Meeting} noch zwei Methoden zur Verfügung um Kundendaten zu verknüpfen, beziehungsweise zu löschen. Diese Funktionen stoßen in den jeweiligen Php Skripten auf dem Server weitere Workflows an, wie beispielsweise das Versenden einer Bestätigungsmail an die ratsuchende Person.
+Über die Methode \code{deleteOnServer()} kann ein bestehendes Meeting auf dem Server gelöscht werden. Durch einen anschließenden Aufruf von \code{fetchMeetings()} wird das Meeting dann auch in der lokalen \code{meetingList} gelöscht. Außerdem stellt ein Objekt vom Typ \code{Meeting} noch zwei Methoden zur Verfügung, um Kundendaten zu verknüpfen, beziehungsweise zu löschen. Diese Funktionen stoßen in den jeweiligen Php Skripten auf dem Server weitere Workflows an, wie beispielsweise das Versenden einer Bestätigungsmail an die ratsuchende Person.
 
 \lstinputlisting[style=PHP-colored, caption=Php Skript zum Erstellen eines neuen Meetings in der Datenbank]{listings/save_meeting.Php}
 
@@ -265,11 +265,11 @@ entsprechende Php Skript auf dem Server gesendet.
 \subsection*{Vergebenen Beratungstermin aufrufen}
 
 In Kapitel \ref{subsection:sequenceDiagrams} wurden exemplarisch alle
-Teilschritte erklärt, die nötig sind um einen bereits vergebenen
+Teilschritte erklärt, die nötig sind, um einen bereits vergebenen
 Beratungstermin aufzurufen und in der Detailansicht darzustellen. Für jeden
 dieser einzelnen Schritte wurde eine entsprechende Funktion in der Klasse
 \code{CalendarModal} implementiert. Die Funktion
-\code{setModalVisible(isVisible)} kann beispielsweise aufgerufen werden um das
+\code{setModalVisible(isVisible)} kann beispielsweise aufgerufen werden, um das
 Modal ein- oder auszublenden. Die Klasse \code{CalendarController} verwendet
 nun all diese Funktionen und bildet so den kompletten beschriebenen Workflow
 Schritt für Schritt ab. Das folgende Listing beschreibt den Ablauf aller
@@ -285,14 +285,14 @@ einzelnen Schritte durch den sequenziellen Aufruf der einzelnen Funktionen:
 Als abschließendes Beispiel der konkreten Implementierung wird die Klasse
 \code{CalendarView} vorgestellt. Diese ist für das Darstellen der
 Terminübersicht zuständig. An dieser Stelle wird die Javascript Bibliothek
-\gls{fullcalendar} verwendet um den Aufbau der Monatsansicht deutlich zu vereinfachen. Die Klasse \code{CalendarView}
+\gls{fullcalendar} verwendet, um den Aufbau der Monatsansicht deutlich zu vereinfachen. Die Klasse \code{CalendarView}
 referenziert auf eine Instanz vom Typ \code{FullCalendar} und kann darüber die
 wichtigsten Funktionen zum Löschen und Hinzufügen weiterer Termine aufrufen. Im
 folgenden Listing wird die Funktion \code{addMeetings(meetingList)} gezeigt.
 Diese Funktion wird vom \code{CalendarController} aufgerufen und bekommt als
 Parameter eine Liste von Meetings übergeben. Aus den übergebenen Objekten vom
 Typ \code{Meeting} werden zunächst Objekte generiert, die alle Eigenschaften
-erhalten, welche die fullcalendar Bibliothek benötigt um die Termine
+erhalten, welche die fullcalendar Bibliothek benötigt, um die Termine
 in der Übersicht korrekt anzeigen zu können. Die so erstellten Datensätze
 werden anschließend in \textit{freie Termine} und \textit{vergebene Termine}
 sortiert. Über die Funktion \code{fullCalendar.addEventSource(eventSource)}
