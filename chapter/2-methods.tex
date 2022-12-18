@@ -2,79 +2,78 @@
 \label{chapter:methods}
 
 \section{Human Centered Design}
-Human Centered Design ist eine Methode die den Entwicklungsprozess von
+Human Centered Design ist eine Methode, die den Entwicklungsprozess von
 interaktiven Systemen und Software beschreibt. Die Kernthese ist hierbei, dass
-die Nutzenden der Systeme und ihr Umfeld im Mittelpunkt aller Entwicklungs- und
-Designprozesse stehen. Thematisch lässt sich die Theorie des Human Centered
-Design in das Themenfeld der Mensch-Maschine Interaktion
+die Nutzenden der Systeme und ihr Umfeld im Mittelpunkt aller Entwicklungs\hyphen\space und
+Designprozesse stehen. Inhaltlich lässt sich die Theorie des Human Centered
+Design in das Themenfeld der Mensch-Maschine-Interaktion
 einordnen\cite{HMI-HCD}.
 
 Die Entwicklung von Software war in den Anfängen geprägt von den technisch sehr
-eingeschränkte Möglichkeiten des Computers. Software wurde also größtenteils so
+eingeschränkte Möglichkeiten des Computers. Software wurde größtenteils so
 entwickelt, dass sie möglichst problemlos und effizient auf dem entsprechenden
-Computer ausgeführt werden kann. Alle Entwicklungsprozesse wurden also aus
+Computer ausgeführt werden kann. Alle Entwicklungsprozesse wurden aus
 Perspektive der ausführenden Maschine gedacht. Der Ansatz des Human Centered
 Design setzt dieser maschinenzentrierten Vorgehensweise eine klare Alternative
 entgegen. Martin Ludwig Hofmann beschreibt den Grundgedanken in \textit{Human
-    Centered Design} so: \glqq{} [Es geht] nicht darum, mit Geräten zu denken,
+    Centered Design} so: \glqq{}[Es geht] nicht darum, mit Geräten zu denken,
 sondern mit Menschen und ihren Weltanschauungen\grqq{}\cite{hcd}. Wie in
 Kapitel \ref{chapter:introduction} erläutert, gewinnt dieser Ansatz in der
-heutigen Zeit immer größere Bedeutung. Wie Alan Dix in \textit{Human Computer
-    Interaction} erklärt, hat sich die Art und Weise, wie Menschen und Computer
-interagieren, in den letzten Jahrzehnten stark verändert. Während Computer
+heutigen Zeit immer größere Bedeutung. Alan Dix erklärt in \textit{Human Computer
+    Interaction}, dass sich die Art und Weise, wie Menschen und Computer
+interagieren, in den letzten Jahrzehnten stark verändert hat. Während Computer
 früher meist nur mathematische Berechnungen durchführten, sind Softwaresysteme
 heute hochgradig interaktiv und sollen von allen Teilen der Gesellschaft
 ungehindert genutzt werden können\cite{hci}.
 
-Um die Methodik des Human Centered Design weiter zu spezifizieren ist zunächst
+Um die Methodik des Human Centered Design weiter zu spezifizieren, ist zunächst
 festzuhalten, dass dem Designprozess an sich eine wichtige Rolle zugeschrieben
 wird. Es reicht nicht aus, dass eine Software korrekt funktioniert, sich also
 alle Berechnungen und Prozesse fehlerfrei ausführen lassen. Im Human Centered
 Design liegt der Fokus auf der Interaktion zwischen dem Menschen und der
 Maschine. In Abgrenzung zum \textit{User Centered Design} werden beim Human
 Centered Design nicht nur die unmittelbaren Nutzenden mit einbezogen. Alle
-Personen, die von der Gestaltung der Systeme betroffen sind sollen während des
+Personen, die von der Gestaltung der Systeme betroffen sind, sollen während des
 Designprozesses beachtet werden\cite{sequenceDiagrams}. Man betrachtet, wie die
 Menschen mit dem Computer interagieren. Wie stoßen sie Prozesse an? Welche
 Reaktionen erwarten sie von dem System? Die Betroffenen sollen mit den Systemen
 möglichst intuitiv interagieren können. Die Benutzeroberfläche der Software
 soll selbst erklären, welche Funktionen auf welchem Weg erreicht werden können.
 Ein essentieller Bestandteil hierfür ist zu verstehen, wie die Systeme genutzt
-werden. Relevante Fragestellung sind hier: In welchem Kontext werden die
+werden. Relevante Fragestellung sind: In welchem Kontext werden die
 Systeme eingesetzt? Welche Menschen arbeiten mit den Systemen? Welche
 Informationen müssen die Nutzenden schnell erfassen können? Um diese Fragen
-sinnvoll beantworten zu können müssen die Betroffenen während der Designphase
+sinnvoll beantworten zu können, müssen die Betroffenen während der Designphase
 kontinuierlich in den Entwicklungsprozess einbezogen werden. Ihre gesamte
 Situation sowie ihre Bedürfnisse müssen im Designprozess untersucht und direkt
 in das Produktdesign integriert werden\cite{hci}.
 
-Wie M. Kurosu erwähnt, ist ein weiterer wichtiger Aspekt des Human Centered
-Design das Durchlaufen mehrerer Iterationen. Ein Produkt ist nach einem ersten
+Masaaki Kurosu hält fest, dass ein weiterer wichtiger Aspekt des Human Centered
+Design das Durchlaufen mehrerer Iterationen ist. Ein Produkt ist nach einem ersten
 Entwicklungszyklus selten schon perfekt. Oftmals ist es wichtig, den Betroffenen
 erste Ergebnisse zu präsentieren oder ihnen Prototypen zu zeigen. Das Feedback,
 das Nutzende hierbei geben, muss dokumentiert und für weitere Iterationen der
-Entwicklung aufgearbeitet werden. Wie Kurosu weiter erwähnt, steht der
-zyklische Ablauf des Human Centered Design auch in der entsprechende ISO Norm
+Entwicklung aufgearbeitet werden. Wie Kurosu weiter ausführt, steht der
+zyklische Ablauf des Human Centered Design auch in der entsprechende ISO-Norm
 im Fokus\cite{kurosuHCI}.
 
 \begin{figure}[H]
     \caption{Iteratives Vorgehen im Human Centered Design nach ISO 9241 \cite{ISO9241Graphic}.}
+    \label{fig:iso-diagram}
     \centering
     \includegraphics[width=10cm]{HCD.png}
 \end{figure}
 
-Das Schaubild der ISO Norm verdeutlicht den Ablauf eines Designprozesses in
-mehreren Phasen. Nachdem geplant ist, was für ein Projekt umgesetzt werden soll,
+Abbildung \ref{fig:iso-diagram} verdeutlicht den Ablauf eines Designprozesses in
+mehreren Phasen. Nachdem geplant ist, welches Projekt umgesetzt werden soll,
 beginnt der zyklische Kreislauf des Entwicklungsprozesses. Im ersten Schritt
-liegt der Fokus auf dem Analysieren der Situation, in der das zu entwickelnde
+liegt der Fokus auf der Analyse der Situation, in der das zu entwickelnde
 System später eingesetzt werden soll. Nur wer den Kontext eines interaktiven
 Systems kennt, kann die Schnittstelle zwischen Maschine und Mensch adäquat
-gestalten. Im zweiten Schritt geht es darum aus den geplanten Erwartungen an
-das System und der Analyse des Nutzungskontextes konkrete Anforderungen zu
-formulieren. Hierbei steht noch nicht im Fokus, wie diese Anforderungen
+gestalten. In Schritt zwei werden aus den geplanten Erwartungen an das System und der Analyse des Nutzungskontextes konkrete Anforderungen formuliert. Dabei steht noch nicht im Fokus, wie diese Anforderungen
 technisch umgesetzt werden könnten. Vielmehr geht es darum, welche
 Anforderungen das fertige System überhaupt erfüllen soll. Im dritten Schritt
-geht es nun darum, diese Anforderungen tatsächlich umzusetzen und technische
+geht es darum, diese Anforderungen tatsächlich umzusetzen und technische
 Lösungen zu implementieren. Gibt es erste Ergebnisse, wird der vierte Schritt
 relevant: Die umgesetzten Lösungen müssen im tatsächlichen Nutzungskontext
 evaluiert werden. Das setzt wieder eine intensiven Austausch mit den
@@ -83,36 +82,33 @@ wieder von vorne beginnen. Fehlende Features können nachgebessert,
 missverständliche Schnittstellen klarer gestaltet und Probleme im praktischen
 Einsatz minimiert werden\cite{ISO9241}.
 
-G.A. Boy berichtet in \textit{The Handbook of Human-Machine Interaction} wie
+G.A. Boy berichtet in \textit{The Handbook of Human-Machine Interaction}, wie
 wichtig es ist, dem späteren Nutzenden der Systeme erste Prototypen und Ideen zu
 präsentieren. Oftmals wissen die Nutzenden gar nicht, welche technischen
 Möglichkeiten es gibt oder welche alternativen Bedienkonzepte in ihrem Kontext
 besonders gut funktionieren könnten. Im Mittelpunkt steht also das Zuhören und Eingehen auf die
 Nutzenden und ihr Umfeld. Allerdings kann auch das Einbringen neuer, für die Nutzenden
-unbekannter Lösungsansätze, von hoher Bedeutung sein\cite{HMI-HCD}.
+unbekannter Lösungsansätze von hoher Bedeutung sein\cite{HMI-HCD}.
 
 \section{Interview im Kontext}
 
 Ein wesentlicher Bestandteil im Entwicklungsprozess nach den Methoden des Human
 Centered Design ist der intensive Austausch mit den Betroffenen der Systeme.
-Hierfür ist es wichtig, dass Softwareentwickler und Designer von
+Dafür ist es wichtig, dass Softwareentwickler und Designer von
 Benutzerschnittstellen in den direkten Austausch mit den Nutzenden der Systeme
 gehen. Um diesen Prozess strukturiert und zielführend zu durchlaufen, kann
-hierfür die Methode des \textit{Interviews im Kontext} benutzt werden.
+die Methode des \textit{Interviews im Kontext} benutzt werden.
 
 Beim Interview im Kontext geht es darum, die Nutzenden der Systeme in dem
 Umfeld zu beobachten, in dem die Software tatsächlich auch im praktischen
 Alltag eingesetzt wird. Der Fokus liegt also auf dem Umfeld der Interaktion mit
-technischen Systemen. In herkömmlichen Interviews begegnen sich Interviewer und
+technischen Systemen. In herkömmlichen Interviews begegnen sich Interviewender und
 Interviewter oftmals in einer neutralen Umgebung, wie beispielsweise einem
 Konferenzraum und sprechen über die Prozesse, für die sich der Interviewende
-interessiert. Beim Interview im Kontext geht es nicht darum, \textit{über} einen
-Prozess zu sprechen, sondern den Prozess als Interviewender \textit{direkt
-    mitzuerleben}\cite{contextualDesign}. In \textit{Manual on Human-Computer
-    Interaction} legen die Autoren den Fokus auf die genaue Beobachtung der
+interessiert. Beim Interview im Kontext steht nicht das Sprechen über, sondern das direkte Miterleben des Prozesses im Mittelpunkt\cite{contextualDesign}. In \textit{Manual on Human-Computer Interaction} legen die Autoren den Fokus auf die genaue Beobachtung der
 Nutzenden in der Interaktion mit den Systemen. Mit dieser Methode könne man
 noch viel mehr praxisnahe Details erfassen, als wenn man mit den Nutzenden nur
-über das System spricht. Spricht man mit Nutzenden beispielsweise darüber, wie
+über das System spreche. Spricht man mit Nutzenden beispielsweise darüber, wie
 sie eine Software bedienen, gibt es möglicherweise viele Dinge, die sie nicht
 erwähnen, weil sie vergessen wurden, nicht relevant erscheinen oder Nutzende
 nicht wissen, wie sie genau darüber sprechen sollen\cite{hciHandbook}.
@@ -141,7 +137,6 @@ Das Ergebnis eines Interviews im Kontext ist also eine ausführliche Beobachtung
 der Interaktion von Nutzenden mit den entsprechenden Systemen im alltäglichen
 Kontext. Diese Beobachtungen können schriftlich festgehalten werden oder auch
 durch Video- und Tonaufzeichnungen ergänzt werden. Im Nachgang des Interviews
-müssen die Beobachtungen ausgewertet und analysiert werden. Ziel ist es dabei,
-aus den Beobachtungen des Interviews konkrete Nutzungsanforderung an das zu
+müssen die Beobachtungen ausgewertet und analysiert werden. Ziel ist es, aus den Beobachtungen des Interviews konkrete Nutzungsanforderung an das zu
 entwickelnde System zu formulieren\cite{HMI-HCD}. Hier können beispielsweise Featurelisten,
 Sequenzdiagramme oder User-Scenarios zum Einsatz kommen\cite{sequenceDiagrams}.

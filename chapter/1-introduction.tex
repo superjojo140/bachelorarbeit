@@ -3,28 +3,28 @@
 
 \section{Zusammenfassung}
 Diese Arbeit beschäftigt sich mit dem Entwicklungsprozess einer Software zur
-Terminvergabe von Beratungsterminen. Diese Software soll in der Studienberatung
+Terminvergabe von Beratungsterminen. Die Software soll in der Studienberatung
 an der Universität Kassel eingesetzt werden. Der Entwicklungsprozess wird mit
-Methoden des \textit{Human Centered Design} begleitet und umgesetzt. Diese
+Methoden des \textit{Human Centered Design} begleitet und umgesetzt. Die
 Arbeit erklärt die verwendeten Methoden sowie die dahinterliegende Theorie. Im
-Rahmen dieser Arbeit wird die Software zur Terminvereinbarung vollständig
+Rahmen der Arbeit wird die Software zur Terminvereinbarung vollständig
 implementiert. Dabei werden alle Schritte des Gestaltungsprozesses beschrieben,
 dokumentiert und ausgewertet.
 
 Die allgemeine Studienberatung der Universität Kassel setzt die Software
-Stubegru bereits seit 6 Jahren zum Management ihrer Beratungstermine,
-Abwesenheiten und als Wissensdatenbank ein. Das Modul zur Vergabe der
+Stubegru bereits seit sechs Jahren zum Management ihrer Beratungstermine,
+Abwesenheiten der Mitarbeitenden und als Wissensdatenbank ein. Das Modul zur Vergabe der
 Beratungstermine soll nun grundlegend neu implementiert werden und noch besser
 an die Bedürfnisse der Mitarbeitenden angepasst werden. In Zusammenarbeit mit
 einem Ansprechpartner aus der Abteilung Studium und Lehre wird dieses neue
 Modul entwickelt, designt und implementiert.\\ Die Bachelorarbeit begleitet
-diesen praktischen Prozess, indem theoretische Grundlagen erläutert werden und
+den praktischen Prozess, indem theoretische Grundlagen erläutert und
 alle Entwicklungsschritte beschrieben werden. Die Theorie des Human Centered
 Design gibt vor, wie ein Gestaltungsprozess von Software aussehen kann. Neben
 grundlegenden Herangehensweisen bringt diese Theorie einige Methoden mit, die
 im Laufe des Gestaltungsprozesses angewandt werden. Hierzu gehört
 beispielsweise das \textit{Interview im Kontext}, das in dieser Arbeit
-ebenfalls erklärt wird und dessen praktische Umsetzung dokumentiert,
+ebenfalls erklärt und dessen praktische Umsetzung dokumentiert,
 ausgewertet und kritisch hinterfragt wird.
 
 \section{Motivation}
@@ -33,12 +33,12 @@ ausgewertet und kritisch hinterfragt wird.
 Wir leben in einem Zeitalter, in dem immer mehr Prozesse des täglichen Lebens
 durch technische Systeme wie Software begleitet werden. In dieser Situation ist
 es von hoher Relevanz, dass alle Menschen unserer Gesellschaft die Möglichkeit
-haben, diese Systeme gleichermaßen zu nutzen und zu verstehen. In den Anfängen
+erhalten, diese Systeme gleichermaßen zu nutzen und zu verstehen. In den Anfängen
 der Softwareentwicklung wurde Software in der Regel aus Sicht der
-verarbeitenden Maschine gedacht: Wie kann die Maschine die gegebenen Aufgaben
-möglichst schnell, fehlerfrei und effizient abarbeiten? Die Nutzenden dieser
-Maschinen waren meist ein eingeschränkter, speziell dafür ausgebildeter
-Personenkreis. Diese Situation hat sich gänzlich verändert. Fast jeder Mensch
+verarbeitenden Maschine gedacht: \textit{Wie kann die Maschine die gegebenen Aufgaben
+möglichst schnell, fehlerfrei und effizient abarbeiten?} Die Nutzenden dieser
+Maschinen gehörten meist einem eingeschränkten, speziell dafür ausgebildeten
+Personenkreis an. Diese Situation hat sich gänzlich verändert. Fast jeder Mensch
 agiert heute viele Male am Tag mit technischen, softwaregetriebenen Systemen:
 Bankautomaten, Smartphones, Supermarktkassen oder Computer. Außerdem wird der
 Umgang mit solchen Systemen durch neue Entwicklungen wie Sprachsteuerung oder
@@ -58,16 +58,16 @@ werden und möglichst wenig durch technische Hintergründe eingeschränkt
 sein\cite{HMI-HCD}.
 
 \subsubsection{Praktische Anwendung}
-Der Gestaltungsprozess nach den Methoden des Human Centered Design soll in
-dieser Bachelorarbeit genauer untersucht werden. Zum einen, indem die
+Der Gestaltungsprozess nach den Methoden des Human Centered Design wird in
+dieser Bachelorarbeit genauer untersucht. Zum einen, indem die
 theoretischen Hintergründe genauer erläutert und Methoden präzise erklärt
 werden. Den wesentlichen Teil dieser Arbeit stellt aber die Dokumentation der
-praktischen Anwendung all dieser Methoden und Konzepte dar. Dies soll am
+praktischen Anwendung dieser Methoden und Konzepte dar. Dies wird am
 Beispiel einer Software zur Terminvergabe in der Studienberatung an der
-Universität Kassel durchgeführt werden. Das entsprechende Modul für diese
-Software soll im Rahmen dieser Arbeit geplant, gestaltet, implementiert und
-getestet werden. All diese Schritte werden schriftlich aufgearbeitet,
-festgehalten und hinterfragt. Das Ziel dieser Arbeit soll es also sein, den
+Universität Kassel durchgeführt. Das entsprechende Modul für die
+Software wird im Rahmen dieser Arbeit geplant, gestaltet, implementiert und
+getestet. All diese Schritte werden schriftlich aufgearbeitet,
+festgehalten und hinterfragt. Das Ziel dieser Arbeit ist es, den
 Designzyklus des Human Centered Design am praktischen Beispiel einer
 Terminvergabe-Software anzuwenden. Die bestehenden wissenschaftlichen
 Erkenntnisse im Bereich der menschzentrierten Gestaltung sollen somit
@@ -77,36 +77,33 @@ Grundlagen im Hinblick auf die gewonnenen praktischen Erfahrungen zu
 hinterfragen und zu diskutieren.
 
 \section{Aufbau}
-Zu Beginn der Arbeit werden in Kapitel \ref{chapter:methods} zunächst die
-verwendeten Grundlagen und Methoden des Human Centered Design genauer erläutert
+Zu Beginn der Arbeit werden in Kapitel \ref{chapter:methods} die
+verwendeten Grundlagen und Methoden des Human Centered Design erläutert
 und klar definiert. Exemplarisch für eine Methode wird hier das Konzept des
 Interviews im Kontext genauer betrachtet und eingeführt. Die
 Kapitel \ref{chapter:user-context} bis \ref{chapter:evaluation} beschäftigen sich
 mit der praktischen Entwicklung des Softwaremoduls zur Terminvereinbarung
-anhand des vorgestellten Designzyklus. Um dem Lesenden einen Eindruck über den
+anhand des vorgestellten Designzyklus. Um dem Lesenden einen Überblick über den
 praktischen Einsatz der betrachteten Software an der Universität zu geben, wird
 in Kapitel \ref{chapter:user-context} zunächst die Situation in der allgemeinen
 Studienberatung erläutert. Anschließend wird die eingesetzte Software genauer
 vorgestellt und deren Entwicklungsgeschichte aufgegriffen. Im weiteren Verlauf
-soll thematisiert werden, aus welchen Gründen eine Überarbeitung dieser
+wird thematisiert, aus welchen Gründen eine Überarbeitung dieser
 Software notwendig ist und welches Ziel die allgemeine Studienberatung damit
 beabsichtigt. Im Kapitel  \ref{chapter:user-requirements} wird ein Interview im
 Kontext mit einem Mitarbeitenden der Studienberatung durchgeführt, dokumentiert
 und ausgewertet. Die aus den Wünschen und Bedürfnissen der Nutzenden
-entstehenden Anforderungen sollen ebenfalls zusammengefasst und dargestellt
-werden. Als nächster Schritt soll in Kapitel \ref{chapter:implementation} die
-praktische Umsetzung der technischen Anforderungen an die Software skizziert
-werden. Implementierungsdetails, Screenshots und Codeschnipsel sollen in diesem
+entstehenden Anforderungen werden ebenfalls zusammengefasst und dargestellt. Als nächster Schritt wird in Kapitel \ref{chapter:implementation} die
+praktische Umsetzung der technischen Anforderungen an die Software skizziert. Implementierungsdetails, Screenshots und Codeschnipsel werden in diesem
 Teil die Dokumentation der Umsetzung veranschaulichen. Als letzter Aspekt der
-praktischen Durchführung soll in Kapitel \ref{chapter:evaluation} das Feedback
-der Nutzenden bei ersten \glspl{Usertest} festgehalten und aufbereitet werden. In
+praktischen Durchführung wird in Kapitel \ref{chapter:evaluation} das Feedback
+der Nutzenden bei ersten \glspl{Usertest} festgehalten und aufbereitet. In
 Kapitel \ref{chapter:conclusion} wird schließlich das Ergebnis des
 durchgeführten Entwicklungsprozesses dargestellt. Die eingesetzten Methoden
 werden nochmals aufgegriffen und kritisch hinterfragt: An welchen Stellen
 können die theoretischen Grundlagen des Human Centered Design den
 Entwicklungsprozess in der Praxis tatsächlich sinnvoll unterstützen? Gab es
-eventuell auch Methoden, die in der praktischen Umsetzung problematisch waren
-oder noch optimiert werden könnten? Der letzte Teil dieser Arbeit gewährt
-schlussendlich einen Ausblick auf weitere Forschungsfelder des Human Centered
+gegebenenfalls auch Methoden, die in der praktischen Umsetzung problematisch waren
+oder noch optimiert werden könnten? Der letzte Teil dieser Arbeit gewährt einen Ausblick auf weitere Forschungsfelder des Human Centered
 Design und die weitere Entwicklung der Software für die Studienberatung der
 Universität Kassel.
