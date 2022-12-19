@@ -256,7 +256,7 @@ entsprechende Php Skript auf dem Server gesendet.
 
 \lstinputlisting[style=ES6, caption=Senden von lokalen Änderungen eines Meetings an den Server]{listings/updateOnServer.js}
 
-Über die Methode \code{deleteOnServer()} kann ein bestehendes Meeting auf dem Server gelöscht werden. Durch einen anschließenden Aufruf von \code{fetchMeetings()} wird das Meeting dann auch in der lokalen \code{meetingList} gelöscht. Außerdem stellt ein Objekt vom Typ \code{Meeting} noch zwei Methoden zur Verfügung, um Kundendaten zu verknüpfen, beziehungsweise zu löschen. Diese Funktionen stoßen in den jeweiligen Php Skripten auf dem Server weitere Workflows an, wie beispielsweise das Versenden einer Bestätigungsmail an die ratsuchende Person.
+Über die Methode \code{deleteOnServer()} kann ein bestehendes Meeting auf dem Server gelöscht werden. Durch einen anschließenden Aufruf von\\ \code{fetchMeetings()} wird das Meeting dann auch in der lokalen \code{meetingList} gelöscht. Außerdem stellt ein Objekt vom Typ \code{Meeting} noch zwei Methoden zur Verfügung, um Kundendaten zu verknüpfen, beziehungsweise zu löschen. Diese Funktionen stoßen in den jeweiligen Php Skripten auf dem Server weitere Workflows an, wie beispielsweise das Versenden einer Bestätigungsmail an die ratsuchende Person.
 
 \lstinputlisting[style=PHP-colored, caption=Php Skript zum Erstellen eines neuen Meetings in der Datenbank]{listings/save_meeting.Php}
 
@@ -289,13 +289,15 @@ Terminübersicht zuständig. An dieser Stelle wird die Javascript Bibliothek
 referenziert auf eine Instanz vom Typ \code{FullCalendar} und kann darüber die
 wichtigsten Funktionen zum Löschen und Hinzufügen weiterer Termine aufrufen. Im
 folgenden Listing wird die Funktion \code{addMeetings(meetingList)} gezeigt.
-Diese Funktion wird vom \code{CalendarController} aufgerufen und bekommt als
+Diese Funktion wird vom\\
+\code{CalendarController} aufgerufen und bekommt als
 Parameter eine Liste von Meetings übergeben. Aus den übergebenen Objekten vom
 Typ \code{Meeting} werden zunächst Objekte generiert, die alle Eigenschaften
 erhalten, welche die FullCalendar Bibliothek benötigt, um die Termine
 in der Übersicht korrekt anzeigen zu können. Die so erstellten Datensätze
 werden anschließend in \textit{freie Termine} und \textit{vergebene Termine}
-sortiert. Über die Funktion \code{fullCalendar.addEventSource(eventSource)}
+sortiert. Über die Funktion\\
+\code{fullCalendar.addEventSource(eventSource)}
 werden die Listen mit den freien und den vergebenen Terminen hinzugefügt. Über
 den weiteren Parameter \code{color} wird in diesem Fall die farbliche
 Darstellung der Termine (grün = frei, rot = vergeben) in der Monatsübersicht gesteuert.

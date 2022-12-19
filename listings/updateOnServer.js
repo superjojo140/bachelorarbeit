@@ -1,7 +1,5 @@
-/**
-    * Updates an existing meeting on the server for storage in database
-    */
- async function updateOnServer() {
+// Updates an existing meeting on the server for storage in database
+async function updateOnServer() {
     let formData = this.toFormData();
 
     const url = `${stubegru.constants.BASE_URL}/modules/calendar/dates/update_calendar_date.php`;
