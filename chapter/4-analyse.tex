@@ -4,16 +4,16 @@
 \section{Interview im Kontext}
 \label{subsection:IIK}
 
-Das Modul zur Terminvereinbarung der Software Stubegru soll in Bezug auf den
+Das Modul zur Terminvereinbarung der Software Stubegru wird in Bezug auf den
 Arbeitsalltag der allgemeinen Studienberatung der Universität Kassel
-überarbeitet werden. Dies soll mit Methoden des Human Centered Design umgesetzt
-werden. Ein zentraler Bestandteil des Human Centered Design ist der enge und
-stetige Austausch mit den Betroffenen des Softwaresystems~\cite{hci}. Um den
-Änderungsbedarf eines bestehenden Softwaresystems einschätzen zu können, wird im
-Human Centered Design häufig die Methode des \textit{Interviews im Kontext}
+überarbeitet. Dies wird mit Methoden des Human Centered Design umgesetzt. Ein
+zentraler Bestandteil des Human Centered Design ist der enge und stetige
+Austausch mit den Betroffenen des Softwaresystems~\cite{hci}. Um den
+Änderungsbedarf eines bestehenden Softwaresystems einschätzen zu können, wird
+im Human Centered Design häufig die Methode des \textit{Interviews im Kontext}
 gewählt~\cite{contextualDesign}. Diese Methode eignet sich besonders zu Beginn
 des Entwicklungsprozesses, da wenig Vorkenntnisse über die eingesetzte Software
-und das Umfeld, in dem diese eingesetzt wird, bekannt sein muss. Die
+und das Umfeld, in dem diese eingesetzt wird, bekannt sein müssen. Die
 Softwareentwickler können so einen guten Einstieg finden, um einen Überblick zu
 gewinnen, welche Funktionen die fertige Software am Ende unterstützen muss.
 Auch lässt sich durch ein genaues Beobachten beim Interview herausarbeiten, in
@@ -28,25 +28,24 @@ Studienberatung der Universität Kassel. Zu seinen Aufgaben gehört die Betreuun
 der Software Stubegru und deren Einsatz in der Abteilung Studium und Lehre.
 Seit über sechs Jahren arbeitet \ipName bereits gemeinsam mit Hilfskräften an
 dem Aufbau und der Optimierung der Software Stubegru, um den täglichen
-Arbeitsalltag seines Teams optimal zu unterstützen. Ich habe mich persönlich
-mit \ipName in seinem Büro im Campus Center der Universität getroffen. Dort hat
-er mir an seinem Schreibtisch gezeigt, wie er mit der alten Version der
-Software Beratungstermine erstellen und vergeben kann. \ipName saß vor mir und
-hatte Maus und Tastatur in der Hand. Ich saß hinter ihm auf einem Stuhl und
-habe auf einem iPad Notizen mitgeschrieben. Für die Dauer von einer Stunde hat
-\ipName mir gezeigt, wie er die Software aktuell nutzt, welche Features für ihn
-sehr wichtig sind und an welchen Stellen noch Verbesserungspotenzial besteht.
+Arbeitsalltag seines Teams optimal zu unterstützen. Ich traf mich persönlich
+mit \ipName in seinem Büro im Campus Center der Universität. Dort zeigte er mir
+an seinem Schreibtisch, wie er mit der alten Version der Software
+Beratungstermine erstellen und vergeben kann. \ipName saß vor mir und hatte
+Maus und Tastatur in der Hand. Ich saß hinter ihm auf einem Stuhl und schrieb
+auf einem iPad Notizen mit. Für die Dauer von einer Stunde zeigte \ipName mir,
+wie er die Software aktuell nutzt, welche Features für ihn sehr wichtig sind
+und an welchen Stellen noch Verbesserungspotenzial besteht.
 
 \subsection*{Detaillierter Ablauf des Interviews}
-Am Anfang habe ich \ipName gebeten, mir einmal zu zeigen, wie er einen
-Beratungstermin in der Software anlegen und vergeben kann. Dies ist der
-Workflow, der im Arbeitsalltag am häufigsten vorkommt und daher eine hohe
-Priorität im Designprozess hat. \ipName klickte sich durch die verschiedenen
-Eingabefelder, um einen freien Zeitslot für einen Beratungstermin anzulegen.
-Hierbei erwähnte er, dass es ganz wichtig ist, dass Datum und Uhrzeit des
-Beratungstermins mit wenigen Klicks über einen \gls{Timepicker} mit der Maus
-eingeben werden können. Eine Datumseingabe über die Tastatur würde er nicht
-bevorzugen.
+Am Anfang bat ich \ipName, mir einmal zu zeigen, wie er einen Beratungstermin
+in der Software anlegen und vergeben kann. Dies ist der Workflow, der im
+Arbeitsalltag am häufigsten vorkommt und daher eine hohe Priorität im
+Designprozess hat. \ipName klickte sich durch die verschiedenen Eingabefelder,
+um einen freien Zeitslot für einen Beratungstermin anzulegen. Hierbei erwähnte
+er, dass es ganz wichtig sei, dass Datum und Uhrzeit des Beratungstermins mit
+wenigen Klicks über einen \gls{Timepicker} mit der Maus eingeben werden können.
+Eine Datumseingabe über die Tastatur bevorzuge er nicht.
 
 \begin{figure}[H]
     \caption{Datepicker im Formular zur Erstellung eines Zeitslots.}
@@ -54,7 +53,7 @@ bevorzugen.
     \includegraphics[width=0.9\textwidth]{screen_old_datepicker.png}
 \end{figure}
 
-Beim Eintragen mehrerer Termine wäre es auch besonders praktisch, dass das zuvor
+Beim Eintragen mehrerer Termine sei es auch besonders praktisch, dass das zuvor
 eingegebene Datum stehen bleibt und direkt ein weiterer Zeitslot für den
 gleichen Tag angelegt werden kann, ohne dass er nochmal extra das Datum
 auswählen muss. Die meisten weiteren Felder sind Dropdown Menüs, mit wenigen
@@ -104,11 +103,11 @@ Soll nun ein Zeitslot tatsächlich vergeben werden, klickt man auf den
 entsprechenden Tag in der Monatsansicht und es öffnet sich ein \gls{Modal}.
 Dies ist ein Fenster, welches sich über den anderen Bildschirminhalt legt und
 dem Nutzer somit deutlich anzeigt, dass hier eine Aktion im neu geöffneten
-Fenster notwendig ist. \ipName zeigt mir, wie die Mitarbeitenden der
-Erstinformation in diesem Detail-\gls{View} die freien Zeitslots an die
-ratsuchenden Personen vergeben können. In einer Liste werden, nach Uhrzeit
-sortiert, alle Termine untereinander angezeigt. Neben jedem freien Termin steht
-ein Button zum Vergeben dieses Zeitslots zur Verfügung.
+Fenster notwendig ist. \ipName zeigte mir, wie die Mitarbeitenden der
+Erstinformation in diesem \gls{View} die freien Zeitslots an die ratsuchenden
+Personen vergeben können. In einer Liste werden, nach Uhrzeit sortiert, alle
+Termine untereinander angezeigt. Neben jedem freien Termin steht ein Button zum
+Vergeben dieses Zeitslots zur Verfügung.
 
 \begin{figure}[H]
     \caption{Der Detail-View: Eine Liste mit drei freien Zeitslots.}
@@ -116,7 +115,7 @@ ein Button zum Vergeben dieses Zeitslots zur Verfügung.
     \includegraphics[width=0.9\textwidth]{screen_old_daylist.png}
 \end{figure}
 
-\ipName zeigt mir, wie eine Hilfskraft der Erstinformation nun einen solchen
+\ipName zeigte mir, wie eine Hilfskraft der Erstinformation nun einen solchen
 Zeitslot vergeben könnte. Nach Klick auf den \textit{Vergabe-Button} klappt ein
 Formular auf, in dem Name, Kontaktdaten und Anliegen der Ratsuchenden erfasst
 werden können.
@@ -127,9 +126,9 @@ werden können.
     \includegraphics[width=0.9\textwidth]{screen_old_clientdata.png}
 \end{figure}
 
-Nachdem alle personenbezogenen Daten korrekt erfasst wurden,kann der Termin nun
-endgültig gebucht werden. Hierzu klicken die Hilfskräfte auf den Button
-\textit{Bestätigen}. \ipName erklärt mir, dass dies ein sehr wichtiger Schritt
+Nachdem alle personenbezogenen Daten korrekt erfasst wurden, kann der Termin
+nun endgültig gebucht werden. Hierzu klicken die Hilfskräfte auf den Button
+\textit{Bestätigen}. \ipName erklärte mir, dass dies ein sehr wichtiger Schritt
 ist: Solange ein Mitarbeitender der Erstinformation das Formular zum Erfassen
 der persönlichen Daten des Ratsuchenden geöffnet hat, wird dieser Zeitslot mit
 einer Sperre versehen. So wird verhindert, dass dieser Zeitslot von einem
@@ -138,8 +137,8 @@ am Telefon die persönlichen Daten und das Anliegen bespricht. Sollte nach dem
 Aufklappen des Formulars der entsprechende Zeitslot doch nicht vergeben werden,
 ist es deshalb notwendig, dass die terminvergebende Person auf
 \textit{Abbrechen} klickt, um die Sperre dieses Zeitslots aufzuheben und ihn
-so mit für die Kollegen wieder freizugeben. \ipName betont, dass dieser Schritt
-manchmal nicht ganz intuitiv ist und für die Hilfskräfte daher in
+für die Kollegen wieder freizugeben. \ipName betonte, dass dieser Schritt
+manchmal nicht ganz intuitiv sei und für die Hilfskräfte daher in
 Einführungsschulungen immer besonders hervorgehoben wird. Es wäre allerdings
 deutlich schlimmer, einen Termin doppelt zu vergeben und somit mindestens einem
 Kunden wieder absagen zu müssen, als einen Zeitslot versehentlich zu sperren.
@@ -167,43 +166,41 @@ Person angezeigt.
     \includegraphics[width=0.9\textwidth]{screen_old_assigned.png}
 \end{figure}
 
-\ipName hat nun den zweistufigen Workflow zur Terminvergabe einmal komplett
-durchgespielt und mich auf viele Details hingewiesen. Während \ipName mir
-gezeigt und erzählt hat, wie die Terminvergabe in der aktuellen Softwareversion
-abläuft, habe ich in Stichworten mitgeschrieben, welche Bemerkungen und
-Auffälligkeiten er besonders betont hat.
+\ipName spielte nun den zweistufigen Workflow zur Terminvergabe einmal komplett
+durch und wies mich auf viele Details hin. Während \ipName mir
+zeigte und erzählte, wie die Terminvergabe in der aktuellen Softwareversion
+abläuft, schrieb ich in Stichworten mit, welche Bemerkungen und
+Auffälligkeiten er besonders betonte.
 
 \section{Auswertung des Interviews}
 
-Während bisher der detaillierte Ablauf des Interviews geschildert wurde, sollen
-im Folgenden die wesentlichen Kernaspekte nochmals zusammengefasst werden, die
-während des Interviews notiert wurden. Das Augenmerk liegt hierbei auf
-Beobachtungen, die Konsequenzen für den Designprozess des neuen Kalendermoduls
-zur Terminvergabe hervorbringen.
+Während bisher der detaillierte Ablauf des Interviews geschildert wurde, werden
+im Folgenden die wesentlichen Kernaspekte nochmals zusammengefasst, die während
+des Interviews notiert wurden. Das Augenmerk liegt hierbei auf Beobachtungen,
+die Konsequenzen für den Designprozess des neuen Kalendermoduls zur
+Terminvergabe hervorbringen.
 
 \subsection*{Methode der Auswertung}
-Während dem Interview habe ich mir alle relevant erscheinenden Aussagen von
-\ipName auf einem iPad notiert. Wurden im weiteren Gesprächsverlauf noch
-ergänzende Informationen zu den einzelnen Punkten deutlich, habe ich diese in
-den Notizen stichpunktartig an die entsprechenden Themen angefügt. Im Nachgang
-des Interviews mussten diese Notizen nun sorgfältig analysiert und ausgewertet
-werden. Hierzu bin ich die einzelnen Themen durchgegangen und habe die
-entsprechenden Ansichten und Klickpfade in der Software nochmals nachgespielt.
-In einem neuen Dokument habe ich nun die herausgearbeiteten Problematiken
-zusammengefasst, um die zu Grunde liegenden Zusammenhänge klarzustellen und zu
-spezifizieren. Dies entspricht dem zweiten Schritt
-\textit{Nutzungsanforderungen spezifizieren} im iterativen Design Zyklus des
-Human Centered Design nach ISO 9241~\cite{ISO9241}.
+Während dem Interview notierte ich mir alle relevant erscheinenden Aussagen von
+\ipName auf einem iPad. Wurden im weiteren Gesprächsverlauf noch ergänzende
+Informationen zu den einzelnen Punkten deutlich, fügte ich diese in den Notizen
+stichpunktartig an die entsprechenden Themen an. Im Nachgang des Interviews
+mussten diese Notizen nun sorgfältig analysiert und ausgewertet werden. Hierzu
+ging ich die einzelnen Themen durch und spielte die entsprechenden Ansichten
+und Klickpfade in der Software nochmals nach. In einem neuen Dokument fasste
+ich nun die herausgearbeiteten Problematiken zusammen, um die zu Grunde
+liegenden Zusammenhänge klarzustellen und zu spezifizieren. Dies entspricht dem
+zweiten Schritt \textit{Nutzungsanforderungen spezifizieren} im iterativen
+Design Zyklus des Human Centered Design nach ISO 9241~\cite{ISO9241}.
 
 \subsection*{Spannende Erkenntnisse}
 \label{subsection:SpannendeErkenntnisse}
 
-Das Interview im Kontext hat viele spannende Beobachtungen geliefert, die hier
-nicht alle detailliert ausgeführt werden können. Daher sollen im Folgenden nun
-drei verschiedene Themen exemplarisch vorgestellt werden, die während des
-Interviews aufgefallen sind. Im weiteren Verlauf dieser Arbeit wird in den
-unterschiedlichen Phasen des Gestaltungsprozesses immer wieder auf diese Themen
-Bezug genommen.
+Das Interview im Kontext lieferte viele spannende Beobachtungen, die hier nicht
+alle detailliert ausgeführt werden können. Daher werden im Folgenden nun drei
+verschiedene Themen exemplarisch vorgestellt, die während des Interviews
+auffielen. Im weiteren Verlauf dieser Arbeit wird in den unterschiedlichen
+Phasen des Gestaltungsprozesses immer wieder auf diese Themen Bezug genommen.
 
 \subsubsection{Kompakte Monatsübersicht}
 In der alten Softwareversion, die an der Uni Kassel bisher zum Einsatz kam,
@@ -216,9 +213,9 @@ tabellarischen Monatsansicht dargestellt.
     \includegraphics[width=0.9\textwidth]{screen_old_module.png}
 \end{figure}
 
-Durch die farblichen Markierungen der einzelnen Tage können die Nutzenden auf einen
-Blick erfassen, ob an diesem Tag Beratungsslots eingetragen wurden und ob unter
-den eingetragenen Zeitslots noch freie Termine vorhanden sind. Ein grün
+Durch die farblichen Markierungen der einzelnen Tage können die Nutzenden auf
+einen Blick erfassen, ob an diesem Tag Beratungsslots eingetragen wurden und ob
+unter den eingetragenen Zeitslots noch freie Termine vorhanden sind. Ein grün
 markierter Tag bedeutet, dass an diesem Tag noch mindestens ein freier
 Beratungsslot vorhanden ist. Ein rot markierter Tag bedeutet, dass an diesem
 Tag Beratungstermine stattfinden, diese allerdings bereits alle an ratsuchende
@@ -274,16 +271,16 @@ Telefontastatur erleichtert.
 \section{Gestaltungslösungen entwickeln}
 
 Nachdem nun die Problematiken und Herausforderungen des neuen Softwaremoduls
-verdeutlicht wurden, sollen im nächsten Schritt konkrete Ideen entwickelt
-werden, wie die erkannten Problematiken und Anforderungen in der Praxis
-umgesetzt werden können. Alan Dix betitelt diese Phase in \textit{Human
-    Computer Interaction} als \textit{Requirements specification} und betont, dass
-der Fokus in diesem Schritt darauf liegt, die notwendigen Funktionalitäten und
-Features der Software grob zu beschreiben. Von besonderer Bedeutung in diesem
-Schritt des Designzyklus sind Zusammenhänge und Abhängigkeiten zwischen
-einzelnen Komponenten. Exakte Implementierungsdetails hingegen sind in dieser
-Phase noch nicht von großer Bedeutung und sollten erst im nächste Schritt
-genauer betrachtet werden~\cite{hci}.
+verdeutlicht wurden, werden im nächsten Schritt konkrete Ideen entwickelt, wie
+die erkannten Problematiken und Anforderungen in der Praxis umgesetzt werden
+können. Alan Dix betitelt diese Phase in \textit{Human Computer Interaction}
+als \textit{Requirements specification} und betont, dass der Fokus in diesem
+Schritt darauf liegt, die notwendigen Funktionalitäten und Features der
+Software grob zu beschreiben. Von besonderer Bedeutung in diesem Schritt des
+Designzyklus sind Zusammenhänge und Abhängigkeiten zwischen einzelnen
+Komponenten. Exakte Implementierungsdetails hingegen sind in dieser Phase noch
+nicht von großer Bedeutung und sollten erst im nächste Schritt genauer
+betrachtet werden~\cite{hci}.
 
 \subsection*{Methode der Erarbeitung}
 Durch die Auswertung des Interviews im Kontext sind Nutzungsanforderungen an
